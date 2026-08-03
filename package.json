@@ -1,0 +1,22 @@
+{
+  "name": "hicks-salon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HICKS Premium Men's Salon — static frontend with Vercel Serverless Function architecture (Neon Postgres + Brevo email, not yet implemented).",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "db:migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "@getbrevo/brevo": "^2.2.0"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}

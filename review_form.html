@@ -1,0 +1,353 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Checkout | HICKS PREMIUM MEN'S SALON</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-leader {
+            display: flex;
+            align-items: baseline;
+        }
+        .dotted-leader::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px dotted #E5E5E5;
+            margin: 0 8px;
+            order: 2;
+        }
+        .dotted-leader span:last-child {
+            order: 3;
+        }
+        .custom-shadow {
+            box-shadow: 2px 2px 0px 0px #000000;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#474747",
+                      "background": "#f9f9f9",
+                      "secondary-fixed": "#e2e2e2",
+                      "surface-dim": "#dadada",
+                      "outline": "#7e7576",
+                      "on-surface": "#1b1b1b",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "primary-fixed": "#e2e2e2",
+                      "text-dimmed": "#737373",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "tertiary-container": "#1b1b1b",
+                      "surface-tint": "#5e5e5e",
+                      "on-secondary-container": "#616363",
+                      "border-muted": "#E5E5E5",
+                      "surface-bright": "#f9f9f9",
+                      "secondary-container": "#dfe0e0",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#4c4546",
+                      "surface-charcoal": "#1A1A1A",
+                      "on-tertiary-container": "#848484",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-container": "#848484",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "secondary": "#5d5f5f",
+                      "on-background": "#1b1b1b",
+                      "primary": "#000000",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e8e8e8",
+                      "error-container": "#ffdad6",
+                      "surface": "#f9f9f9",
+                      "inverse-surface": "#303030",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "on-primary-fixed": "#1b1b1b",
+                      "inverse-on-surface": "#f1f1f1",
+                      "tertiary": "#000000",
+                      "inverse-primary": "#c6c6c6",
+                      "surface-container": "#eeeeee",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-container": "#1b1b1b",
+                      "outline-variant": "#cfc4c5",
+                      "surface-variant": "#e2e2e2",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "80px",
+                      "stack-md": "40px",
+                      "margin-edge": "40px",
+                      "gutter": "24px",
+                      "stack-sm": "16px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Anton"],
+                      "headline-lg-mobile": ["Anton"],
+                      "body-xl": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["Anton"],
+                      "body-sm": ["Hanken Grotesk"],
+                      "display-lg": ["Anton"],
+                      "label-caps": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "52px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-lg text-body-lg overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-background border-b border-border-muted">
+<nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg tracking-tighter text-primary" href="index.html">HICKS</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300" href="index.html">HOME</a>
+<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300" href="service.html">SERVICES</a>
+<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300" href="locations.html">LOCATIONS</a>
+<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300" href="gallery.html">GALLERY</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-background z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
+<button class="absolute top-8 right-margin-edge text-primary" id="mobile-menu-close">
+<span class="material-symbols-outlined" style="font-size: 40px;">close</span>
+</button>
+<ul class="flex flex-col gap-8 text-center">
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="index.html">HOME</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="service.html">SERVICES</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="locations.html">LOCATIONS</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="gallery.html">GALLERY</a></li>
+</ul>
+</div>
+<main class="max-w-container-max mx-auto px-margin-edge pt-stack-md pb-stack-lg min-h-screen">
+<!-- Page Title -->
+<div class="mb-stack-md border-b border-primary pb-4 flex justify-between items-end">
+<h1 class="font-headline-xl text-headline-xl uppercase">Review Your Booking</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Summary Column -->
+<div class="lg:col-span-7 space-y-stack-md">
+<!-- Client Info Section -->
+<section>
+<h2 class="font-label-caps text-label-caps text-text-dimmed mb-stack-sm tracking-[0.2em]">CLIENT DETAILS</h2>
+<div class="border border-border-muted p-stack-sm grid grid-cols-1 md:grid-cols-2 gap-stack-sm">
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">NAME</p>
+<p class="font-body-xl text-body-xl uppercase" id="rv-name">—</p>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">PHONE</p>
+<p class="font-body-xl text-body-xl" id="rv-phone">—</p>
+</div>
+</div>
+</section>
+<!-- Appointment Info Section -->
+<section>
+<h2 class="font-label-caps text-label-caps text-text-dimmed mb-stack-sm tracking-[0.2em]">APPOINTMENT INFO</h2>
+<div class="border border-border-muted p-stack-sm space-y-stack-sm">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary pt-1">location_on</span>
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">LOCATION</p>
+<p class="font-body-xl text-body-xl uppercase" id="rv-location">—</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary pt-1">calendar_today</span>
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">PREFERRED DAY &amp; TIME</p>
+<p class="font-body-xl text-body-xl uppercase" id="rv-datetime">—</p>
+</div>
+</div>
+<div class="flex items-start gap-4" id="rv-notes-row" style="display:none!important">
+<span class="material-symbols-outlined text-primary pt-1">notes</span>
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">NOTES</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant" id="rv-notes">—</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Selected Services -->
+<section>
+<h2 class="font-label-caps text-label-caps text-text-dimmed mb-stack-sm tracking-[0.2em]">SELECTED SERVICES</h2>
+<div class="space-y-4" id="rv-services-list">
+<p class="font-body-lg text-text-dimmed">No services selected.</p>
+</div>
+</section>
+</div>
+<!-- Receipt / Action Column -->
+<div class="lg:col-span-5 lg:sticky lg:top-32">
+<div class="border border-primary p-gutter bg-surface-container-lowest">
+<h2 class="font-headline-lg text-headline-lg mb-gutter uppercase border-b border-border-muted pb-4">Order Summary</h2>
+<div class="space-y-4 mb-stack-md">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-text-dimmed">SUBTOTAL</span>
+<span id="rv-subtotal">PKR 0</span>
+</div>
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-text-dimmed">PST — PUNJAB (16%)</span>
+<span id="rv-tax">PKR 0</span>
+</div>
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-text-dimmed">BOOKING FEE</span>
+<span>PKR 0</span>
+</div>
+<div class="pt-4 border-t-2 border-primary flex justify-between items-baseline">
+<span class="font-headline-lg text-headline-lg uppercase">Total Bill</span>
+<span class="font-headline-xl text-headline-xl" id="rv-total">PKR 0</span>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-body-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300 active:scale-[0.98]">
+    Confirm Booking
+</button>
+<button class="w-full bg-transparent text-text-dimmed py-4 mt-2 font-label-caps text-label-caps uppercase hover:text-primary transition-colors" onclick="window.location.href='booking_form.html'">
+    Edit Booking Details
+</button>
+</div>
+<!-- Trust Badge -->
+<div class="mt-gutter flex items-center justify-center gap-4 text-text-dimmed opacity-60">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-label-caps text-[10px] tracking-widest uppercase">Secured &amp; Encrypted Checkout</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-primary relative overflow-hidden" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB-c4ZQLjnpGRWR9lZVYPUqJYxX_0WfvwX2u8FCjh5WFEIxi3RB4VoD1abJLXnmKtUgGM9aeDTeAafw26-0nxVgPsEtofY5dmY7v1IV7ta14WgdgIruYVfsyCdKd-Ta_hD5heuYrOXR_FUGg7UtIlgduMxO38MbNEm_tYP_54ITcYdMIvnYhMCUZrLzNNYTqfzg90d8_Q2Yv_dyt93jGUySUqbvPokY0RVnHJ0htO6jW1OAS29a8W8ttubg5y7IBshlbg&quot;); background-size: cover; background-position: center center;">
+<!-- Overlay for readability -->
+<div class="absolute inset-0 bg-primary/80"></div>
+<div class="relative z-10 flex flex-col items-center pt-stack-lg pb-stack-md px-margin-edge w-full text-center">
+<div class="font-display-lg text-display-lg text-on-primary mb-stack-md">HICKS</div>
+<div class="flex flex-wrap justify-center gap-gutter mb-stack-sm">
+<a class="font-label-caps text-label-caps text-on-primary underline hover:opacity-80 transition-opacity" href="#">PRIVACY POLICY</a>
+<a class="font-label-caps text-label-caps text-on-primary underline hover:opacity-80 transition-opacity" href="#">TERMS OF SERVICE</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">INSTAGRAM</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">FACEBOOK</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-primary-container mt-stack-sm">
+                © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<script>
+        // ── Populate from localStorage ────────────────────────
+        (function () {
+            const raw = localStorage.getItem('hicksBooking');
+            if (!raw) {
+                // No booking data — send back to booking form
+                window.location.href = 'booking_form.html';
+                return;
+            }
+
+            const d = JSON.parse(raw);
+
+            // Client details
+            document.getElementById('rv-name').textContent  = d.customerName  || '—';
+            document.getElementById('rv-phone').textContent = d.customerPhone || '—';
+
+            // Appointment info
+            document.getElementById('rv-location').textContent = d.location || '—';
+            const dayTime = [d.preferredDay, d.primaryTimeWindow].filter(Boolean).join(' • ');
+            document.getElementById('rv-datetime').textContent  = dayTime || '—';
+
+            // Notes (only show row if notes exist)
+            if (d.notes && d.notes.trim()) {
+                document.getElementById('rv-notes').textContent = d.notes;
+                document.getElementById('rv-notes-row').style.removeProperty('display');
+            }
+
+            // Services list
+            const services  = d.selectedServices || [];
+            const listEl    = document.getElementById('rv-services-list');
+            listEl.innerHTML = '';
+
+            if (services.length === 0) {
+                listEl.innerHTML = '<p class="font-body-lg text-text-dimmed">No services selected.</p>';
+            } else {
+                services.forEach((svc, i) => {
+                    const isLast = i === services.length - 1;
+                    listEl.innerHTML += `
+                        <div class="flex flex-col gap-1 ${isLast ? '' : 'border-b border-border-muted pb-4'}">
+                            <div class="flex justify-between items-baseline font-body-xl text-body-xl uppercase">
+                                <span>${svc.name}</span>
+                                <span class="font-bold">PKR ${svc.price.toLocaleString()}</span>
+                            </div>
+                            <p class="text-body-sm text-text-dimmed italic max-w-md">${svc.description}</p>
+                        </div>`;
+                });
+            }
+
+            // Order summary — 16% Punjab Sales Tax
+            const TAX_RATE = 0.16;
+            const subtotal  = services.reduce((sum, s) => sum + s.price, 0);
+            const tax       = Math.round(subtotal * TAX_RATE);
+            const total     = subtotal + tax;
+
+            function pkr(n) { return 'PKR ' + n.toLocaleString(); }
+            document.getElementById('rv-subtotal').textContent = pkr(subtotal);
+            document.getElementById('rv-tax').textContent      = pkr(tax);
+            document.getElementById('rv-total').textContent    = pkr(total);
+        })();
+
+        // ── Mobile Menu ───────────────────────────────────────
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const close  = document.getElementById('mobile-menu-close');
+        const menu   = document.getElementById('mobile-menu');
+        toggle.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+        close.addEventListener('click',  () => menu.classList.add('translate-x-full'));
+
+        // ── Micro-interactions ────────────────────────────────
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown',  () => el.classList.add('opacity-70'));
+            el.addEventListener('mouseup',    () => el.classList.remove('opacity-70'));
+            el.addEventListener('mouseleave', () => el.classList.remove('opacity-70'));
+        });
+
+        // ── Parallax footer ───────────────────────────────────
+        window.addEventListener('scroll', () => {
+            const footer = document.querySelector('footer');
+            if (footer) footer.style.backgroundPositionY = (window.pageYOffset * 0.1) + 'px';
+        });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HICKS | Find Your Style Gallery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "border-muted": "#E5E5E5",
+                    "on-secondary-container": "#616363",
+                    "surface-dim": "#dadada",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#474747",
+                    "tertiary": "#000000",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "surface-tint": "#5e5e5e",
+                    "text-dimmed": "#737373",
+                    "secondary-container": "#dfe0e0",
+                    "primary-container": "#1b1b1b",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container": "#eeeeee",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "on-surface": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#454747",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-background": "#1b1b1b",
+                    "tertiary-fixed": "#e2e2e2",
+                    "inverse-primary": "#c6c6c6",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-bright": "#f9f9f9",
+                    "surface": "#f9f9f9",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "inverse-surface": "#303030",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#cfc4c5",
+                    "tertiary-container": "#1b1b1b",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#848484",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#4c4546",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-charcoal": "#1A1A1A",
+                    "on-primary-fixed": "#1b1b1b",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "outline": "#7e7576",
+                    "on-tertiary-container": "#848484",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary": "#5d5f5f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-lg": "80px",
+                    "margin-edge": "40px",
+                    "stack-md": "40px",
+                    "stack-sm": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Anton"],
+                    "headline-xl": ["Anton"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "body-xl": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "52px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .dotted-leader {
+        display: flex;
+        align-items: baseline;
+      }
+      .dotted-leader::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px dotted #E5E5E5;
+        margin: 0 8px;
+        order: 2;
+      }
+      .dotted-leader span:last-child {
+        order: 3;
+      }
+      .hairline-card {
+        border: 1px solid #E5E5E5;
+      }
+      .editorial-shadow {
+        box-shadow: 4px 4px 0px 0px #000000;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcikfSi33521ZrGpGILzgvm58miRkx7zh6MsV1uRHm6TIGezmdGGFkb2E0IvgsCYj1tdccPlujiIaEGbJeTvOiwraphE3FJnggoT0TRlNt8Lzn_ElkOUmLxZ__OsyK7vIaoW9SxTTgnmkGMwwbIqA_Fl9j9UtDTuyFiBgcSDKASkwiC2edQaQZ8Jcs2w9A9BtMr-G2JYzl-DvRlp4n_9reWF9Bw8b94IPgANh0IX0_T6fUT0fWnZzk35XtoXjET3us8g');
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .gallery-item {
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+      .gallery-item.hidden-item {
+        display: none !important;
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      /* Custom grid logic for alternating large/small pairs */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+      }
+      @media (min-width: 768px) {
+        .gallery-grid .gallery-item:nth-child(4n+1) { grid-column: span 8; height: 600px; }
+        .gallery-grid .gallery-item:nth-child(4n+2) { grid-column: span 4; height: 600px; }
+        .gallery-grid .gallery-item:nth-child(4n+3) { grid-column: span 4; height: 600px; }
+        .gallery-grid .gallery-item:nth-child(4n+4) { grid-column: span 8; height: 600px; }
+      }
+      @media (max-width: 767px) {
+        .gallery-grid .gallery-item { grid-column: span 12; height: 400px; }
+      }
+    </style>
+</head>
+<body class="text-on-background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs8L_U8mN5Wq-2WwBADMEplimSPz1WHTeZElM8xAQiCEyFvCp8DMTrXgPALgstdbdNx6-zOL3O1NDo3eN5qLiSDWTohL1TZ8yn2NMmGVlxiFiQqwR67Qtj531Vm0HY_z1YPHnn16Gi6JtNbAO1eFZxpeNS8ujJ2QV374Lb4oNgQG6DDCu99CJRvMv7Fuy83BGuFG-orCQYagUfO4l_o_oYe4H-Sb15DGGpqMrZ223kPPUUxIJq7YRl0NgfdFNAPhMsGA"); background-size: cover; background-attachment: fixed;'>
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-surface-charcoal w-full top-0 sticky z-50 border-b border-border-muted dark:border-on-surface-variant" id="main-header">
+<nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg tracking-tighter text-primary dark:text-on-primary" href="index.html">HICKS</a>
+<div class="hidden md:flex space-x-8">
+<a class="font-label-caps text-label-caps text-text-dimmed dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="index.html">HOME</a>
+<a class="font-label-caps text-label-caps text-text-dimmed dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="service.html">SERVICES</a>
+<a class="font-label-caps text-label-caps text-text-dimmed dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="locations.html">LOCATIONS</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary border-b-2 border-primary dark:border-on-primary pb-1 transition-colors duration-300 cursor-pointer active:opacity-70" href="gallery.html">GALLERY</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 hover:bg-white hover:text-primary border border-primary transition-all duration-300" onclick="window.location.href='booking_form.html'">
+                BOOK NOW
+            </button>
+<button class="md:hidden text-primary dark:text-on-primary" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-background dark:bg-surface-charcoal z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
+<button class="absolute top-8 right-margin-edge text-primary dark:text-on-primary" id="mobile-menu-close">
+<span class="material-symbols-outlined" style="font-size: 40px;">close</span>
+</button>
+<ul class="flex flex-col gap-8 text-center">
+<li class="font-headline-xl text-headline-xl text-text-dimmed dark:text-on-surface-variant"><a href="index.html">HOME</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed dark:text-on-surface-variant"><a href="service.html">SERVICES</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed dark:text-on-surface-variant"><a href="locations.html">LOCATIONS</a></li>
+<li class="font-headline-xl text-headline-xl text-primary dark:text-on-primary"><a href="gallery.html">GALLERY</a></li>
+</ul>
+</div>
+<main class="max-w-container-max mx-auto px-margin-edge pt-stack-lg pb-stack-lg">
+<!-- Header Section -->
+<section class="mb-stack-lg flex flex-col md:flex-row gap-gutter items-end p-8 md:p-12 border border-border-muted text-on-primary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIAMjlAfY-uCvtiPmnQdkki9Km_2lIVTMbuzvc61b4lTU1RkQeew-7lrZlwOViYyor8aWDO4m8DYpWUawJ52uACvfM11pQ8WspMdD7xxK8xB4hlDwfVDCK_qJ-bT8muNyHKzBfAk2w9vIsKbmojMczbZAxeVufmE5wtvLMRmH4VqAZQI3-XngFf17HPksN2uH5WEahAh9VrpPNsEXePW47o8cL5kIBHWPot75W3MOifRACNPsbMJSsYfV0h1Wowj-Kzg'); background-size: cover; background-position: center;"><div class="w-full">
+<h1 class="font-display-lg text-display-lg uppercase mb-stack-sm text-on-primary">
+                FIND YOUR <br/> STYLE
+            </h1>
+<p class="font-body-xl text-body-xl text-on-primary/70 max-w-md">
+                Explore our curated gallery of professional craftsmanship. From precision haircuts to specialized beard styling and premium grooming, discover the standard of Hicks.
+            </p>
+</div>
+</section>
+<!-- Category Filter -->
+<div class="flex flex-wrap gap-gutter mb-stack-md border-b border-border-muted pb-8" id="filter-container">
+<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-primary bg-primary text-on-primary transition-colors" data-filter="all">ALL LOOKS</button>
+<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-border-muted hover:border-primary transition-colors" data-filter="haircuts">HAIRCUTS</button>
+<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-border-muted hover:border-primary transition-colors" data-filter="beard-styling">BEARD STYLING</button>
+<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-border-muted hover:border-primary transition-colors" data-filter="grooming">GROOMING</button>
+</div>
+<!-- Customer Style Section -->
+<div class="mb-4">
+<h2 class="font-label-caps text-label-caps text-primary tracking-widest mb-stack-sm">CUSTOMER LOOKS</h2>
+</div>
+<div class="gallery-grid" id="gallery-grid">
+<!-- Row 1: Large (Left) / Small (Right) -->
+<!-- Look 01 (Large) -->
+<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="haircuts">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ')">
+</div>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
+<span class="font-label-caps text-label-caps opacity-80">LOOK 01 — HAIRCUTS</span>
+<h3 class="font-headline-xl text-headline-xl mt-2">THE ARCHITECTURAL FADE</h3>
+<p class="font-body-lg text-body-lg mt-2 max-w-md hidden md:block">Precision execution with a seamless transition and textured crown for the modern professional.</p>
+</div>
+</div>
+<!-- Look 02 (Small) -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+<div class="flex-1 overflow-hidden">
+<img alt="Sculpted Beard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
+</div>
+<div class="p-6 border-t border-border-muted bg-white">
+<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 02 — BEARD STYLING</span>
+<h3 class="font-headline-lg text-headline-lg mt-2">SCULPTED BEARD</h3>
+<div class="mt-4 flex justify-between items-center">
+<span class="font-body-sm text-body-sm uppercase tracking-tighter">View Details</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Small (Left) / Large (Right) -->
+<!-- Look 03 (Small) -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+<div class="flex-1 overflow-hidden">
+<img alt="Matte Pompadour" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4bWm18fu7ru2nqRFP2HvftszEP7hvRuMYrT3pSiqGDsM7tb23k9sJB_p1jW866NpzwmBbzwhoTGH1beav24BeHY4ei1OmZ3GK55b9_55_R8ZCgyekezY3h-2cnedtdHaC6xNK4Lwfmoa9srtkfmlIPoBZtJG-kKDmuwLZAjgkGuBgQJDHeYobhPa2NVVhjKtPR1J4u9z-SPaQ4mAzBAAEC35v43NPQMDUj_nlFjWMJjP_aioElEgOtrV8LDGwgJUhA"/>
+</div>
+<div class="p-6 border-t border-border-muted bg-white">
+<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 03 — HAIRCUTS</span>
+<h4 class="font-headline-lg text-headline-lg mt-2">MATTE POMPADOUR</h4>
+</div>
+</div>
+<!-- Look 04 (Large) -->
+<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="haircuts">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsFO-j0f_OFcq782n4oqbZQuBlT5yyGUy_LhZKMzrqUEfzmQjDQrAevSqTi5RyQZQpOX_wiDzvqhDHICbEvuau-7xJhqS8gRc8f-FHg-nEl4R-l3uGlh25vBKX4O3mg2i_E5VkU6R4fLK-IOe2bxatZRIZzf02_6yH7SxMua_7ghB_cPkxvpcktj4lupRNIcpdDE0fA1hueglP9MhllcLdZbivGpwXhfrBV-O6guT3HDqXQ6m0Q5Gq31ssuP2TUII4Ew')">
+</div>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
+<span class="font-label-caps text-label-caps opacity-80">LOOK 04 — HAIRCUTS</span>
+<h3 class="font-headline-xl text-headline-xl mt-2">THE URBAN BUZZ</h3>
+<p class="font-body-lg text-body-lg mt-2 max-w-md hidden md:block">Minimalist, sharp, and effortless. Designed for those who appreciate high-impact simplicity.</p>
+</div>
+</div>
+<!-- Row 3: Large (Left) / Small (Right) -->
+<!-- Look 05 (Large) -->
+<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="haircuts">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIgEy8_H_RNynQGiOlfn3r_RlAsMjSqzy0KJletmZd6DSE4LBeXOHTR2Be9Va86EFZ2-k7O9cbvSuYGkOyEhVE_fRngSu1B6KELFB2SouBpwUWZQurCu5kV6PbhFC518DFMr8Y59Wm02e1wrqdKzmjW5hcJ2MgFOHA8PgFn2o3j0PfbM8qfW1JcDcQo41Gcq8v0SrLhQsS6jQSSX67FG2B4dm_UMiCTaOloL6vkNCS3IGKIBktevNvbQ_K0jmiP8ylCQ')">
+</div>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
+<span class="font-label-caps text-label-caps opacity-80">LOOK 05 — HAIRCUTS</span>
+<h3 class="font-headline-xl text-headline-xl mt-2">LOW TAPER FADE</h3>
+</div>
+</div>
+<!-- Look 06 (Small) -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+<div class="flex-1 overflow-hidden">
+<img alt="Classic Goatee" class="w-full h-full object-cover grayscale brightness-75 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCQ68JbfT--0NUMXJfsI_IlS2ZtxCY6HaNMi0kn1tI00_J0-rblborxmD8WLyIsfm9D6uSdBJUbKYZ9Dc8bdMHJrPtg4Zb4084DCoswmuWFetk9KPiz7KPW7Fe4wSsiEyB--cqY8IL78Ukj_e0hk5WIqhsMtyDDIPSzvvnw-GPbCuloUW15l37KnK2CvYhNWIz29h_DXSvHlfrGeTfb1Ojf2Brym8J8DmwCpWr0hLUf27m20wXWvcb6VV5pa4DxJ2Eg"/>
+</div>
+<div class="p-6 border-t border-border-muted bg-white">
+<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 06 — BEARD STYLING</span>
+<h4 class="font-headline-lg text-headline-lg mt-2">CLASSIC GOATEE</h4>
+</div>
+</div>
+<!-- Row 4: Small (Left) / Large (Right) -->
+<!-- Look 07 (Small) -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+<div class="flex-1 overflow-hidden">
+<img alt="Sharp Line-Up" class="w-full h-full object-cover grayscale brightness-90 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YHfz4NGReZEF9SnFO8uf2D9pp5g1VysL9jIbM9TPEhZQhyC_eEAG9xTyPNYXyK72-Qcg59ht-NZecYeMlW9L_deEKyejC8ydR9oUNurY4SZ67PBeu7ipskI16lpImdQ2OPRt-85vHkZk6uSb_vAc7RIyIE9YXGNu_5rFJ95-3m0-7lHVE92pa6b5YnAoWlfZmzeJXqT5iTf2Yql85CfLkTIyDcIzpgpzx8XShagXG2CXMu_Kc8i99WShcgJYTnLvIA"/>
+</div>
+<div class="p-6 border-t border-border-muted bg-white">
+<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 07 — BEARD STYLING</span>
+<h4 class="font-headline-lg text-headline-lg mt-2">SHARP LINE-UP</h4>
+</div>
+</div>
+<!-- Look 08 (Large) -->
+<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="grooming">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBV3853dXW4p0M5iFu5Mg7eF52jmbmLC9B4R-DdWGGdqgnIq9k50s6SYUVEWexY9ZNrhTnQmQJLvPQxkAnA5vbJjeE1e44KTl8RT40jvxhJAcQrXYINyHMs52QivCfzuK2gBle9j9jdBugDmoxFBCYkvE0VZjKuyL-9IUU1tDh8jVXBBj8NK2eXz7JeVWQC7PwJxp1ue3h8CibcEmwinhyi0xUynrEPm41cBjSr9h3ekLEpIVDGg5SXclasFVPQMaqm7w')">
+</div>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
+<span class="font-label-caps text-label-caps opacity-80">LOOK 08 — GROOMING</span>
+<h3 class="font-headline-xl text-headline-xl mt-2">EXECUTIVE FACIAL</h3>
+</div>
+</div>
+<!-- Additional Grooming Card -->
+<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="grooming">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEnh4LbZXVyArAhMkVMDZzaptHHWF5tYsq2SugQHnHPJR4SDK2gUHQLr6cpeGhf6esG5LEDyyzLUJUBV_CpsOkjuH0i7YgMqR6sL3yePlX14APTQ12iX7D8SItXlF5TV1qqN8Z8grjxVZqOy-bXcm2gbkFRfL8j01Fr8cpHc3JpNrpaXlSR5PhNs1g7mz9zc0qY4RgJ1LADLqJrC5NPzAnHnkRIuXAQaB3YHbWFXHoMhRw1RW6V3WGL6D_d_brPxzSrw')">
+</div>
+<div class="absolute top-6 right-6">
+<span class="bg-white/90 backdrop-blur-sm px-4 py-2 font-label-caps text-label-caps border border-primary">PREMIUM LOOK</span>
+</div>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
+<span class="font-label-caps text-label-caps opacity-80">LOOK 09 — GROOMING</span>
+<h3 class="font-headline-xl text-headline-xl mt-2">THE GROOM SESSION</h3>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-stack-lg flex flex-col items-center">
+<button class="group flex items-center gap-4 font-label-caps text-label-caps py-6 px-12 border border-border-muted hover:border-primary transition-all relative overflow-hidden">
+<span class="relative z-10">LOAD MORE LOOKS</span>
+<span class="material-symbols-outlined relative z-10 transition-transform group-hover:rotate-90">add</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg text-white" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs-7R_rdS5pAv-QOuuZPFayB3NiZCZMgR4tkg6MJ8wyiwh7cDnwmuDOCRYfm71Kks08ryFo76NBWbjJrsHrROiIaxRj0H-0SK--danph1ZjdW4_mlb0UZJcryhNuYmSYRYxPrC-oYfusIO0a3z7dhAXUgiZT1cku-yLPda245UOetVJTv5nUTZVAnNceFxXkiobSxANY-ngjK3E3yZC698nAiCTNiZ-YyCU2AQvrCvC97MIoohP5mBg0YvBqI_hyQH0Q'); background-size: cover; background-position: center;">
+<div class="flex flex-col items-center pt-stack-lg pb-stack-md px-margin-edge w-full text-center max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg text-on-primary dark:text-primary mb-8">HICKS</div>
+<div class="flex flex-wrap justify-center gap-8 mb-stack-md">
+<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="https://instagram.com/hicksmens" target="_blank">INSTAGRAM</a>
+<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="https://facebook.com/hicksmens" target="_blank">FACEBOOK</a>
+</div>
+<div class="border-t border-white/10 w-full pt-8 mt-8">
+<p class="font-label-caps text-label-caps text-on-primary dark:text-primary opacity-60 uppercase tracking-widest">
+                    © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Filter Interactivity Script -->
+<script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update Button Styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+                    b.classList.add('border-border-muted');
+                });
+                btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+                btn.classList.remove('border-border-muted');
+
+                // Filter Items with Animation
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden-item');
+                        // Small timeout to allow browser to register display before opacity change
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        // Wait for transition before hiding completely
+                        setTimeout(() => {
+                            // Check if filter hasn't changed again during timeout
+                            const currentFilter = document.querySelector('.filter-btn.bg-primary').getAttribute('data-filter');
+                            if (currentFilter !== 'all' && category !== currentFilter) {
+                                item.classList.add('hidden-item');
+                            }
+                        }, 400);
+                    }
+                });
+            });
+        });
+
+        // Hover effect for cards
+        galleryItems.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('editorial-shadow');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('editorial-shadow');
+            });
+        });
+
+        // Mobile Menu Logic
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const close = document.getElementById('mobile-menu-close');
+        const menu = document.getElementById('mobile-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.remove('translate-x-full');
+        });
+
+        close.addEventListener('click', () => {
+            menu.classList.add('translate-x-full');
+        });
+    </script>
+</body></html>

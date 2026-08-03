@@ -1,0 +1,369 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>HICKS | Premium Men's Salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-high": "#e8e8e8",
+                    "border-muted": "#E5E5E5",
+                    "primary-container": "#1b1b1b",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-bright": "#f9f9f9",
+                    "background": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#000000",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary-container": "#1b1b1b",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1b1b1b",
+                    "primary-fixed": "#e2e2e2",
+                    "inverse-surface": "#303030",
+                    "on-surface-variant": "#4c4546",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface": "#f9f9f9",
+                    "secondary": "#5d5f5f",
+                    "surface-variant": "#e2e2e2",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#cfc4c5",
+                    "on-background": "#1b1b1b",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-dim": "#dadada",
+                    "on-primary-fixed": "#1b1b1b",
+                    "on-primary-container": "#848484",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#dfe0e0",
+                    "outline": "#7e7576",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-container": "#eeeeee",
+                    "surface-charcoal": "#1A1A1A",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-tint": "#5e5e5e",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#616363",
+                    "inverse-primary": "#c6c6c6",
+                    "text-dimmed": "#737373",
+                    "on-tertiary-container": "#848484"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "16px",
+                    "stack-md": "40px",
+                    "gutter": "24px",
+                    "stack-lg": "80px",
+                    "container-max": "1280px",
+                    "margin-edge": "40px"
+            },
+            "fontFamily": {
+                    "body-xl": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Anton"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Anton"],
+                    "body-sm": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "52px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-leader {
+            display: flex;
+            align-items: baseline;
+        }
+        .dotted-leader::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px dotted #737373;
+            margin: 0 10px;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .editorial-border {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        @media (max-width: 768px) {
+            .parallax-bg {
+                background-attachment: scroll;
+            }
+        }
+        /* Custom Textures */
+        .bg-woody {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQeLrv8d5K9v0cOMngbP4oFnX91go-VdkbhwKVitacP91tapFWlNDC9Ww_27KgWeXhbVRFaPy1GIoqgZXMDogn59_lAE8HXyzJzA2isLK1OxRGiENZnbxxNNMBz1pbehhykhHGdEwhmcAyedj-MwXbEVxsbZ6cKMu4-Cd5IkM21tHH3o7izcpA3qqB5AgWgh8B70LjLzH_Sp4FwPEzp2g9wBuz41YtNLeB37om2Db8M7RN9zH_OmQWIWv20B4KtGFVMQ');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-charcoal {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-woody text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar: Kept light/white as per request -->
+<header class="w-full top-0 sticky z-50 bg-background border-b border-border-muted transition-all duration-300" id="main-header">
+<nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg tracking-tighter text-primary" href="index.html">HICKS</a>
+<!-- Desktop Navigation -->
+<ul class="hidden md:flex gap-10 items-center">
+<li class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 cursor-pointer transition-colors duration-300"><a href="index.html">HOME</a></li>
+<li class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer"><a href="service.html">SERVICES</a></li>
+<li class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer"><a href="locations.html">LOCATIONS</a></li>
+<li class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer"><a href="gallery.html">GALLERY</a></li>
+</ul>
+<div class="flex items-center gap-6">
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-8 py-3 hover:bg-white hover:text-primary border border-primary transition-all duration-300 cursor-pointer active:opacity-70" onclick="window.location.href='booking_form.html'">
+                    BOOK NOW
+                </button>
+<button class="md:hidden text-primary" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-background z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
+<button class="absolute top-8 right-margin-edge text-primary" id="mobile-menu-close">
+<span class="material-symbols-outlined" style="font-size: 40px;">close</span>
+</button>
+<ul class="flex flex-col gap-8 text-center">
+<li class="font-headline-xl text-headline-xl text-primary"><a href="index.html">HOME</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="service.html">SERVICES</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="locations.html">LOCATIONS</a></li>
+<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="gallery.html">GALLERY</a></li>
+</ul>
+</div>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative h-[921px] w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0 scale-105 animate-[subtle-zoom_20s_infinite_alternate] transition-all duration-1000 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Cinematic portrait of a sharp-featured man in a black blazer." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3CKP_KZnUEjBtWob7NowYojvcGeAuD35GvIFr2kE0SoZmb-OsFrpKFppCEMesyy9xw42HPgnNXc5QWDfrIASYzzfUczylHT_yo2-vSan8B0xZhid65KHu8q3I7NxwXPwB88qdoSl3EzNa6yAiWA15yJTuHnQN8GP9jxo4gXgaNtems5VZ_Rf36pDerOlyfjCq_GDmgeBa1stmj5_8MMJN1g_UziVespWu6PLBrod2YbeQY3l8t-vqUl63ycYG_28_bQ')"></div>
+</div>
+<div class="absolute inset-0 bg-black/20 z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
+<div class="relative z-20 text-center text-white px-margin-edge transition-all duration-1000 opacity-100 translate-y-0">
+<h1 class="font-display-lg text-[120px] md:text-[200px] leading-none tracking-tight animate-fade-in uppercase">HICKS</h1>
+<p class="font-label-caps text-label-caps tracking-[0.4em] mt-4 opacity-90">BAHAWALPUR FASHION WEEK</p>
+<div class="mt-stack-md flex justify-center">
+<div class="w-[1px] h-24 bg-white/50 animate-bounce"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: About Premium Grooming -->
+<section class="py-stack-lg px-margin-edge max-w-container-max mx-auto grid md:grid-cols-2 gap-gutter items-center bg-woody">
+<div class="space-y-stack-sm order-2 md:order-1 transition-all duration-1000 opacity-100 translate-y-0">
+<span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">The Legacy</span>
+<h2 class="font-headline-xl text-headline-xl text-primary uppercase">Editorial Excellence in Bahawalpur</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-xl">
+                    HICKS isn't just a salon; it's a statement of sophistication. Operating since early 2021, we bring high-fashion grooming standards to the heart of Bahawalpur, merging over 4 years of precision with modern editorial aesthetics.
+                </p>
+<p class="font-body-lg text-body-lg text-text-dimmed max-w-lg">
+                    Our master barbers are architects of style, crafting looks that define the modern gentleman. Experience the quiet luxury of a space designed for the discerning.
+                </p>
+<div class="pt-stack-sm">
+<button class="font-label-caps text-label-caps border border-primary text-primary px-10 py-4 hover:bg-primary hover:text-on-primary transition-all duration-300">OUR STORY</button>
+</div>
+</div>
+<div class="order-1 md:order-2 h-[600px] bg-border-muted overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Luxury minimalist salon interior" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP4R01ikbPQY1h86v4EX_mGuj256l8y6T-fVR_RY9FBr8FrgFdg9NqcndL14XlDtRwM5C8TcvDTzWl5nQ4ekkhbGpb7K-BGc50E2urSzXIvDItt_mtx1nR_YV1d6S9Cvl3Sz0YKgZ_O5blT1rOsNEJ-XCjnxHi3t8W4Ndw3mFx0w5-8jS3sF9jIu9v8uGUoZHwrgW5Yfo-_bNEVfeyjvjIAGLVKHiDZYKdBxdp-hVjP6Pun42hhIY25Y_8HFS2N7cbdw">
+</div>
+</section>
+<!-- Section 3: Services Teaser -->
+<section class="bg-surface-container-low py-stack-lg px-margin-edge bg-woody">
+<div class="max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-md border-b border-border-muted pb-8">
+<div>
+<span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">Curation</span>
+<h2 class="font-headline-xl text-headline-xl text-primary">SELECT SERVICES</h2>
+</div>
+<a class="font-label-caps text-label-caps text-primary hover:underline transition-all" href="service.html">VIEW FULL MENU</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-white/80 backdrop-blur-sm p-gutter space-y-6 border border-border-muted hover:border-primary transition-colors group">
+<div class="h-64 overflow-hidden">
+<img alt="Hair Designing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_swWO_5AWSAK0WtQy7c-nalIJFhqSGN5NJoHqEIHs_m-_mPQ5fRxkXtK0fvIfVekGkM_dVgaPnI1eZVXnVEkkzCNfG768rEgwDXQqf5KjiUI8FL9ArFGK4A1-mk2z0w1TaXT6ZpJKoPp1rxzirGr8ljhpJbvSkEU2xL14-gXVyzGJ-jNpcsTh_8YIzyKWzqB_A6QSwnQBd82Vmf5y4cBDfBl5smEOMvSnh9xes7S5RX8sAzD-GRPgVCBerOSl0AIDw">
+</div>
+<div class="space-y-4">
+<div class="dotted-leader">
+<span class="font-headline-lg text-headline-lg uppercase">Hair Designing</span>
+<span class="font-body-xl text-body-xl text-primary">ON INQUIRY</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dimmed">Architectural cuts tailored to your face structure and lifestyle.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-white/80 backdrop-blur-sm p-gutter space-y-6 border border-border-muted hover:border-primary transition-colors group">
+<div class="h-64 overflow-hidden">
+<img alt="Premium Wash" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsYFY94Sw1ZV_KQ_dsohfkUy7uZ5jZEu4PKBQ9q1Qt8qJZywNd9To6YMZZwnXn-UtPriG1epNOvZzeBH2mvE_tHHeIewbOxyJP2UjbAj9Uqa_9vg914W7H4UrIaR-noVhFaKx4n9kUXQknedmsJcP2xwKgHeBnh9C2OoJWt_4eraab7DOk7c-xt-JAddpzlHs_Ge90gifptYL1VVK3Q4H9Rk4UwjjBT_wPLpyuBKJ0bjSTvp0zqXSSH1LPpBYIhsWTsg">
+</div>
+<div class="space-y-4">
+<div class="dotted-leader">
+<span class="font-headline-lg text-headline-lg uppercase">Premium Wash</span>
+<span class="font-body-xl text-body-xl text-primary">ON INQUIRY</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dimmed">Deep cleansing and scalp therapy using artisan-grade botanicals.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-white/80 backdrop-blur-sm p-gutter space-y-6 border border-border-muted hover:border-primary transition-colors group">
+<div class="h-64 overflow-hidden">
+<img alt="Signature Shave" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVLs9qr4r4KTfbkhpktAq6OzEmBkzHnByRokMq1M7xaguKpKtSdNIl33N6f5bSeeFaMJxhYLLf4NeIYbES5xUc4fsnMRui4Yn5CaDtlHC-Ehw1q-B-gX7TDIgkTd23K3NYzY90sW8_iDHTSrCtq40Gnbn2LacYCmuQWdTERZq5SR2_r0Az9ECufcNHszsRc1obs3qjwHIQi-Si6yIdmgGt5euKmUqEtYDdwODJGtgPV76Di_6omFtLncD24Mx4oiNtmQ">
+</div>
+<div class="space-y-4">
+<div class="dotted-leader">
+<span class="font-headline-lg text-headline-lg uppercase">Signature Shave</span>
+<span class="font-body-xl text-body-xl text-primary">ON INQUIRY</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dimmed">Classic straight-razor ritual with hot towels and essential oils.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Find Your Style -->
+<section class="relative py-32 overflow-hidden flex items-center justify-center group cursor-pointer bg-charcoal">
+<div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
+<div class="w-full h-full opacity-30 grayscale transition-all duration-700 group-hover:opacity-20 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy-eEEsUFwBQIsMvZIglwR6Gy7s-XFhCtWdu6M7y2oCO03LhHuk_K9TLCyGlyuss1ZZ3GU7xiJl9lpRGqxA6O-vdJ8X5-JRGJ2YQIyWeZqY2MuoWkM91GPHvXPxF80UgpORH7qRYN48dKFAat3GgrUfFBvSaNLhBNLnWtg6LK1YMrP3Rxu2wGi4nKShVQxa6l03OyZ3NkKpFpPsBZZ8IOBOMx2YVTn41Y67aOsShCl4YrACUiX4IJMFXsiQUEbVIx_ig')"></div>
+</div>
+<div class="relative z-10 text-center px-margin-edge transition-all duration-1000 opacity-100 translate-y-0">
+<span class="font-label-caps text-label-caps text-white/70 mb-4 block tracking-[0.5em]">DISCOVER THE LOOKBOOK</span>
+<h2 class="font-display-lg text-display-lg text-white uppercase group-hover:tracking-widest transition-all duration-700">FIND YOUR STYLE</h2>
+<div class="mt-8">
+<a class="inline-flex items-center gap-4 text-white font-label-caps text-label-caps border-b border-white pb-2" href="gallery.html">
+                        EXPLORE GALLERY <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 5: Locations Teaser -->
+<section class="py-stack-lg px-margin-edge max-w-container-max mx-auto text-center bg-woody">
+<span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">Connectivity</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mt-4 mb-stack-md">OUR STUDIOS</h2>
+<div class="flex flex-col md:flex-row justify-center gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
+<a class="p-10 border border-border-muted bg-white/50 backdrop-blur-sm flex-1 text-left space-y-4 hover:border-primary transition-all block" href="locations.html">
+<h3 class="font-headline-lg text-headline-lg">RAILWAY ROAD (MAIN BRANCH)</h3>
+<p class="font-body-lg text-body-lg text-text-dimmed">Fandi Center, near Raja Pump Chowk, Railway Road, Bahawalpur, Punjab</p>
+<div class="pt-4 flex items-center gap-2 font-label-caps text-label-caps text-primary">
+<span class="material-symbols-outlined">location_on</span> VIEW ON MAP
+                    </div>
+</a>
+<a class="p-10 border border-border-muted bg-white/50 backdrop-blur-sm flex-1 text-left space-y-4 hover:border-primary transition-all block" href="locations.html">
+<h3 class="font-headline-lg text-headline-lg">SATELLITE TOWN BRANCH</h3>
+<p class="font-body-lg text-body-lg text-text-dimmed">Satellite Town, Bahawalpur District, Punjab</p>
+<div class="pt-4 flex items-center gap-2 font-label-caps text-label-caps text-primary">
+<span class="material-symbols-outlined">location_on</span> VIEW ON MAP
+                    </div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-charcoal text-on-primary">
+<div class="flex flex-col items-center pt-stack-lg pb-stack-md px-margin-edge w-full text-center max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg text-on-primary mb-stack-sm">HICKS</div>
+<div class="flex flex-wrap justify-center gap-8 mb-stack-md">
+<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">PRIVACY POLICY</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">TERMS OF SERVICE</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="https://instagram.com/hicksmens" target="_blank">INSTAGRAM</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="https://facebook.com/hicksmens" target="_blank">FACEBOOK</a>
+</div>
+<div class="font-label-caps text-label-caps text-on-primary/50 border-t border-on-primary/10 pt-10 w-full">
+                © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-sm');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.remove('py-2', 'shadow-sm');
+                header.classList.add('py-6');
+            }
+        });
+
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const close = document.getElementById('mobile-menu-close');
+        const menu = document.getElementById('mobile-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.remove('translate-x-full');
+        });
+
+        close.addEventListener('click', () => {
+            menu.classList.add('translate-x-full');
+        });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+<style>
+        @keyframes subtle-zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 1.5s ease-out forwards;
+        }
+    </style>
+</body></html>

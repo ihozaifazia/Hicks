@@ -236,7 +236,7 @@
 </div>
 </div>
 <!-- Primary Action -->
-<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-body-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300 active:scale-[0.98]">
+<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-body-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300 active:scale-[0.98]" id="confirm-btn" onclick="confirmBooking()">
     Confirm Booking
 </button>
 <button class="w-full bg-transparent text-text-dimmed py-4 mt-2 font-label-caps text-label-caps uppercase hover:text-primary transition-colors" onclick="window.location.href='booking_form.html'">
@@ -251,6 +251,33 @@
 </div>
 </div>
 </main>
+
+<!-- ── Success Overlay ─────────────────────────────────────────── -->
+<div id="success-overlay" class="fixed inset-0 z-[200] bg-background flex flex-col items-center justify-center px-margin-edge text-center" style="display:none!important; opacity:0; transition: opacity 0.6s ease;">
+  <div class="max-w-lg w-full">
+    <!-- Animated checkmark -->
+    <div class="flex justify-center mb-stack-md">
+      <div class="w-20 h-20 border-2 border-primary flex items-center justify-center">
+        <span class="material-symbols-outlined text-primary" style="font-size:48px;">check</span>
+      </div>
+    </div>
+    <span class="font-label-caps text-label-caps text-text-dimmed tracking-widest block mb-4">BOOKING CONFIRMED</span>
+    <h1 class="font-display-lg text-[64px] leading-none tracking-tight uppercase text-primary mb-stack-sm">You're in.</h1>
+    <p class="font-body-xl text-body-xl text-on-surface-variant max-w-sm mx-auto mb-2">
+      Your appointment request has been received. Our team will confirm your slot via phone.
+    </p>
+    <p class="font-label-caps text-label-caps text-text-dimmed mb-stack-md" id="success-ref"></p>
+    <div class="border-t border-border-muted pt-stack-md space-y-4">
+      <button onclick="window.location.href='index.html'" class="w-full bg-primary text-on-primary py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300">
+        Back to Home
+      </button>
+      <button onclick="window.location.href='booking_form.html'" class="w-full text-text-dimmed py-4 font-label-caps text-label-caps uppercase hover:text-primary transition-colors">
+        Book Another Appointment
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="w-full mt-stack-lg bg-primary relative overflow-hidden" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB-c4ZQLjnpGRWR9lZVYPUqJYxX_0WfvwX2u8FCjh5WFEIxi3RB4VoD1abJLXnmKtUgGM9aeDTeAafw26-0nxVgPsEtofY5dmY7v1IV7ta14WgdgIruYVfsyCdKd-Ta_hD5heuYrOXR_FUGg7UtIlgduMxO38MbNEm_tYP_54ITcYdMIvnYhMCUZrLzNNYTqfzg90d8_Q2Yv_dyt93jGUySUqbvPokY0RVnHJ0htO6jW1OAS29a8W8ttubg5y7IBshlbg&quot;); background-size: cover; background-position: center center;">
 <!-- Overlay for readability -->
@@ -347,6 +374,30 @@
             const footer = document.querySelector('footer');
             if (footer) footer.style.backgroundPositionY = (window.pageYOffset * 0.1) + 'px';
         });
+
+        // ── Confirm Booking ───────────────────────────────────
+        function confirmBooking() {
+            const btn = document.getElementById('confirm-btn');
+            btn.textContent = 'PROCESSING...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Generate a short reference number for the prototype
+                const ref = 'HKS-' + Date.now().toString(36).toUpperCase().slice(-6);
+                document.getElementById('success-ref').textContent = 'Reference: ' + ref;
+
+                // Show the overlay
+                const overlay = document.getElementById('success-overlay');
+                overlay.style.removeProperty('display');
+                // Force reflow then fade in
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+                });
+
+                // Clear booking data from localStorage
+                localStorage.removeItem('hicksBooking');
+            }, 1400);
+        }
     </script>
 
 

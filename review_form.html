@@ -29,6 +29,32 @@
         .custom-shadow {
             box-shadow: 2px 2px 0px 0px #000000;
         }
+        body, .bg-woody, .bg-background, .bg-white, .bg-surface-container-lowest {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .bg-charcoal, .bg-surface-charcoal, .bg-primary, footer {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .hover\:bg-white:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+            background-size: cover;
+        }
+        .hover\:bg-primary:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+            background-size: cover;
+        }
+        @keyframes loaderPulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .loader-text {
+            animation: loaderPulse 2s infinite ease-in-out;
+        }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -127,6 +153,10 @@
     </script>
 </head>
 <body class="bg-background text-on-surface font-body-lg text-body-lg overflow-x-hidden">
+<!-- Page Loader -->
+<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
+    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
+</div>
 <!-- Header / TopNavBar -->
 <header class="w-full top-0 sticky z-50 bg-background border-b border-border-muted">
 <nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
@@ -291,7 +321,7 @@
 <a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">FACEBOOK</a>
 </div>
 <p class="font-label-caps text-label-caps text-on-primary-container mt-stack-sm">
-                © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+                © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
             </p>
 </div>
 </footer>
@@ -398,6 +428,19 @@
                 localStorage.removeItem('hicksBooking');
             }, 1400);
         }
+
+        // Dismiss Page Loader
+        window.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 500);
+                }, 1000);
+            }
+        });
     </script>
 
 

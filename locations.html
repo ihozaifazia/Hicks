@@ -1,294 +1,540 @@
-<!DOCTYPE html><html class="light" lang="en" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>LOCATIONS | HICKS PREMIUM MEN'S SALON</title>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet">
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Theme Configuration -->
-<script id="tailwind-config">
+<!doctype html>
+<html class="light" lang="en" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LOCATIONS | HICKS PREMIUM MEN'S SALON</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "surface-container-low": "#f3f3f3",
-                    "surface-container-high": "#e8e8e8",
-                    "border-muted": "#E5E5E5",
-                    "primary-container": "#1b1b1b",
-                    "on-secondary": "#ffffff",
-                    "surface-container-highest": "#e2e2e2",
-                    "surface-bright": "#f9f9f9",
-                    "background": "#f9f9f9",
-                    "error-container": "#ffdad6",
-                    "tertiary": "#000000",
-                    "primary": "#000000",
-                    "secondary-fixed-dim": "#c6c6c7",
-                    "inverse-on-surface": "#f1f1f1",
-                    "tertiary-container": "#1b1b1b",
-                    "on-tertiary-fixed": "#1b1b1b",
-                    "on-tertiary": "#ffffff",
-                    "tertiary-fixed-dim": "#c6c6c6",
-                    "surface-container-lowest": "#ffffff",
-                    "on-surface": "#1b1b1b",
-                    "primary-fixed": "#e2e2e2",
-                    "inverse-surface": "#303030",
-                    "on-surface-variant": "#4c4546",
-                    "on-secondary-fixed": "#1a1c1c",
-                    "tertiary-fixed": "#e2e2e2",
-                    "surface": "#f9f9f9",
-                    "secondary": "#5d5f5f",
-                    "surface-variant": "#e2e2e2",
-                    "primary-fixed-dim": "#c6c6c6",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#cfc4c5",
-                    "on-background": "#1b1b1b",
-                    "on-primary": "#ffffff",
-                    "secondary-fixed": "#e2e2e2",
-                    "surface-dim": "#dadada",
-                    "on-primary-fixed": "#1b1b1b",
-                    "on-primary-container": "#848484",
-                    "on-error-container": "#93000a",
-                    "secondary-container": "#dfe0e0",
-                    "outline": "#7e7576",
-                    "on-tertiary-fixed-variant": "#474747",
-                    "surface-container": "#eeeeee",
-                    "surface-charcoal": "#1A1A1A",
-                    "on-primary-fixed-variant": "#474747",
-                    "on-secondary-fixed-variant": "#454747",
-                    "surface-tint": "#5e5e5e",
-                    "error": "#ba1a1a",
-                    "on-secondary-container": "#616363",
-                    "inverse-primary": "#c6c6c6",
-                    "text-dimmed": "#737373",
-                    "on-tertiary-container": "#848484"
+            colors: {
+              "surface-container-low": "#f3f3f3",
+              "surface-container-high": "#e8e8e8",
+              "border-muted": "#E5E5E5",
+              "primary-container": "#1b1b1b",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e2e2e2",
+              "surface-bright": "#f9f9f9",
+              background: "#f9f9f9",
+              "error-container": "#ffdad6",
+              tertiary: "#000000",
+              primary: "#000000",
+              "secondary-fixed-dim": "#c6c6c7",
+              "inverse-on-surface": "#f1f1f1",
+              "tertiary-container": "#1b1b1b",
+              "on-tertiary-fixed": "#1b1b1b",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#c6c6c6",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1b1b1b",
+              "primary-fixed": "#e2e2e2",
+              "inverse-surface": "#303030",
+              "on-surface-variant": "#4c4546",
+              "on-secondary-fixed": "#1a1c1c",
+              "tertiary-fixed": "#e2e2e2",
+              surface: "#f9f9f9",
+              secondary: "#5d5f5f",
+              "surface-variant": "#e2e2e2",
+              "primary-fixed-dim": "#c6c6c6",
+              "on-error": "#ffffff",
+              "outline-variant": "#cfc4c5",
+              "on-background": "#1b1b1b",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#e2e2e2",
+              "surface-dim": "#dadada",
+              "on-primary-fixed": "#1b1b1b",
+              "on-primary-container": "#848484",
+              "on-error-container": "#93000a",
+              "secondary-container": "#dfe0e0",
+              outline: "#7e7576",
+              "on-tertiary-fixed-variant": "#474747",
+              "surface-container": "#eeeeee",
+              "surface-charcoal": "#1A1A1A",
+              "on-primary-fixed-variant": "#474747",
+              "on-secondary-fixed-variant": "#454747",
+              "surface-tint": "#5e5e5e",
+              error: "#ba1a1a",
+              "on-secondary-container": "#616363",
+              "inverse-primary": "#c6c6c6",
+              "text-dimmed": "#737373",
+              "on-tertiary-container": "#848484",
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
             },
-            "spacing": {
-                    "stack-sm": "16px",
-                    "stack-md": "40px",
-                    "gutter": "24px",
-                    "stack-lg": "80px",
-                    "container-max": "1280px",
-                    "margin-edge": "40px"
+            spacing: {
+              "stack-sm": "16px",
+              "stack-md": "40px",
+              gutter: "24px",
+              "stack-lg": "80px",
+              "container-max": "1280px",
+              "margin-edge": "40px",
             },
-            "fontFamily": {
-                    "body-xl": ["Hanken Grotesk"],
-                    "headline-lg-mobile": ["Anton"],
-                    "label-caps": ["Hanken Grotesk"],
-                    "headline-xl": ["Anton"],
-                    "headline-lg": ["Anton"],
-                    "body-lg": ["Hanken Grotesk"],
-                    "display-lg": ["Anton"],
-                    "body-sm": ["Hanken Grotesk"]
+            fontFamily: {
+              "body-xl": ["Hanken Grotesk"],
+              "headline-lg-mobile": ["Anton"],
+              "label-caps": ["Hanken Grotesk"],
+              "headline-xl": ["Anton"],
+              "headline-lg": ["Anton"],
+              "body-lg": ["Hanken Grotesk"],
+              "display-lg": ["Anton"],
+              "body-sm": ["Hanken Grotesk"],
             },
-            "fontSize": {
-                    "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                    "headline-xl": ["48px", {"lineHeight": "52px", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
-                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
-            }
+            fontSize: {
+              "body-xl": ["20px", { lineHeight: "32px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "28px",
+                { lineHeight: "32px", fontWeight: "400" },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-xl": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "36px", fontWeight: "400" },
+              ],
+              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "display-lg": [
+                "80px",
+                {
+                  lineHeight: "88px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            },
           },
         },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+        font-size: 20px;
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-            font-size: 20px;
+      .dotted-leader {
+        display: flex;
+        align-items: baseline;
+      }
+      .dotted-leader::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px dotted #e5e5e5;
+        margin: 0 10px;
+        order: 2;
+      }
+      .dotted-leader .value {
+        order: 3;
+      }
+      .map-container {
+        filter: grayscale(1) contrast(1.1) brightness(0.9);
+        transition: filter 0.5s ease;
+      }
+      .map-container:hover {
+        filter: grayscale(0.2) contrast(1);
+      }
+      body,
+      .texture-light,
+      .bg-woody,
+      .bg-background,
+      .bg-white,
+      .bg-surface-container-lowest {
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA") !important;
+        background-size: cover;
+        background-repeat: repeat;
+      }
+      .texture-dark,
+      .bg-charcoal,
+      .bg-surface-charcoal,
+      .bg-primary,
+      footer {
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ") !important;
+        background-size: cover;
+        background-repeat: repeat;
+      }
+      .hover\:bg-white:hover {
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA") !important;
+        background-size: cover;
+      }
+      .hover\:bg-primary:hover {
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ") !important;
+        background-size: cover;
+      }
+      @keyframes loaderPulse {
+        0% {
+          transform: scale(0.95);
+          opacity: 0.8;
         }
-        .dotted-leader {
-            display: flex;
-            align-items: baseline;
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
         }
-        .dotted-leader::after {
-            content: "";
-            flex: 1;
-            border-bottom: 1px dotted #E5E5E5;
-            margin: 0 10px;
-            order: 2;
+        100% {
+          transform: scale(0.95);
+          opacity: 0.8;
         }
-        .dotted-leader .value {
-            order: 3;
-        }
-        .map-container {
-            filter: grayscale(1) contrast(1.1) brightness(0.9);
-            transition: filter 0.5s ease;
-        }
-        .map-container:hover {
-            filter: grayscale(0.2) contrast(1);
-        }
-        .texture-light {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA');
-            background-blend-mode: multiply;
-        }
-        .texture-dark {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8UjviLQuRMRuGFYuF0zea992Q1PhQpOcZSUgFdUtvp76dBe97-4c7jXy_rIqP63DxmA2tQzp20wmJ1oWTiDied2gaS356Hr5T21ERNfY0RD4nFVg0h6d8_nkO3I7u4v4Hr_DHHeGL5m7NWh-4OdclH1eO1vG2MvZ3JIMTlDDtXfHgKC4zSbKwCOt6w1rPG38OKXJRKnJaBvEBJAQU88kmhm9vAhAUOq1W5oBxSn4jwJbrimy5bsWHvk7S80xG4PDbyQ');
-            background-blend-mode: overlay;
-        }
+      }
+      .loader-text {
+        animation: loaderPulse 2s infinite ease-in-out;
+      }
     </style>
-</head>
-<body class="bg-background text-on-background font-body-lg antialiased texture-light">
-<!-- TopAppBar -->
-<header class="w-full top-0 sticky bg-white border-b border-border-muted z-50" id="main-header">
-<nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
-<a class="font-headline-lg text-headline-lg tracking-tighter text-primary" href="index.html">HICKS</a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="index.html">HOME</a>
-<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="service.html">SERVICES</a>
-<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-300 cursor-pointer active:opacity-70" href="locations.html">LOCATIONS</a>
-<a class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="gallery.html">GALLERY</a>
-</div>
-<div class="flex items-center gap-6">
-<button class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3 uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300" onclick="window.location.href='booking_form.html'">
-                BOOK NOW
-            </button>
-<button class="md:hidden text-primary" id="mobile-menu-toggle">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-</header>
-<!-- Mobile Menu -->
-<div class="fixed inset-0 bg-background z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
-<button class="absolute top-8 right-margin-edge text-primary" id="mobile-menu-close">
-<span class="material-symbols-outlined" style="font-size: 40px;">close</span>
-</button>
-<ul class="flex flex-col gap-8 text-center">
-<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="index.html">HOME</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="service.html">SERVICES</a></li>
-<li class="font-headline-xl text-headline-xl text-primary"><a href="locations.html">LOCATIONS</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="gallery.html">GALLERY</a></li>
-</ul>
-</div>
-<main class="max-w-container-max mx-auto px-margin-edge">
-<!-- Hero Section -->
-<section class="mt-stack-lg mb-stack-md transition-all duration-1000 opacity-100 p-8 md:p-12 border border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCTYHsTeCBEFoh_xHpd17M6A2mAPclBczi6vGR7XWbxtmOQcpTQ6-SAwlNoFUxrs9uzDqR45Y9qBlGkTc8XhaaYym7cah45_Z-lt_2b-jMkulSd-EKX9n5hJxsPc9jkUbze3PA-6y53cEGHGuyEAdGYPS-06kPjkfqVL0dcKXkdJDHL3bncXOLrUduXfICwHJCXT_QabWRASw5p2lZ9IoJBU2Dj5-W86hNqWnM6SpZMiu0Ln_u1RCUFUYHt9_tKgyflOg&quot;); background-size: cover; background-repeat: no-repeat; background-position: center center;">
-<h1 class="font-display-lg text-display-lg uppercase max-w-4xl text-on-primary">Establishments of Distinction</h1>
-<p class="font-body-xl text-body-xl text-on-primary opacity-60 mt-stack-sm max-w-2xl" style="opacity: 0;">Premium grooming services in the heart of Bahawalpur. Visit our sanctuaries of style for a masterfully curated experience.</p>
-</section>
-<!-- Locations Grid (Asymmetric) -->
-<section class="flex flex-col gap-stack-lg mb-stack-lg transition-all duration-1000 opacity-100">
-<!-- Row 1: Railway Road -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center border-b border-border-muted pb-stack-md">
-<a class="block overflow-hidden border border-border-muted group" href="https://maps.google.com" target="_blank">
-<img alt="Railway Road Branch" class="w-full aspect-[16/9] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlST2JebyeMIQnMqnAj2xoTsQgx7YTWeGj0j_CbkrSlBYfNEIZ0a8ex08_inxOPYD2L6GQazzK_XVnLR66QI5WTKQGfSvEvEODdxuPT0qUya0wsMhBIBEW5-IZu1IbKSN4_kLtSwqgvhotHy6HwNMxtXSNXGYidEC9w3hCUrSPSlCVl1QNkr80XJZSikw__MvwWgQF7l3jtDpJmyEarfqBcuw0rHvi6zLujrKealkBvZ9ZZly_Q5mcnAa6g3s0hw5v5Q">
-</a>
-<div class="flex flex-col gap-4">
-<h2 class="font-headline-xl text-headline-xl uppercase">Railway Road (Main Branch)</h2>
-<div class="space-y-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">location_on</span>
-<span class="font-body-lg">Fandi Center, near Raja Pump Chowk, Railway Road, Bahawalpur</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">call</span>
-<span class="font-body-lg">+92 346 8541177</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">schedule</span>
-<span class="font-body-lg">Mon-Sun 10:00 AM - 10:00 PM</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Row 2: Satellite Town -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center border-b border-border-muted pb-stack-md">
-<a class="block overflow-hidden border border-border-muted group" href="https://maps.google.com" target="_blank">
-<img alt="Satellite Town Branch" class="w-full aspect-[16/9] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXSu6ACKiRURUBVueuUVDLC6XGnGev7q07D8M6yZuHFRN2u3YmoRTbNEUeMu4UARGWcC2naPBnI7jDFH8TB3naBEEE1AczeEnQ4IaiPCrPt4AVKE4c4FA3cQtPLQFKuXfQuZ2o1E4IL4HQUE_nFZ4kceoI1SYbyBMofL1etpQru0N6jtitvYE8qciCyRnX7n20xCbutxOpE6AS7iRe_9OVTkrCmjdR48GrM9FNomf8JoPKWlqiK2MB_IUQxSwW9HX1YQ">
-</a>
-<div class="flex flex-col gap-4">
-<h2 class="font-headline-xl text-headline-xl uppercase">Satellite Town Branch</h2>
-<div class="space-y-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">location_on</span>
-<span class="font-body-lg">Satellite Town, Bahawalpur</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">call</span>
-<span class="font-body-lg">+92 346 8541177</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">schedule</span>
-<span class="font-body-lg">Mon-Sun 10:00 AM - 10:00 PM</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Row 3: DHA Road -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
-<a class="block overflow-hidden border border-border-muted group" href="https://maps.google.com" target="_blank">
-<img alt="DHA Road Branch" class="w-full aspect-[16/9] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpJw_vx8YIWEnUzifP4aFLRLCNmfZPpk-MxQ_zPVc8zwK4fqrVELnuIDftiIDYvmLqcNhf8_fVKTtHmc58z4BtzGAKEX_9u6rDnudE0lkyN5OFN6YbMPd2dWRXbfBAd1GVUPujTRSYDh47dDnxmIAIRNn8SCoFhJ5-e5mZQe47hhLll3mksNAuPbhW-tRIxOL2wxsLYcEfD1mAkRvjWhMMS7hdNFxgsvdOoBuVCmSQw60NjLf5MulLD5BJQynuaDnC6g">
-</a>
-<div class="flex flex-col gap-4">
-<h2 class="font-headline-xl text-headline-xl uppercase">DHA ROAD BRANCH</h2>
-<span class="font-headline-xl text-headline-xl text-primary tracking-widest uppercase">Opening Soon</span>
-</div>
-</div>
-</section>
-<!-- Dotted Menu Style Operational Hours -->
-<!-- Atmospheric Imagery Section -->
-</main>
-<!-- Footer -->
-<footer class="w-full bg-surface-charcoal text-white flex flex-col items-center py-12 px-margin-edge text-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAve22IeDfiz4JxX0doMsfTNQNg8vUxwjaetArebLdyS1bh0lcxBsWvctS_93v0W6ZlNLElKUgDuxViQXnea4lQxysYDfUXj_BnBARtqz3iRucoyhqzQ6yHYbVQg9RNIBdk3GHRrbDyG41Wc1hmu-qGTYO428kkCzyTdG5DV3M-VreRVXmM5jaZsDRv2Og0tc0iEaLeD3H9V5VSRh25Wzm2AKTcGSQD-qj-v0dPr_y3ZF2y1MD_RRd2V6wXWOdActmbFw&quot;); background-size: cover; background-position: center center;">
-<div class="font-display-lg text-display-lg uppercase mb-8 tracking-tighter">HICKS</div>
-<div class="flex flex-wrap justify-center gap-8 mb-12">
-<a class="font-label-caps text-label-caps hover:opacity-70 transition-opacity" href="#">PRIVACY POLICY</a>
-<a class="font-label-caps text-label-caps hover:opacity-70 transition-opacity" href="#">TERMS OF SERVICE</a>
-<a class="font-label-caps text-label-caps hover:opacity-70 transition-opacity" href="https://instagram.com/hicksmens" target="_blank">INSTAGRAM</a>
-<a class="font-label-caps text-label-caps hover:opacity-70 transition-opacity" href="https://facebook.com/hicksmens" target="_blank">FACEBOOK</a>
-</div>
-<div class="w-full border-t border-white/10 pt-8">
-<div class="font-label-caps text-[10px] tracking-widest opacity-60">
-      © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+  </head>
+  <body
+    class="bg-background text-on-background font-body-lg antialiased texture-light"
+  >
+    <!-- Page Loader -->
+    <div
+      id="page-loader"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal"
+      style="
+        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ&quot;);
+        background-size: cover;
+        background-position: center;
+        transition: opacity 0.5s ease-in-out;
+      "
+    >
+      <h1
+        class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text"
+      >
+        HICKS
+      </h1>
     </div>
-</div>
-</footer>
-<script>
-        // Mobile Menu Logic
-        const toggle = document.getElementById('mobile-menu-toggle');
-        const close = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
+    <!-- TopAppBar -->
+    <header
+      class="w-full top-0 sticky bg-white border-b border-border-muted z-50"
+      id="main-header"
+    >
+      <nav
+        class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto"
+      >
+        <a
+          class="font-headline-lg text-headline-lg tracking-tighter text-primary"
+          href="index.html"
+          >HICKS</a
+        >
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70"
+            href="index.html"
+            >HOME</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70"
+            href="service.html"
+            >SERVICES</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-300 cursor-pointer active:opacity-70"
+            href="locations.html"
+            >LOCATIONS</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70"
+            href="gallery.html"
+            >GALLERY</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3 uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300"
+            onclick="window.location.href = 'booking_form.html'"
+          >
+            BOOK NOW
+          </button>
+          <button class="md:hidden text-primary" id="mobile-menu-toggle">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- Mobile Menu -->
+    <div
+      class="fixed inset-0 bg-background z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden"
+      id="mobile-menu"
+    >
+      <button
+        class="absolute top-8 right-margin-edge text-primary"
+        id="mobile-menu-close"
+      >
+        <span class="material-symbols-outlined" style="font-size: 40px"
+          >close</span
+        >
+      </button>
+      <ul class="flex flex-col gap-8 text-center">
+        <li class="font-headline-xl text-headline-xl text-text-dimmed">
+          <a href="index.html">HOME</a>
+        </li>
+        <li class="font-headline-xl text-headline-xl text-text-dimmed">
+          <a href="service.html">SERVICES</a>
+        </li>
+        <li class="font-headline-xl text-headline-xl text-primary">
+          <a href="locations.html">LOCATIONS</a>
+        </li>
+        <li class="font-headline-xl text-headline-xl text-text-dimmed">
+          <a href="gallery.html">GALLERY</a>
+        </li>
+      </ul>
+    </div>
+    <main class="max-w-container-max mx-auto px-margin-edge">
+      <!-- Hero Section -->
+      <section
+        class="mt-stack-lg mb-stack-md transition-all duration-1000 opacity-100 p-8 md:p-12 border border-border-muted"
+        style="
+          background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCTYHsTeCBEFoh_xHpd17M6A2mAPclBczi6vGR7XWbxtmOQcpTQ6-SAwlNoFUxrs9uzDqR45Y9qBlGkTc8XhaaYym7cah45_Z-lt_2b-jMkulSd-EKX9n5hJxsPc9jkUbze3PA-6y53cEGHGuyEAdGYPS-06kPjkfqVL0dcKXkdJDHL3bncXOLrUduXfICwHJCXT_QabWRASw5p2lZ9IoJBU2Dj5-W86hNqWnM6SpZMiu0Ln_u1RCUFUYHt9_tKgyflOg&quot;);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        "
+      >
+        <h1
+          class="font-display-lg text-display-lg uppercase max-w-4xl text-on-primary"
+        >
+          Establishments of Distinction
+        </h1>
+        <p
+          class="font-body-xl text-body-xl text-on-primary opacity-60 mt-stack-sm max-w-2xl"
+          style="opacity: 1"
+        >
+          Premium grooming services in the heart of Bahawalpur. Visit our
+          sanctuaries of style for a masterfully curated experience.
+        </p>
+      </section>
+      <!-- Locations Grid (Asymmetric) -->
+      <section
+        class="flex flex-col gap-stack-lg mb-stack-lg transition-all duration-1000 opacity-100"
+      >
+        <!-- Row 1: Railway Road -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center border-b border-border-muted pb-stack-md"
+        >
+          <div class="block overflow-hidden border border-border-muted group w-full aspect-[16/9]">
+            <iframe 
+              src="https://maps.google.com/maps?q=29.403819,71.664898&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h2 class="font-headline-xl text-headline-xl uppercase">
+              Railway Road (Main Branch)
+            </h2>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >location_on</span
+                >
+                <span class="font-body-lg"
+                  >Fandi Center, near Raja Pump Chowk, Railway Road,
+                  Bahawalpur</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">call</span>
+                <span class="font-body-lg">+92 346 8541177</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >schedule</span
+                >
+                <span class="font-body-lg">Mon-Sun 10:00 AM - 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2: Satellite Town -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center border-b border-border-muted pb-stack-md"
+        >
+          <div class="block overflow-hidden border border-border-muted group w-full aspect-[16/9]">
+            <iframe 
+              src="https://maps.google.com/maps?q=Hicks%20Men%20Salon,%20Satellite%20Town,%20Bahawalpur&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h2 class="font-headline-xl text-headline-xl uppercase">
+              Satellite Town Branch
+            </h2>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >location_on</span
+                >
+                <span class="font-body-lg">Satellite Town, Bahawalpur</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">call</span>
+                <span class="font-body-lg">+92 325 8079200</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >schedule</span
+                >
+                <span class="font-body-lg">Mon-Sun 10:00 AM - 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Row 3: DHA Road -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+          <a
+            class="block overflow-hidden border border-border-muted group"
+            href="https://maps.google.com"
+            target="_blank"
+          >
+            <img
+              alt="DHA Road Branch"
+              class="w-full aspect-[16/9] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpJw_vx8YIWEnUzifP4aFLRLCNmfZPpk-MxQ_zPVc8zwK4fqrVELnuIDftiIDYvmLqcNhf8_fVKTtHmc58z4BtzGAKEX_9u6rDnudE0lkyN5OFN6YbMPd2dWRXbfBAd1GVUPujTRSYDh47dDnxmIAIRNn8SCoFhJ5-e5mZQe47hhLll3mksNAuPbhW-tRIxOL2wxsLYcEfD1mAkRvjWhMMS7hdNFxgsvdOoBuVCmSQw60NjLf5MulLD5BJQynuaDnC6g"
+            />
+          </a>
+          <div class="flex flex-col gap-4">
+            <h2 class="font-headline-xl text-headline-xl uppercase">
+              DHA ROAD BRANCH
+            </h2>
+            <span
+              class="font-headline-xl text-headline-xl text-primary tracking-widest uppercase"
+              >Opening Soon</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Dotted Menu Style Operational Hours -->
+      <!-- Atmospheric Imagery Section -->
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full bg-surface-charcoal text-white flex flex-col items-center py-12 px-margin-edge text-center"
+      style="
+        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAve22IeDfiz4JxX0doMsfTNQNg8vUxwjaetArebLdyS1bh0lcxBsWvctS_93v0W6ZlNLElKUgDuxViQXnea4lQxysYDfUXj_BnBARtqz3iRucoyhqzQ6yHYbVQg9RNIBdk3GHRrbDyG41Wc1hmu-qGTYO428kkCzyTdG5DV3M-VreRVXmM5jaZsDRv2Og0tc0iEaLeD3H9V5VSRh25Wzm2AKTcGSQD-qj-v0dPr_y3ZF2y1MD_RRd2V6wXWOdActmbFw&quot;);
+        background-size: cover;
+        background-position: center center;
+      "
+    >
+      <div
+        class="font-display-lg text-display-lg uppercase mb-8 tracking-tighter"
+      >
+        HICKS
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 mb-12">
+        <a
+          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
+          href="#"
+          >PRIVACY POLICY</a
+        >
+        <a
+          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
+          href="#"
+          >TERMS OF SERVICE</a
+        >
+        <a
+          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
+          href="https://instagram.com/hicksmens"
+          target="_blank"
+          >INSTAGRAM</a
+        >
+        <a
+          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
+          href="https://facebook.com/hicksmens"
+          target="_blank"
+          >FACEBOOK</a
+        >
+      </div>
+      <div class="w-full border-t border-white/10 pt-8">
+        <div class="font-label-caps text-[10px] tracking-widest opacity-60">
+          © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Mobile Menu Logic
+      const toggle = document.getElementById("mobile-menu-toggle");
+      const close = document.getElementById("mobile-menu-close");
+      const menu = document.getElementById("mobile-menu");
 
-        toggle.addEventListener('click', () => {
-            menu.classList.remove('translate-x-full');
+      toggle.addEventListener("click", () => {
+        menu.classList.remove("translate-x-full");
+      });
+
+      close.addEventListener("click", () => {
+        menu.classList.add("translate-x-full");
+      });
+
+      // Simple intersection observer for reveal effect
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100");
+            entry.target.classList.remove("opacity-0", "translate-y-4");
+          }
         });
+      }, observerOptions);
 
-        close.addEventListener('click', () => {
-            menu.classList.add('translate-x-full');
-        });
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-4",
+        );
+        observer.observe(section);
+      });
 
-        // Simple intersection observer for reveal effect
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-4');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
-            observer.observe(section);
-        });
+      // Dismiss Page Loader
+      window.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("page-loader");
+        if (loader) {
+          setTimeout(() => {
+            loader.style.opacity = "0";
+            setTimeout(() => {
+              loader.remove();
+            }, 500);
+          }, 1000);
+        }
+      });
     </script>
-
-
-</body></html>
+  </body>
+</html>

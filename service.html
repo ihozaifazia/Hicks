@@ -130,15 +130,23 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         /* Custom Background Textures from DataStore */
-        .bg-woody-texture {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqRkV8M-no3fW2n1Y5MnBKn67Cah_rzj8_Y-39MSBLU3_y_-we-gYe9SkUYBn1CUF8AJEv7PNuj0cy1GRHF9li1MeQcCbthSiZqib3GKhCs4jTMYhGzh7oe9K_87a0NDeVGu_aHoF3Vej3r_I_xXspT2m4vor0BgLhtNqjN9TZDHTXdYcvGyqbCG_oS9gwvj2JXOpLLoICkZHy6yE3BCEEKF0KPyBDiJr9oPnKmDkshEM2WMpketsEa0vU1TmBhkE-BQ');
+        body, .bg-woody-texture, .bg-background, .bg-white, .bg-surface-container-lowest, .card-texture-light {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
             background-size: cover;
             background-repeat: repeat;
         }
-        .bg-charcoal-texture {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4BilyF6sYkDYGntXl8UrSu0CKxnsls9B-WwDe1305QcKpMt2EP0c9qhpQfiq0p5XmNYcxSwXCDvUNxCevEl41oS45aRhzUPDKgx0JoMhjiMHDgtNfX3iyXIZFC3eKAor5cLejCqTvtFYd0XqtxCTtqnrDrwjyKSMh7uyKenD9zPibq0y9TJ6l4KXgSIMixgy4vNHcFWrfOKy8-ZBff_nmZJu8Fky5aLqRSIjzrg4pyx2Z2Iiazeswn0lsyB2Dq8PnCQ');
+        .bg-charcoal, .bg-surface-charcoal, .bg-primary, .bg-charcoal-texture, .card-texture-dark, footer {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
             background-size: cover;
             background-repeat: repeat;
+        }
+        .hover\:bg-white:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+            background-size: cover;
+        }
+        .hover\:bg-primary:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+            background-size: cover;
         }
         .texture-light-blend {
             background-blend-mode: overlay;
@@ -146,9 +154,21 @@
         .texture-dark-blend {
             background-blend-mode: multiply;
         }
+        @keyframes loaderPulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .loader-text {
+            animation: loaderPulse 2s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="text-on-background antialiased selection:bg-primary selection:text-on-primary" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBNcootmdmuKg0POwIrNpRQu8PnbKGAyIZI3hNXX_HLu2uNU7QHpD_q5m_qMTHuvC4Z_X6tiS9jWd6q_fFhHXJHRj43HwB8HbQ6auauG4Y1mjwbg3l24Q85EQbJHUcmEQidu-Ubb1jAb5HAYDgBxjYKsee1RrLP_Fc0crLR4J42XRlaBBrUNp2TJuZxIGvGlQNzmyCbaJAYEtL5eBJ26h9UrqkY8dj_ewN_qHoTPVNkXZVZoJS4tlINlKP8wD0xMzDipw&quot;); background-size: auto; background-repeat: repeat;">
+<!-- Page Loader -->
+<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
+    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
+</div>
 <!-- TopNavBar -->
 <header class="w-full top-0 sticky z-50 bg-white border-b border-border-muted" id="main-header">
 <nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
@@ -195,245 +215,183 @@
             </p>
 </div>
 </section>
-<!-- Main Services Grid -->
-<div class="mt-stack-lg flex flex-wrap items-center justify-center gap-4 px-margin-edge"><div class="relative group">
-<button class="font-label-caps text-label-caps px-8 py-3 bg-primary text-on-primary border border-primary transition-all duration-300 uppercase flex items-center gap-2">
-    ALL <span class="material-symbols-outlined text-sm">expand_more</span>
-</button>
-<div class="absolute left-0 top-full mt-2 w-64 bg-white border border-border-muted shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted" href="#">HAIRCUTS &amp; GROOMING</a>
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted" href="#">BEARD &amp; FACIAL HAIR</a>
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted" href="#">HAIR COLOUR &amp; CHEMICAL TREATMENTS</a>
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted" href="#">SKIN, FACE &amp; HAIR REMOVAL</a>
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted" href="#">BODY CARE &amp; WELLNESS</a>
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted" href="#">PACKAGES</a>
-<a class="block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">BUNDLES</a>
+<!-- Main Services Grid Selector -->
+<div class="mt-stack-lg flex flex-wrap items-center justify-center gap-4 px-margin-edge w-full">
+    <!-- Category Dropdown Container -->
+    <div class="relative group">
+        <button id="category-trigger" class="font-label-caps text-label-caps px-8 py-3 bg-primary text-on-primary border border-primary transition-all duration-300 uppercase flex items-center gap-2 cursor-pointer">
+            <span id="current-category">ALL</span> <span class="material-symbols-outlined text-sm">expand_more</span>
+        </button>
+        <div id="category-dropdown-options" class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-64 bg-white border border-border-muted shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 max-h-80 overflow-y-auto no-scrollbar">
+            <!-- Populated via JavaScript -->
+        </div>
+    </div>
+    
+    <!-- Packages Button -->
+    <button class="font-label-caps text-label-caps px-8 py-3 bg-white text-primary border border-primary transition-all duration-300 uppercase cursor-pointer" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
+        PACKAGES
+    </button>
+    
+    <!-- Bundles Button -->
+    <button class="font-label-caps text-label-caps px-8 py-3 bg-white text-primary border border-primary transition-all duration-300 uppercase cursor-pointer" onclick="document.getElementById('bundles').scrollIntoView({behavior:'smooth'})">
+        BUNDLES
+    </button>
 </div>
-</div>
-<button class="font-label-caps text-label-caps px-8 py-3 bg-white text-primary border border-border-muted hover:border-primary transition-all duration-300 uppercase" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">PACKAGES</button>
-<button class="font-label-caps text-label-caps px-8 py-3 bg-white text-primary border border-border-muted hover:border-primary transition-all duration-300 uppercase" onclick="document.getElementById('bundles').scrollIntoView({behavior:'smooth'})">BUNDLES</button></div><section class="mt-stack-lg">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Service 01 -->
-<div class="group border-r border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">01 / DESIGN</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">HAIR<br>CUTTING</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAK0UjQs3D5Jp7RbXyYzNnJCepAmbHLt8yWeZSv-I0-QMrL6ufpZ7U_0qVs6tVuIKPh8AX_tbzrmHno9XcOVPVzBI55aptcPq74wU-cHZPIzyjVihsEBx_Zm2lojnQsdFEAwo_VLQZPjto45p8zAf263xSQzUd1sVGAl7XBKnKl3A16BRqcCHXYrvoYWFooDoIsTWWrfo99ybvSgAMLJ7fZlpzVqBXPWw8IubYZxzy25nuh9B7_xPTLJyBCfpto0G_U1Q&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Simple, blow-dry, styled or exclusive-stylist cuts and fades from 450/-.
-                    </p>
-</div>
-</div>
-<!-- Service 02 -->
-<div class="group border-r border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">02 / COLOR</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">HAIR<br>COLORING</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB1OxJy6RnsHwuwg9lCjrnGLwP1Wk3TbShIWDUhSpKUJh3liwmVPzRNqTHVNT0zm4NzjNzrqxQJ7RbQTZX8lSCSzUTk0xCz0PgUOQwoqw1Fo6CXNPXpzX_IMMgBzJ9Q01tz_BkYTQnL5n2dUguAOb0pMWQKXoktzPTuPn-ZyfrWurWJdUd4pLoZ45RggBXwBYdYnrBsBNIMwdK_EXu1mYugVhiV_8QFQ5pvEyRKVGD-FURAgkM1jhY5eQ6URNMoO9_o7Q&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Fashion colour, Keune, Lorial Majirel, Framesi and Just For Men dye lines.
-                    </p>
-</div>
-</div>
-<!-- Service 03 -->
-<div class="group border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">03 / THERAPY</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">HAIR WASHING /<br>TREATMENT</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDhOvcy4a6IWcxEKzn2MAzA6QazI6blJTvgwT_GGOFzIxKFDVnA_92QdWI-nJFqYQWgfPs05VGH0SE0FXxResAVRVIjXO5hQLKwrOzbaIriIcQRflnN2V8Bnx2qIDhrqtquaC40TrFe5o_H1HN_uUwHBH5SpuJQtw8DrBBX3y8nOJqHGqaBvxSmCJZA9WyxIDkbXTFWQT-PalAEZqZRc6PcAmCDcbBCGqtsNd1qGm_HQIYHucCc4ibpg-IyWLgiH_LMlw&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Argabeta argan wash, Anti-Dandruff care and Protein + Repair Rescue therapy.
-                    </p>
-</div>
-</div>
-<!-- Service 04 -->
-<div class="group border-r border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">04 / GROOMING</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">BEARD TRIMMING<br>&amp; STYLING</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBE9H1PPFzd-X2o6MK8VD8Whd1-0zMmcGS2vzm8RyjyEFAT3ZrB777i_-jb1bmUfVerDNh7kQwnunv7xcLkyOGFX-deB9crfdgbmR0faZ4jgqX81WKGm1qaOp-7lySq3WamJMBhU68O6T4gxdvO5lMcSuwWHhg7omu_dXCkK0qr4g8j4bcNd2KWK7WQoTFEC9o9tWsrxwuYf2WMHQnvKHiwGZ2VqudRcvT6g73OYVnvfGX1C0wjJ9Rs-PPgAEO4V-OalA&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Shaves, faded beards and detailed trims, finished by our senior barbers.
-                    </p>
-</div>
-</div>
-<!-- Service 05 -->
-<div class="group border-r border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">05 / REVIVAL</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">FACIAL<br>TREATMENTS</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCIShZjpjjPq5pDDgQ85fhtf3JdQ72kdQguUaxON8hK4xnwDIBioPNDGK5oo-FjjmdFzSOyisJj9QYaquHjO_RG71MBN_8FFXq5kqKNPw9lDm1oixNWYMUZ2RwUGCud24r0B6HlphFX8RMbr5alSJjRJo0kOKtYA1cW66mDL0jycFpqTA0KnYgPHbxRvnO5u6_NdHi1l152bdiWzMohOfEiGkBfwt2WH0USefRt9zms3tKJjz9p3G5EsmBNXEMkG4C9DQ&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Skin brightening and lightening facials with Eveline, Thalgo and Janssen.
-                    </p>
-</div>
-</div>
-<!-- Service 06 -->
-<div class="group border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">06 / JUNIOR</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">KIDS<br>HAIRCUT</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAGb6Z-dMJRyLvwTWZ5WeTe4pr8NG8DoaxXd8iBVFYqcNYfabqL12t5kkfsH8V4yfxt08TERxHsH32_mr_2dq2cWDzgJU5s_66ZcGVAI7lB9b9lx4WkYiVzlemmdSY2YRCseBZdpgYo4yXP9bsRoPh1xgl1KUHj-MKILkyIooIbWWaEZrVngy_FgWqZU9XDkppo0tJaDZI0tJKqBL3qkGIXkbkZSiV3lZjkMwS6pfmOS2vpDRP-xlphI2X2-gliwT1PVw&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Gentle, patient cuts for our youngest clients, from first cuts to long hair.
-                    </p>
-</div>
-</div>
-<!-- Service 07 -->
-<div class="group border-r border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">07 / SKINCARE</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">FACIAL &amp;<br>CLEAN UP</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDUxhUBua1gxR8hve2vkp5Sl-xCjOM2qa5yVXVMX3DN_gOnsEuCLo8WwjS8HunhY14Pfq4IBe6adfu-jrKTzF9q5c-MnxE3YCUZ1lL609V5SHpXOPS0I29hcc39nTzjUV6eOsbTj4e8faqYufj-pffNb-dZkM0GJPxKOCS2b4YBlr-6u4imjCpOw5_7RGEQ1P6ZAkbeH8VsVsNkMmp43hykkmXwy3o6_X1ot_-EzR7AGi7M2mb4uMiVdifcPq1lV99hwg&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Simple to whitening cleansing rituals that leave skin refreshed.
-                    </p>
-</div>
-</div>
-<!-- Service 08 -->
-<div class="group border-r border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">08 / REPAIR</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">KERATIN<br>TREATMENT</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBZqHitJpleo5msbppKzBXqW3yu1mFInwyn1oOhS2yoX_9FiW8GwagYGiNgYGMrqv6Bvnu2gZ25vSE7a7CVcYeIt5j1ApzFiDOWTMzpRKJBOFDUkI7BHw6F7vuWSqnZd2FSqX__7LRVVQaHEq5egYrgBvLqoOhrOdsQUruKccHMgiUCijWC8guCmMpamES0jV_SXHUprmu1OiWq5S720kgZBID0lN2ziCbfukVqdFnWIGIJb8WnmG_4oz3BWg6UzfeKog&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Bio-Tanix and thermal keratin smoothing, tailored to your hair length and type.
-                    </p>
-</div>
-</div>
-<!-- Service 09 -->
-<div class="group border-b border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">09 / WELLNESS</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">HAIR<br>SPA</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDloyo0HDrTzc8WKrQT0wrokWv1UG1Ke6MB0EAKqYzMEOvBUNA5qu8JpAFPaO9x-GmhRMkgLV1jUdglW-L-fLh3_JHFtPUd_g52ppDCqoksKe7PsTgQjpxniG3M55WBEf420fWA074XdGufKJGPaevxDUZ7Pg0oYogb-xzIUBUlKYuhnOFp5TxneQVSHwcMh8rCOvV93CHZ47s731Jq_Wk3JEZUqQpKr7EmTHL634e7etQcnrWp-sLiCl9MQ4hNlZjkbw&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Scalp and head-and-shoulder massage therapy, with or without vibrator treatment.
-                    </p>
-</div>
-</div>
-<!-- Service 10 -->
-<div class="group border-r border-border-muted flex flex-col bg-white/80 backdrop-blur-sm">
-<div class="p-8 border-b border-border-muted group-hover:bg-primary transition-colors duration-500">
-<span class="font-label-caps text-label-caps text-text-dimmed group-hover:text-on-primary/60">10 / ARTISTRY</span>
-<h2 class="font-headline-xl text-headline-xl mt-4 uppercase group-hover:text-on-primary">HEAT-FREE<br>CURLING</h2>
-</div>
-<div class="aspect-square bg-cover bg-center grayscale border-b border-border-muted" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAC9ulYHdbynV2ulp784sHXjFGCMfYaEuSk8X_75xN6gX-802kCaaa_8fCNPXYNS7pgBTvVMZ8hUQ6MxuyKXCOR1O5F1F94oIpucWI7b2pXYCYQDAVJ_iMXyIyNqcJiH2lAByfPzt4jNU9gQzCKMevoAOKaqMQ_MV8xUiMdm9Pn2E3TDMpS7zStFi4-Ibr4eEQR5dTqTw0qunrnlzsi5awp-b4unuhIs1CeGNvBkDE9QFUX0XjG0nU9ra6nfiLvK1pxNw&quot;);"></div>
-<div class="p-8 flex-grow group-hover:bg-surface-charcoal group-hover:text-on-primary transition-colors duration-500">
-<p class="font-body-sm text-body-sm opacity-70">
-                        Long-lasting texture and curl definition, styled without heat damage.
-                    </p>
-</div>
-</div>
-</div>
+
+<!-- Dynamic Services Grid Section -->
+<section class="mt-stack-lg">
+    <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- JavaScript will render services here -->
+    </div>
+    
+    <!-- Load More Button -->
+    <div class="flex justify-center mt-12" id="load-more-container">
+        <button id="load-more-btn" class="font-label-caps text-label-caps px-8 py-3 bg-white text-primary border border-primary hover:bg-primary hover:text-on-primary transition-all duration-300 uppercase cursor-pointer">
+            Load More
+        </button>
+    </div>
 </section>
+
 <!-- Packages Section -->
 <section class="mt-stack-lg mb-stack-lg" id="packages">
-<div class="mb-12 text-center">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-tighter">Exclusive Collections</span>
-<h2 class="font-display-lg text-display-lg uppercase mt-4">PACKAGES</h2>
-</div>
-<div class="grid grid-cols-1 gap-gutter md:grid-cols-2 lg:grid-cols-4">
-<!-- Package 1: Student -->
-<div class="bg-surface-charcoal p-12 text-on-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Package 01</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Student</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Hair cut (blow-dry) + wash + trim + simple cleansing. 1450/- — with exclusive stylist 1550/-.</p>
-</div>
-<button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Student%20Package'">Book Package</button>
-</div>
-<!-- Package 2: Smart -->
-<div class="bg-surface-charcoal p-12 text-on-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Package 02</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Smart</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Hair cut (blow-dry) + wash + shave/beard + neck polish + whitening cleansing. 3300/-.</p>
-</div>
-<button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Smart%20Package'">Book Package</button>
-</div>
-<!-- Package 3: Jobian -->
-<div class="bg-surface-charcoal p-12 text-on-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Package 03</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Jobian</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Hair cut (blow-dry) + wash + beard + head massage + neck polish. 1400/-.</p>
-</div>
-<button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Jobian%20Package'">Book Package</button>
-</div>
-<!-- Package 4: Party Makeover -->
-<div class="bg-surface-charcoal p-12 text-on-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Package 04</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Party Makeover</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Beard/shave + cleansing + shower &amp; refresh + styling + makeover. 6000/-.</p>
-</div>
-<button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Party%20Makeover'">Book Package</button>
-</div>
-</div>
+    <div class="mb-12 text-center">
+        <span class="font-label-caps text-label-caps text-primary uppercase tracking-tighter">Exclusive Collections</span>
+        <h2 class="font-display-lg text-display-lg uppercase mt-4">PACKAGES</h2>
+    </div>
+    <div class="grid grid-cols-1 gap-gutter md:grid-cols-2 lg:grid-cols-4">
+        <!-- Package 1: Student -->
+        <div class="card-texture-dark p-12 text-white flex flex-col justify-between min-h-[400px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Package 01</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Student</h3>
+                <p class="font-body-sm text-body-sm mt-4 opacity-75 leading-relaxed text-white/80">
+                    Hair Cut (with blowdry) + Wash + Trim + Simple Cleansing.
+                </p>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    PKR 1,450 <span class="text-xs opacity-60 font-normal">/ PKR 1,550 (Exclusive Stylist)</span>
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Student%20Package'">Book Package</button>
+        </div>
+        <!-- Package 2: Smart -->
+        <div class="card-texture-dark p-12 text-white flex flex-col justify-between min-h-[400px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Package 02</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Smart</h3>
+                <p class="font-body-sm text-body-sm mt-4 opacity-75 leading-relaxed text-white/80">
+                    Hair Cut (with blowdry) + Wash + Shave/Beard + Neck Polish + Whitening Cleansing (Cute Plus).
+                </p>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    PKR 3,300
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Smart%20Package'">Book Package</button>
+        </div>
+        <!-- Package 3: Jobian -->
+        <div class="card-texture-dark p-12 text-white flex flex-col justify-between min-h-[400px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Package 03</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Jobian</h3>
+                <p class="font-body-sm text-body-sm mt-4 opacity-75 leading-relaxed text-white/80">
+                    Hair Cut (with blowdry) + Wash + Beard + Head Massage + Neck Polish.
+                </p>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    PKR 1,400
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Jobian%20Package'">Book Package</button>
+        </div>
+        <!-- Package 4: Party Makeover -->
+        <div class="card-texture-dark p-12 text-white flex flex-col justify-between min-h-[400px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Package 04</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Party Makeover</h3>
+                <p class="font-body-sm text-body-sm mt-4 opacity-75 leading-relaxed text-white/80">
+                    Beard/Shave + Cute Plus Cleansing + Shower & Refresh + Styling + Makeover.
+                </p>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    PKR 6,000
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Party%20Makeover'">Book Package</button>
+        </div>
+    </div>
 </section>
+
 <!-- Bundles Section -->
 <section class="mt-stack-lg mb-stack-lg" id="bundles">
-<div class="mb-12 text-center">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-tighter">LIMITED OFFERS</span>
-<h2 class="font-display-lg text-display-lg uppercase mt-4">BUNDLES</h2>
-</div>
-<div class="grid grid-cols-1 gap-gutter lg:grid-cols-4">
-<!-- Bundle 1 -->
-<div class="bg-white border-4 border-primary p-12 text-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Bundle 01</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Silver Groom</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">One-day groom bundle: cut, shave/beard, skin tone treatment, hand &amp; pedicure, styling and makeover. <span class="line-through opacity-50">14500/-</span> 12500/- (50% advance).</p>
-</div>
-<button class="mt-8 border border-primary px-6 py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Silver%20Package'">Book Bundle</button>
-</div>
-<!-- Bundle 2 -->
-<div class="bg-white border-4 border-primary p-12 text-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Bundle 02</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Gold Groom</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Two-day groom bundle: cut, shave/beard, manicure/pedicure, skin tone treatment, styling and makeover. <span class="line-through opacity-50">22400/-</span> 19000/- (50% advance).</p>
-</div>
-<button class="mt-8 border border-primary px-6 py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Gold%20Package'">Book Bundle</button>
-</div>
-<!-- Bundle 3 -->
-<div class="bg-white border-4 border-primary p-12 text-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Bundle 03</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Platinum Groom</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Three-day groom bundle: cut, shave/beard, signature manicure &amp; pedicure, head &amp; shoulder massage, styling and makeover. <span class="line-through opacity-50">30900/-</span> 26500/- (50% advance).</p>
-</div>
-<button class="mt-8 border border-primary px-6 py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Platinum%20Package'">Book Bundle</button>
-</div>
-<!-- Bundle 4 -->
-<div class="bg-white border-4 border-primary p-12 text-primary flex flex-col justify-between min-h-[400px] shadow-2xl">
-<div>
-<span class="font-label-caps text-label-caps opacity-60 uppercase">Bundle 04</span>
-<h3 class="font-headline-xl text-headline-xl mt-4 uppercase">Executive Groom</h3>
-<p class="font-body-sm text-body-sm mt-4 opacity-70">Four-day pre-event treatment: cut, shave/beard, signature manicure &amp; pedicure, skin brightening, repair rescue, styling and makeover. <span class="line-through opacity-50">47300/-</span> 41000/- (50% advance).</p>
-</div>
-<button class="mt-8 border border-primary px-6 py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors uppercase" onclick="window.location.href='booking_form.html?package=Executive%20Package'">Book Bundle</button>
-</div>
-</div>
+    <div class="mb-12 text-center">
+        <span class="font-label-caps text-label-caps text-primary uppercase tracking-tighter">LIMITED OFFERS</span>
+        <h2 class="font-display-lg text-display-lg uppercase mt-4">BUNDLES</h2>
+    </div>
+    <div class="grid grid-cols-1 gap-gutter lg:grid-cols-4">
+        <!-- Bundle 1 -->
+        <div class="card-texture-dark p-8 text-white flex flex-col justify-between min-h-[480px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Bundle 01 (1 Day Offer)</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Silver Groom</h3>
+                <p class="font-body-sm text-body-sm mt-4 opacity-75 leading-relaxed text-white/80">
+                    Hair Cut + Shave/Beard + Even Skin Tone (Thalgo) + Hand Polish + Neck Polish + Pedicure Simple + Full Arm Cleansing & Scrub + Styling + Makeover + Shower & Refresh.
+                </p>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    <span class="line-through opacity-50 text-sm">PKR 14,500</span> PKR 12,500
+                    <div class="text-[10px] text-white/60 font-normal mt-1">Booking Advance: 50%</div>
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Silver%20Groom%20Bundle'">Book Bundle</button>
+        </div>
+        <!-- Bundle 2 -->
+        <div class="card-texture-dark p-8 text-white flex flex-col justify-between min-h-[480px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Bundle 02 (2 Days Offer)</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Gold Groom</h3>
+                <div class="font-body-sm text-body-sm mt-4 opacity-75 space-y-2 leading-relaxed text-white/80">
+                    <div><strong>Day 1:</strong> Cut, Shave/Beard, Neck Polish, Manicure, Pedicure, Even Skin Tone (Thalgo), Makeover, Styling, Shower & Refresh</div>
+                    <div><strong>Day 2:</strong> Shave/Beard, Cleansing (Cute Plus), Hand/Foot Polish, Makeover, Styling, Shower & Refresh</div>
+                </div>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    <span class="line-through opacity-50 text-sm">PKR 22,400</span> PKR 19,000
+                    <div class="text-[10px] text-white/60 font-normal mt-1">Booking Advance: 50%</div>
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Gold%20Groom%20Bundle'">Book Bundle</button>
+        </div>
+        <!-- Bundle 3 -->
+        <div class="card-texture-dark p-8 text-white flex flex-col justify-between min-h-[480px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Bundle 03 (3 Days Offer)</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Platinum Groom</h3>
+                <div class="font-body-sm text-body-sm mt-4 opacity-75 space-y-2 leading-relaxed text-white/80">
+                    <div><strong>Day 1:</strong> Cut, Shave/Beard, Signature Mani/Pedi, Even Skin Tone (Thalgo), Makeover, Styling, Shower & Refresh</div>
+                    <div><strong>Day 2:</strong> Shave/Beard, Cleansing (Cute Plus), Hand/Foot Polish, Makeover, Styling, Shower & Refresh</div>
+                    <div><strong>Day 3:</strong> Shave/Beard, Cleansing (Cute Plus), Head & Shoulder Massage (with vibrator), Makeover, Styling, Shower & Refresh</div>
+                </div>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    <span class="line-through opacity-50 text-sm">PKR 30,900</span> PKR 26,500
+                    <div class="text-[10px] text-white/60 font-normal mt-1">Booking Advance: 50%</div>
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Platinum%20Groom%20Bundle'">Book Bundle</button>
+        </div>
+        <!-- Bundle 4 -->
+        <div class="card-texture-dark p-8 text-white flex flex-col justify-between min-h-[480px] shadow-2xl">
+            <div>
+                <span class="font-label-caps text-label-caps opacity-60 uppercase text-white/70">Bundle 04 (4 Days Offer)</span>
+                <h3 class="font-headline-xl text-headline-xl mt-4 uppercase text-white">Executive Groom</h3>
+                <div class="font-body-sm text-body-sm mt-4 opacity-75 space-y-2 leading-relaxed text-xs text-white/80">
+                    <div><strong>Pre-Event:</strong> Cut, Shave/Beard, Signature Mani/Pedi, Skin Brightening (Janssen), Repair Rescue, Shower & Refresh</div>
+                    <div><strong>Day 1:</strong> Beard/Shave, Cleansing (Janssen), Styling, Hand/Foot Polish, Make Over, Shower & Refresh</div>
+                    <div><strong>Day 2:</strong> Shave/Beard, Cleansing (Janssen), Styling, Make Over, Shower & Refresh</div>
+                    <div><strong>Day 3:</strong> H&S Massage (with vibrator), Foot Massage (with oil), Shave/Beard, Cleansing (Janssen), Styling, Make Over, Shower & Refresh</div>
+                </div>
+                <div class="mt-6 font-body-lg text-white font-bold">
+                    <span class="line-through opacity-50 text-sm">PKR 47,300</span> PKR 41,000
+                    <div class="text-[10px] text-white/60 font-normal mt-1">Booking Advance: 50%</div>
+                </div>
+            </div>
+            <button class="mt-8 border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?package=Executive%20Groom%20Bundle'">Book Bundle</button>
+        </div>
+    </div>
 </section>
 </main>
 <!-- Footer -->
@@ -450,11 +408,12 @@
 </div>
 <div class="w-full border-t border-white/10 pt-8">
 <p class="font-label-caps text-label-caps text-white/60">
-        © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+        © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
       </p>
 </div>
 </div>
 </footer>
+<script src="assets/services_data.js"></script>
 <script>
     // Sticky header transition
     window.addEventListener('scroll', () => {
@@ -479,6 +438,99 @@
 
     close.addEventListener('click', () => {
         menu.classList.add('translate-x-full');
+    });
+
+    // State Variables
+    let currentCategory = "ALL";
+    let isExpanded = false;
+    const INITIAL_LIMIT = 8;
+
+    // Elements
+    const currentCategorySpan = document.getElementById('current-category');
+    const dropdownOptions = document.getElementById('category-dropdown-options');
+    const servicesGrid = document.getElementById('services-grid');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreContainer = document.getElementById('load-more-container');
+
+    // Populate categories in dropdown
+    const categories = [
+      "ALL",
+      "HAIR CRAFT",
+      "CUT FOR HIM & HER",
+      "HAIR STYLING",
+      "BEARD",
+      "HAIR TREATMENT",
+      "HAIR DYE",
+      "COLOR APPLICATION",
+      "LIGHTENING/STREAKING",
+      "THREADING",
+      "TRIMMING",
+      "WAXING",
+      "BODY CARE & MASSAGE",
+      "SKIN CARE & FACIALS"
+    ];
+
+    dropdownOptions.innerHTML = categories.map(cat => `
+        <button class="w-full text-left block px-6 py-3 font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-colors border-b border-border-muted last:border-b-0 cursor-pointer" onclick="setCategory('${cat}')">
+            ${cat === "ALL" ? "ALL SERVICES" : cat}
+        </button>
+    `).join('');
+
+    window.setCategory = function(cat) {
+        currentCategory = cat;
+        currentCategorySpan.textContent = cat;
+        isExpanded = false;
+        renderServices();
+    };
+
+    function renderServices() {
+        const filtered = currentCategory === "ALL" 
+            ? servicesData 
+            : servicesData.filter(s => s.category === currentCategory);
+
+        const showLimit = isExpanded ? filtered.length : Math.min(filtered.length, INITIAL_LIMIT);
+        const visibleServices = filtered.slice(0, showLimit);
+
+        servicesGrid.innerHTML = visibleServices.map((s, idx) => `
+            <div class="card-texture-dark p-10 text-white flex flex-col justify-between min-h-[320px] shadow-2xl">
+                <div>
+                    <span class="font-label-caps text-label-caps opacity-60 uppercase">${s.category}</span>
+                    <h2 class="font-headline-xl text-headline-xl mt-4 uppercase leading-none text-white">${s.name}</h2>
+                    <p class="font-body-sm text-body-sm mt-4 opacity-75 text-white/80">${s.desc}</p>
+                </div>
+                <div class="mt-8 flex flex-col gap-4">
+                    <span class="font-bold opacity-100 font-body-lg text-white">PKR ${s.price.toLocaleString()}/-</span>
+                    <button class="w-full border border-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors uppercase cursor-pointer" onclick="window.location.href='booking_form.html?service=${encodeURIComponent(s.name)}'">Book Now</button>
+                </div>
+            </div>
+        `).join('');
+
+        if (filtered.length > showLimit) {
+            loadMoreContainer.style.display = 'flex';
+        } else {
+            loadMoreContainer.style.display = 'none';
+        }
+    }
+
+    loadMoreBtn.addEventListener('click', () => {
+        isExpanded = true;
+        renderServices();
+    });
+
+    // Initial load
+    renderServices();
+
+    // Dismiss Page Loader
+    window.addEventListener('DOMContentLoaded', () => {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.remove();
+                }, 500);
+            }, 1000);
+        }
     });
 </script>
 

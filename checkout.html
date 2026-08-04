@@ -226,6 +226,13 @@
 <p class="font-body-xl text-body-xl uppercase" id="rv-datetime">—</p>
 </div>
 </div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary pt-1">person</span>
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">STYLIST</p>
+<p class="font-body-xl text-body-xl uppercase" id="rv-stylist">—</p>
+</div>
+</div>
 <div class="flex items-start gap-4" id="rv-notes-row" style="display:none!important">
 <span class="material-symbols-outlined text-primary pt-1">notes</span>
 <div>
@@ -251,6 +258,10 @@
 <div class="flex justify-between font-label-caps text-label-caps">
 <span class="text-text-dimmed">SUBTOTAL</span>
 <span id="rv-subtotal">PKR 0</span>
+</div>
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-text-dimmed">EXECUTIVE STYLIST FEE</span>
+<span id="rv-stylist-fee">PKR 0</span>
 </div>
 <div class="flex justify-between font-label-caps text-label-caps">
 <span class="text-text-dimmed">PST — PUNJAB (16%)</span>
@@ -343,6 +354,7 @@
 
             // Appointment info
             document.getElementById('rv-location').textContent = d.location || '—';
+            document.getElementById('rv-stylist').textContent = d.stylist || 'Normal';
             const dayTime = [d.preferredDay, d.primaryTimeWindow].filter(Boolean).join(' • ');
             document.getElementById('rv-datetime').textContent  = dayTime || '—';
 
@@ -376,11 +388,13 @@
             // Order summary — 16% Punjab Sales Tax
             const TAX_RATE = 0.16;
             const subtotal  = services.reduce((sum, s) => sum + s.price, 0);
-            const tax       = Math.round(subtotal * TAX_RATE);
-            const total     = subtotal + tax;
+            const stylistFee = (d.stylist && d.stylist.startsWith('Executive')) ? 500 : 0;
+            const tax       = Math.round((subtotal + stylistFee) * TAX_RATE);
+            const total     = subtotal + stylistFee + tax;
 
             function pkr(n) { return 'PKR ' + n.toLocaleString(); }
             document.getElementById('rv-subtotal').textContent = pkr(subtotal);
+            document.getElementById('rv-stylist-fee').textContent = pkr(stylistFee);
             document.getElementById('rv-tax').textContent      = pkr(tax);
             document.getElementById('rv-total').textContent    = pkr(total);
         })();

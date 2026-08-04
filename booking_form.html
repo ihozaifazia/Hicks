@@ -422,6 +422,25 @@
                 >Please select a branch location.</span
               >
             </div>
+            <!-- Stylist Dropdown -->
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label
+                class="font-label-caps text-label-caps text-white/80"
+                for="field-stylist"
+                >SELECT STYLIST</label
+              >
+              <select
+                id="field-stylist"
+                class="border border-white/20 p-4 text-body-lg font-body-lg bg-transparent text-white rounded-none focus:ring-0 appearance-none cursor-pointer transition-all"
+              >
+                <option value="Normal" selected class="bg-neutral-900 text-white">
+                  Normal
+                </option>
+                <option value="Executive" class="bg-neutral-900 text-white">
+                  Executive (Extra Fee)
+                </option>
+              </select>
+            </div>
             <!-- Services Multi-select (Custom UI) -->
             <div class="flex flex-col gap-2 md:col-span-2">
               <label class="font-label-caps text-label-caps text-white/80"
@@ -472,6 +491,7 @@
                 >PRIMARY TIME WINDOW</label
               >
               <select
+                id="field-time-primary"
                 class="border border-white/20 p-4 text-body-lg font-body-lg bg-transparent text-white rounded-none focus:ring-0 cursor-pointer"
                 required=""
               >
@@ -491,6 +511,7 @@
                 >SECONDARY TIME WINDOW</label
               >
               <select
+                id="field-time-secondary"
                 class="border border-white/20 p-4 text-body-lg font-body-lg bg-transparent text-white rounded-none focus:ring-0 cursor-pointer"
               >
                 <option value="mid-day" class="bg-neutral-900 text-white">
@@ -879,15 +900,16 @@
           if (!valid) return;
 
           // -- All valid: save and redirect --
-          const allSelects = document.querySelectorAll("select");
-          const primarySel = allSelects[1];
-          const secondarySel = allSelects[2];
+          const stylistEl = document.getElementById("field-stylist");
+          const primarySel = document.getElementById("field-time-primary");
+          const secondarySel = document.getElementById("field-time-secondary");
 
           const bookingData = {
             customerName: nameVal,
             customerPhone: phoneVal,
             customerEmail: document.getElementById("field-email").value.trim(),
             location: locEl.options[locEl.selectedIndex].text,
+            stylist: stylistEl.options[stylistEl.selectedIndex].text,
             selectedServices: checkedServices,
             preferredDay: selectedDay,
             bookingDate: selectedIsoDate,
@@ -909,7 +931,7 @@
           setTimeout(() => {
             btn.innerText = "REDIRECTING TO CHECKOUT...";
             setTimeout(() => {
-              window.location.href = "review_form.html";
+              window.location.href = "checkout.html";
             }, 800);
           }, 1200);
         });

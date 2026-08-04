@@ -129,19 +129,39 @@
             }
         }
         /* Custom Textures */
-        .bg-woody {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQeLrv8d5K9v0cOMngbP4oFnX91go-VdkbhwKVitacP91tapFWlNDC9Ww_27KgWeXhbVRFaPy1GIoqgZXMDogn59_lAE8HXyzJzA2isLK1OxRGiENZnbxxNNMBz1pbehhykhHGdEwhmcAyedj-MwXbEVxsbZ6cKMu4-Cd5IkM21tHH3o7izcpA3qqB5AgWgh8B70LjLzH_Sp4FwPEzp2g9wBuz41YtNLeB37om2Db8M7RN9zH_OmQWIWv20B4KtGFVMQ');
+        .bg-woody, .bg-background, .bg-white, .bg-surface-container-lowest {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
             background-size: cover;
-            background-position: center;
+            background-repeat: repeat;
         }
-        .bg-charcoal {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ');
+        .bg-charcoal, .bg-surface-charcoal, .bg-primary, footer {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
             background-size: cover;
-            background-position: center;
+            background-repeat: repeat;
+        }
+        .hover\:bg-white:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+            background-size: cover;
+        }
+        .hover\:bg-primary:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+            background-size: cover;
+        }
+        @keyframes loaderPulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .loader-text {
+            animation: loaderPulse 2s infinite ease-in-out;
         }
     </style>
 </head>
 <body class="bg-woody text-on-background selection:bg-primary selection:text-on-primary">
+<!-- Page Loader -->
+<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
+    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
+</div>
 <!-- TopNavBar: Kept light/white as per request -->
 <header class="w-full top-0 sticky z-50 bg-background border-b border-border-muted transition-all duration-300" id="main-header">
 <nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
@@ -196,7 +216,7 @@
 <span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">The Legacy</span>
 <h2 class="font-headline-xl text-headline-xl text-primary uppercase">Editorial Excellence in Bahawalpur</h2>
 <p class="font-body-xl text-body-xl text-on-surface-variant max-w-xl">
-                    HICKS isn't just a salon; it's a statement of sophistication. Operating since early 2021, we bring high-fashion grooming standards to the heart of Bahawalpur, merging over 4 years of precision with modern editorial aesthetics.
+                    HICKS isn't just a salon; it's a statement of sophistication. Operating since 2016, we bring high-fashion grooming standards to the heart of Bahawalpur, merging 10 years of experience with modern editorial aesthetics.
                 </p>
 <p class="font-body-lg text-body-lg text-text-dimmed max-w-lg">
                     Our master barbers are architects of style, crafting looks that define the modern gentleman. Experience the quiet luxury of a space designed for the discerning.
@@ -310,7 +330,7 @@
 <a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="https://facebook.com/hicksmens" target="_blank">FACEBOOK</a>
 </div>
 <div class="font-label-caps text-label-caps text-on-primary/50 border-t border-on-primary/10 pt-10 w-full">
-                © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+                © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
             </div>
 </div>
 </footer>
@@ -351,6 +371,19 @@
         document.querySelectorAll('section > div').forEach(el => {
             el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(el);
+        });
+
+        // Dismiss Page Loader
+        window.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 500);
+                }, 1000);
+            }
         });
     </script>
 <style>

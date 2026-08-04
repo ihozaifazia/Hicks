@@ -29,6 +29,32 @@
         .custom-shadow {
             box-shadow: 2px 2px 0px 0px #000000;
         }
+        body, .bg-woody, .bg-background, .bg-white, .bg-surface-container-lowest {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .bg-charcoal, .bg-surface-charcoal, .bg-primary, footer {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .hover\:bg-white:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+            background-size: cover;
+        }
+        .hover\:bg-primary:hover {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+            background-size: cover;
+        }
+        @keyframes loaderPulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .loader-text {
+            animation: loaderPulse 2s infinite ease-in-out;
+        }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -127,6 +153,10 @@
     </script>
 </head>
 <body class="bg-background text-on-surface font-body-lg text-body-lg overflow-x-hidden">
+<!-- Page Loader -->
+<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
+    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
+</div>
 <!-- Header / TopNavBar -->
 <header class="w-full top-0 sticky z-50 bg-background border-b border-border-muted">
 <nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
@@ -196,6 +226,13 @@
 <p class="font-body-xl text-body-xl uppercase" id="rv-datetime">—</p>
 </div>
 </div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary pt-1">person</span>
+<div>
+<p class="font-label-caps text-[10px] text-text-dimmed mb-1">STYLIST</p>
+<p class="font-body-xl text-body-xl uppercase" id="rv-stylist">—</p>
+</div>
+</div>
 <div class="flex items-start gap-4" id="rv-notes-row" style="display:none!important">
 <span class="material-symbols-outlined text-primary pt-1">notes</span>
 <div>
@@ -223,6 +260,10 @@
 <span id="rv-subtotal">PKR 0</span>
 </div>
 <div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-text-dimmed">EXECUTIVE STYLIST FEE</span>
+<span id="rv-stylist-fee">PKR 0</span>
+</div>
+<div class="flex justify-between font-label-caps text-label-caps">
 <span class="text-text-dimmed">PST — PUNJAB (16%)</span>
 <span id="rv-tax">PKR 0</span>
 </div>
@@ -236,7 +277,7 @@
 </div>
 </div>
 <!-- Primary Action -->
-<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-body-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300 active:scale-[0.98]">
+<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-body-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300 active:scale-[0.98]" id="confirm-btn" onclick="confirmBooking()">
     Confirm Booking
 </button>
 <button class="w-full bg-transparent text-text-dimmed py-4 mt-2 font-label-caps text-label-caps uppercase hover:text-primary transition-colors" onclick="window.location.href='booking_form.html'">
@@ -251,6 +292,33 @@
 </div>
 </div>
 </main>
+
+<!-- ── Success Overlay ─────────────────────────────────────────── -->
+<div id="success-overlay" class="fixed inset-0 z-[200] bg-background flex flex-col items-center justify-center px-margin-edge text-center" style="display:none!important; opacity:0; transition: opacity 0.6s ease;">
+  <div class="max-w-lg w-full">
+    <!-- Animated checkmark -->
+    <div class="flex justify-center mb-stack-md">
+      <div class="w-20 h-20 border-2 border-primary flex items-center justify-center">
+        <span class="material-symbols-outlined text-primary" style="font-size:48px;">check</span>
+      </div>
+    </div>
+    <span class="font-label-caps text-label-caps text-text-dimmed tracking-widest block mb-4">BOOKING CONFIRMED</span>
+    <h1 class="font-display-lg text-[64px] leading-none tracking-tight uppercase text-primary mb-stack-sm">You're in.</h1>
+    <p class="font-body-xl text-body-xl text-on-surface-variant max-w-sm mx-auto mb-2">
+      Your appointment request has been received. Our team will confirm your slot via phone.
+    </p>
+    <p class="font-label-caps text-label-caps text-text-dimmed mb-stack-md" id="success-ref"></p>
+    <div class="border-t border-border-muted pt-stack-md space-y-4">
+      <button onclick="window.location.href='index.html'" class="w-full bg-primary text-on-primary py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300">
+        Back to Home
+      </button>
+      <button onclick="window.location.href='booking_form.html'" class="w-full text-text-dimmed py-4 font-label-caps text-label-caps uppercase hover:text-primary transition-colors">
+        Book Another Appointment
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="w-full mt-stack-lg bg-primary relative overflow-hidden" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB-c4ZQLjnpGRWR9lZVYPUqJYxX_0WfvwX2u8FCjh5WFEIxi3RB4VoD1abJLXnmKtUgGM9aeDTeAafw26-0nxVgPsEtofY5dmY7v1IV7ta14WgdgIruYVfsyCdKd-Ta_hD5heuYrOXR_FUGg7UtIlgduMxO38MbNEm_tYP_54ITcYdMIvnYhMCUZrLzNNYTqfzg90d8_Q2Yv_dyt93jGUySUqbvPokY0RVnHJ0htO6jW1OAS29a8W8ttubg5y7IBshlbg&quot;); background-size: cover; background-position: center center;">
 <!-- Overlay for readability -->
@@ -264,7 +332,7 @@
 <a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">FACEBOOK</a>
 </div>
 <p class="font-label-caps text-label-caps text-on-primary-container mt-stack-sm">
-                © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+                © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
             </p>
 </div>
 </footer>
@@ -286,6 +354,7 @@
 
             // Appointment info
             document.getElementById('rv-location').textContent = d.location || '—';
+            document.getElementById('rv-stylist').textContent = d.stylist || 'Normal';
             const dayTime = [d.preferredDay, d.primaryTimeWindow].filter(Boolean).join(' • ');
             document.getElementById('rv-datetime').textContent  = dayTime || '—';
 
@@ -319,11 +388,13 @@
             // Order summary — 16% Punjab Sales Tax
             const TAX_RATE = 0.16;
             const subtotal  = services.reduce((sum, s) => sum + s.price, 0);
-            const tax       = Math.round(subtotal * TAX_RATE);
-            const total     = subtotal + tax;
+            const stylistFee = (d.stylist && d.stylist.startsWith('Executive')) ? 500 : 0;
+            const tax       = Math.round((subtotal + stylistFee) * TAX_RATE);
+            const total     = subtotal + stylistFee + tax;
 
             function pkr(n) { return 'PKR ' + n.toLocaleString(); }
             document.getElementById('rv-subtotal').textContent = pkr(subtotal);
+            document.getElementById('rv-stylist-fee').textContent = pkr(stylistFee);
             document.getElementById('rv-tax').textContent      = pkr(tax);
             document.getElementById('rv-total').textContent    = pkr(total);
         })();
@@ -346,6 +417,43 @@
         window.addEventListener('scroll', () => {
             const footer = document.querySelector('footer');
             if (footer) footer.style.backgroundPositionY = (window.pageYOffset * 0.1) + 'px';
+        });
+
+        // ── Confirm Booking ───────────────────────────────────
+        function confirmBooking() {
+            const btn = document.getElementById('confirm-btn');
+            btn.textContent = 'PROCESSING...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Generate a short reference number for the prototype
+                const ref = 'HKS-' + Date.now().toString(36).toUpperCase().slice(-6);
+                document.getElementById('success-ref').textContent = 'Reference: ' + ref;
+
+                // Show the overlay
+                const overlay = document.getElementById('success-overlay');
+                overlay.style.removeProperty('display');
+                // Force reflow then fade in
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+                });
+
+                // Clear booking data from localStorage
+                localStorage.removeItem('hicksBooking');
+            }, 1400);
+        }
+
+        // Dismiss Page Loader
+        window.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 500);
+                }, 1000);
+            }
         });
     </script>
 

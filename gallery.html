@@ -131,11 +131,24 @@
       .editorial-shadow {
         box-shadow: 4px 4px 0px 0px #000000;
       }
-      body {
-        -webkit-font-smoothing: antialiased;
-        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcikfSi33521ZrGpGILzgvm58miRkx7zh6MsV1uRHm6TIGezmdGGFkb2E0IvgsCYj1tdccPlujiIaEGbJeTvOiwraphE3FJnggoT0TRlNt8Lzn_ElkOUmLxZ__OsyK7vIaoW9SxTTgnmkGMwwbIqA_Fl9j9UtDTuyFiBgcSDKASkwiC2edQaQZ8Jcs2w9A9BtMr-G2JYzl-DvRlp4n_9reWF9Bw8b94IPgANh0IX0_T6fUT0fWnZzk35XtoXjET3us8g');
+      body, .bg-woody, .bg-background, .bg-white, .bg-surface-container-lowest {
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
         background-size: cover;
+        background-repeat: repeat;
         background-attachment: fixed;
+      }
+      .bg-charcoal, .bg-surface-charcoal, .bg-primary, footer {
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+        background-size: cover;
+        background-repeat: repeat;
+      }
+      .hover\:bg-white:hover {
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
+        background-size: cover;
+      }
+      .hover\:bg-primary:hover {
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
+        background-size: cover;
       }
       .gallery-item {
         transition: opacity 0.4s ease, transform 0.4s ease;
@@ -145,24 +158,41 @@
         opacity: 0;
         transform: scale(0.95);
       }
-      /* Custom grid logic for alternating large/small pairs */
+      /* Grid design just like services page */
       .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 24px;
       }
       @media (min-width: 768px) {
-        .gallery-grid .gallery-item:nth-child(4n+1) { grid-column: span 8; height: 600px; }
-        .gallery-grid .gallery-item:nth-child(4n+2) { grid-column: span 4; height: 600px; }
-        .gallery-grid .gallery-item:nth-child(4n+3) { grid-column: span 4; height: 600px; }
-        .gallery-grid .gallery-item:nth-child(4n+4) { grid-column: span 8; height: 600px; }
+        .gallery-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
-      @media (max-width: 767px) {
-        .gallery-grid .gallery-item { grid-column: span 12; height: 400px; }
+      @media (min-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+      .gallery-grid .gallery-item {
+        grid-column: span 1 !important;
+        height: 320px !important;
+      }
+      @keyframes loaderPulse {
+          0% { transform: scale(0.95); opacity: 0.8; }
+          50% { transform: scale(1.05); opacity: 1; }
+          100% { transform: scale(0.95); opacity: 0.8; }
+      }
+      .loader-text {
+          animation: loaderPulse 2s infinite ease-in-out;
       }
     </style>
 </head>
 <body class="text-on-background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs8L_U8mN5Wq-2WwBADMEplimSPz1WHTeZElM8xAQiCEyFvCp8DMTrXgPALgstdbdNx6-zOL3O1NDo3eN5qLiSDWTohL1TZ8yn2NMmGVlxiFiQqwR67Qtj531Vm0HY_z1YPHnn16Gi6JtNbAO1eFZxpeNS8ujJ2QV374Lb4oNgQG6DDCu99CJRvMv7Fuy83BGuFG-orCQYagUfO4l_o_oYe4H-Sb15DGGpqMrZ223kPPUUxIJq7YRl0NgfdFNAPhMsGA"); background-size: cover; background-attachment: fixed;'>
+<!-- Page Loader -->
+<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
+    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
+</div>
 <!-- TopNavBar -->
 <header class="bg-white dark:bg-surface-charcoal w-full top-0 sticky z-50 border-b border-border-muted dark:border-on-surface-variant" id="main-header">
 <nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
@@ -218,108 +248,210 @@
 <h2 class="font-label-caps text-label-caps text-primary tracking-widest mb-stack-sm">CUSTOMER LOOKS</h2>
 </div>
 <div class="gallery-grid" id="gallery-grid">
-<!-- Row 1: Large (Left) / Small (Right) -->
-<!-- Look 01 (Large) -->
-<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="haircuts">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ')">
-</div>
-<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
-<span class="font-label-caps text-label-caps opacity-80">LOOK 01 — HAIRCUTS</span>
-<h3 class="font-headline-xl text-headline-xl mt-2">THE ARCHITECTURAL FADE</h3>
-<p class="font-body-lg text-body-lg mt-2 max-w-md hidden md:block">Precision execution with a seamless transition and textured crown for the modern professional.</p>
-</div>
-</div>
-<!-- Look 02 (Small) -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-<div class="flex-1 overflow-hidden">
-<img alt="Sculpted Beard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
-</div>
-<div class="p-6 border-t border-border-muted bg-white">
-<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 02 — BEARD STYLING</span>
-<h3 class="font-headline-lg text-headline-lg mt-2">SCULPTED BEARD</h3>
-<div class="mt-4 flex justify-between items-center">
-<span class="font-body-sm text-body-sm uppercase tracking-tighter">View Details</span>
-<span class="material-symbols-outlined text-primary">arrow_forward</span>
-</div>
-</div>
-</div>
-<!-- Row 2: Small (Left) / Large (Right) -->
-<!-- Look 03 (Small) -->
+<!-- Look 01 -->
 <div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-<div class="flex-1 overflow-hidden">
-<img alt="Matte Pompadour" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4bWm18fu7ru2nqRFP2HvftszEP7hvRuMYrT3pSiqGDsM7tb23k9sJB_p1jW866NpzwmBbzwhoTGH1beav24BeHY4ei1OmZ3GK55b9_55_R8ZCgyekezY3h-2cnedtdHaC6xNK4Lwfmoa9srtkfmlIPoBZtJG-kKDmuwLZAjgkGuBgQJDHeYobhPa2NVVhjKtPR1J4u9z-SPaQ4mAzBAAEC35v43NPQMDUj_nlFjWMJjP_aioElEgOtrV8LDGwgJUhA"/>
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="The Architectural Fade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 01 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">THE ARCHITECTURAL FADE</h3>
+    </div>
 </div>
-<div class="p-6 border-t border-border-muted bg-white">
-<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 03 — HAIRCUTS</span>
-<h4 class="font-headline-lg text-headline-lg mt-2">MATTE POMPADOUR</h4>
-</div>
-</div>
-<!-- Look 04 (Large) -->
-<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="haircuts">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsFO-j0f_OFcq782n4oqbZQuBlT5yyGUy_LhZKMzrqUEfzmQjDQrAevSqTi5RyQZQpOX_wiDzvqhDHICbEvuau-7xJhqS8gRc8f-FHg-nEl4R-l3uGlh25vBKX4O3mg2i_E5VkU6R4fLK-IOe2bxatZRIZzf02_6yH7SxMua_7ghB_cPkxvpcktj4lupRNIcpdDE0fA1hueglP9MhllcLdZbivGpwXhfrBV-O6guT3HDqXQ6m0Q5Gq31ssuP2TUII4Ew')">
-</div>
-<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
-<span class="font-label-caps text-label-caps opacity-80">LOOK 04 — HAIRCUTS</span>
-<h3 class="font-headline-xl text-headline-xl mt-2">THE URBAN BUZZ</h3>
-<p class="font-body-lg text-body-lg mt-2 max-w-md hidden md:block">Minimalist, sharp, and effortless. Designed for those who appreciate high-impact simplicity.</p>
-</div>
-</div>
-<!-- Row 3: Large (Left) / Small (Right) -->
-<!-- Look 05 (Large) -->
-<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="haircuts">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIgEy8_H_RNynQGiOlfn3r_RlAsMjSqzy0KJletmZd6DSE4LBeXOHTR2Be9Va86EFZ2-k7O9cbvSuYGkOyEhVE_fRngSu1B6KELFB2SouBpwUWZQurCu5kV6PbhFC518DFMr8Y59Wm02e1wrqdKzmjW5hcJ2MgFOHA8PgFn2o3j0PfbM8qfW1JcDcQo41Gcq8v0SrLhQsS6jQSSX67FG2B4dm_UMiCTaOloL6vkNCS3IGKIBktevNvbQ_K0jmiP8ylCQ')">
-</div>
-<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
-<span class="font-label-caps text-label-caps opacity-80">LOOK 05 — HAIRCUTS</span>
-<h3 class="font-headline-xl text-headline-xl mt-2">LOW TAPER FADE</h3>
-</div>
-</div>
-<!-- Look 06 (Small) -->
+<!-- Look 02 -->
 <div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-<div class="flex-1 overflow-hidden">
-<img alt="Classic Goatee" class="w-full h-full object-cover grayscale brightness-75 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCQ68JbfT--0NUMXJfsI_IlS2ZtxCY6HaNMi0kn1tI00_J0-rblborxmD8WLyIsfm9D6uSdBJUbKYZ9Dc8bdMHJrPtg4Zb4084DCoswmuWFetk9KPiz7KPW7Fe4wSsiEyB--cqY8IL78Ukj_e0hk5WIqhsMtyDDIPSzvvnw-GPbCuloUW15l37KnK2CvYhNWIz29h_DXSvHlfrGeTfb1Ojf2Brym8J8DmwCpWr0hLUf27m20wXWvcb6VV5pa4DxJ2Eg"/>
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Sculpted Beard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 02 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">SCULPTED BEARD</h3>
+    </div>
 </div>
-<div class="p-6 border-t border-border-muted bg-white">
-<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 06 — BEARD STYLING</span>
-<h4 class="font-headline-lg text-headline-lg mt-2">CLASSIC GOATEE</h4>
+<!-- Look 03 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Matte Pompadour" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4bWm18fu7ru2nqRFP2HvftszEP7hvRuMYrT3pSiqGDsM7tb23k9sJB_p1jW866NpzwmBbzwhoTGH1beav24BeHY4ei1OmZ3GK55b9_55_R8ZCgyekezY3h-2cnedtdHaC6xNK4Lwfmoa9srtkfmlIPoBZtJG-kKDmuwLZAjgkGuBgQJDHeYobhPa2NVVhjKtPR1J4u9z-SPaQ4mAzBAAEC35v43NPQMDUj_nlFjWMJjP_aioElEgOtrV8LDGwgJUhA"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 03 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">MATTE POMPADOUR</h3>
+    </div>
 </div>
+<!-- Look 04 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="The Urban Buzz" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsFO-j0f_OFcq782n4oqbZQuBlT5yyGUy_LhZKMzrqUEfzmQjDQrAevSqTi5RyQZQpOX_wiDzvqhDHICbEvuau-7xJhqS8gRc8f-FHg-nEl4R-l3uGlh25vBKX4O3mg2i_E5VkU6R4fLK-IOe2bxatZRIZzf02_6yH7SxMua_7ghB_cPkxvpcktj4lupRNIcpdDE0fA1hueglP9MhllcLdZbivGpwXhfrBV-O6guT3HDqXQ6m0Q5Gq31ssuP2TUII4Ew"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 04 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">THE URBAN BUZZ</h3>
+    </div>
 </div>
-<!-- Row 4: Small (Left) / Large (Right) -->
-<!-- Look 07 (Small) -->
+<!-- Look 05 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Low Taper Fade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIgEy8_H_RNynQGiOlfn3r_RlAsMjSqzy0KJletmZd6DSE4LBeXOHTR2Be9Va86EFZ2-k7O9cbvSuYGkOyEhVE_fRngSu1B6KELFB2SouBpwUWZQurCu5kV6PbhFC518DFMr8Y59Wm02e1wrqdKzmjW5hcJ2MgFOHA8PgFn2o3j0PfbM8qfW1JcDcQo41Gcq8v0SrLhQsS6jQSSX67FG2B4dm_UMiCTaOloL6vkNCS3IGKIBktevNvbQ_K0jmiP8ylCQ"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 05 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">LOW TAPER FADE</h3>
+    </div>
+</div>
+<!-- Look 06 -->
 <div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-<div class="flex-1 overflow-hidden">
-<img alt="Sharp Line-Up" class="w-full h-full object-cover grayscale brightness-90 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YHfz4NGReZEF9SnFO8uf2D9pp5g1VysL9jIbM9TPEhZQhyC_eEAG9xTyPNYXyK72-Qcg59ht-NZecYeMlW9L_deEKyejC8ydR9oUNurY4SZ67PBeu7ipskI16lpImdQ2OPRt-85vHkZk6uSb_vAc7RIyIE9YXGNu_5rFJ95-3m0-7lHVE92pa6b5YnAoWlfZmzeJXqT5iTf2Yql85CfLkTIyDcIzpgpzx8XShagXG2CXMu_Kc8i99WShcgJYTnLvIA"/>
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Classic Goatee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCQ68JbfT--0NUMXJfsI_IlS2ZtxCY6HaNMi0kn1tI00_J0-rblborxmD8WLyIsfm9D6uSdBJUbKYZ9Dc8bdMHJrPtg4Zb4084DCoswmuWFetk9KPiz7KPW7Fe4wSsiEyB--cqY8IL78Ukj_e0hk5WIqhsMtyDDIPSzvvnw-GPbCuloUW15l37KnK2CvYhNWIz29h_DXSvHlfrGeTfb1Ojf2Brym8J8DmwCpWr0hLUf27m20wXWvcb6VV5pa4DxJ2Eg"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 06 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">CLASSIC GOATEE</h3>
+    </div>
 </div>
-<div class="p-6 border-t border-border-muted bg-white">
-<span class="font-label-caps text-label-caps text-text-dimmed">LOOK 07 — BEARD STYLING</span>
-<h4 class="font-headline-lg text-headline-lg mt-2">SHARP LINE-UP</h4>
+<!-- Look 07 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Sharp Line-Up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YHfz4NGReZEF9SnFO8uf2D9pp5g1VysL9jIbM9TPEhZQhyC_eEAG9xTyPNYXyK72-Qcg59ht-NZecYeMlW9L_deEKyejC8ydR9oUNurY4SZ67PBeu7ipskI16lpImdQ2OPRt-85vHkZk6uSb_vAc7RIyIE9YXGNu_5rFJ95-3m0-7lHVE92pa6b5YnAoWlfZmzeJXqT5iTf2Yql85CfLkTIyDcIzpgpzx8XShagXG2CXMu_Kc8i99WShcgJYTnLvIA"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 07 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">SHARP LINE-UP</h3>
+    </div>
 </div>
+<!-- Look 08 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Executive Facial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV3853dXW4p0M5iFu5Mg7eF52jmbmLC9B4R-DdWGGdqgnIq9k50s6SYUVEWexY9ZNrhTnQmQJLvPQxkAnA5vbJjeE1e44KTl8RT40jvxhJAcQrXYINyHMs52QivCfzuK2gBle9j9jdBugDmoxFBCYkvE0VZjKuyL-9IUU1tDh8jVXBBj8NK2eXz7JeVWQC7PwJxp1ue3h8CibcEmwinhyi0xUynrEPm41cBjSr9h3ekLEpIVDGg5SXclasFVPQMaqm7w"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 08 — GROOMING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">EXECUTIVE FACIAL</h3>
+    </div>
 </div>
-<!-- Look 08 (Large) -->
-<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="grooming">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBV3853dXW4p0M5iFu5Mg7eF52jmbmLC9B4R-DdWGGdqgnIq9k50s6SYUVEWexY9ZNrhTnQmQJLvPQxkAnA5vbJjeE1e44KTl8RT40jvxhJAcQrXYINyHMs52QivCfzuK2gBle9j9jdBugDmoxFBCYkvE0VZjKuyL-9IUU1tDh8jVXBBj8NK2eXz7JeVWQC7PwJxp1ue3h8CibcEmwinhyi0xUynrEPm41cBjSr9h3ekLEpIVDGg5SXclasFVPQMaqm7w')">
+<!-- Look 09 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="The Groom Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEnh4LbZXVyArAhMkVMDZzaptHHWF5tYsq2SugQHnHPJR4SDK2gUHQLr6cpeGhf6esG5LEDyyzLUJUBV_CpsOkjuH0i7YgMqR6sL3yePlX14APTQ12iX7D8SItXlF5TV1qqN8Z8grjxVZqOy-bXcm2gbkFRfL8j01Fr8cpHc3JpNrpaXlSR5PhNs1g7mz9zc0qY4RgJ1LADLqJrC5NPzAnHnkRIuXAQaB3YHbWFXHoMhRw1RW6V3WGL6D_d_brPxzSrw"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 09 — GROOMING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">THE GROOM SESSION</h3>
+    </div>
 </div>
-<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
-<span class="font-label-caps text-label-caps opacity-80">LOOK 08 — GROOMING</span>
-<h3 class="font-headline-xl text-headline-xl mt-2">EXECUTIVE FACIAL</h3>
+<!-- Look 10 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Classic Textured Crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 10 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">TEXTURED CROP</h3>
+    </div>
 </div>
+<!-- Look 11 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Faded Shape-Up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 11 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">FADED SHAPE-UP</h3>
+    </div>
 </div>
-<!-- Additional Grooming Card -->
-<div class="gallery-item group relative overflow-hidden hairline-card bg-white" data-category="grooming">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEnh4LbZXVyArAhMkVMDZzaptHHWF5tYsq2SugQHnHPJR4SDK2gUHQLr6cpeGhf6esG5LEDyyzLUJUBV_CpsOkjuH0i7YgMqR6sL3yePlX14APTQ12iX7D8SItXlF5TV1qqN8Z8grjxVZqOy-bXcm2gbkFRfL8j01Fr8cpHc3JpNrpaXlSR5PhNs1g7mz9zc0qY4RgJ1LADLqJrC5NPzAnHnkRIuXAQaB3YHbWFXHoMhRw1RW6V3WGL6D_d_brPxzSrw')">
+<!-- Look 12 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Whitening Facial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV3853dXW4p0M5iFu5Mg7eF52jmbmLC9B4R-DdWGGdqgnIq9k50s6SYUVEWexY9ZNrhTnQmQJLvPQxkAnA5vbJjeE1e44KTl8RT40jvxhJAcQrXYINyHMs52QivCfzuK2gBle9j9jdBugDmoxFBCYkvE0VZjKuyL-9IUU1tDh8jVXBBj8NK2eXz7JeVWQC7PwJxp1ue3h8CibcEmwinhyi0xUynrEPm41cBjSr9h3ekLEpIVDGg5SXclasFVPQMaqm7w"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 12 — GROOMING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">WHITENING FACIAL</h3>
+    </div>
 </div>
-<div class="absolute top-6 right-6">
-<span class="bg-white/90 backdrop-blur-sm px-4 py-2 font-label-caps text-label-caps border border-primary">PREMIUM LOOK</span>
+<!-- Look 13 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Classic Blowout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4bWm18fu7ru2nqRFP2HvftszEP7hvRuMYrT3pSiqGDsM7tb23k9sJB_p1jW866NpzwmBbzwhoTGH1beav24BeHY4ei1OmZ3GK55b9_55_R8ZCgyekezY3h-2cnedtdHaC6xNK4Lwfmoa9srtkfmlIPoBZtJG-kKDmuwLZAjgkGuBgQJDHeYobhPa2NVVhjKtPR1J4u9z-SPaQ4mAzBAAEC35v43NPQMDUj_nlFjWMJjP_aioElEgOtrV8LDGwgJUhA"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 13 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">CLASSIC BLOWOUT</h3>
+    </div>
 </div>
-<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/90 to-transparent w-full text-white">
-<span class="font-label-caps text-label-caps opacity-80">LOOK 09 — GROOMING</span>
-<h3 class="font-headline-xl text-headline-xl mt-2">THE GROOM SESSION</h3>
+<!-- Look 14 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Stubble Groom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YHfz4NGReZEF9SnFO8uf2D9pp5g1VysL9jIbM9TPEhZQhyC_eEAG9xTyPNYXyK72-Qcg59ht-NZecYeMlW9L_deEKyejC8ydR9oUNurY4SZ67PBeu7ipskI16lpImdQ2OPRt-85vHkZk6uSb_vAc7RIyIE9YXGNu_5rFJ95-3m0-7lHVE92pa6b5YnAoWlfZmzeJXqT5iTf2Yql85CfLkTIyDcIzpgpzx8XShagXG2CXMu_Kc8i99WShcgJYTnLvIA"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 14 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">STUBBLE DETAILED</h3>
+    </div>
 </div>
+<!-- Look 15 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Premium Spa Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEnh4LbZXVyArAhMkVMDZzaptHHWF5tYsq2SugQHnHPJR4SDK2gUHQLr6cpeGhf6esG5LEDyyzLUJUBV_CpsOkjuH0i7YgMqR6sL3yePlX14APTQ12iX7D8SItXlF5TV1qqN8Z8grjxVZqOy-bXcm2gbkFRfL8j01Fr8cpHc3JpNrpaXlSR5PhNs1g7mz9zc0qY4RgJ1LADLqJrC5NPzAnHnkRIuXAQaB3YHbWFXHoMhRw1RW6V3WGL6D_d_brPxzSrw"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 15 — GROOMING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">PREMIUM SPA SESSION</h3>
+    </div>
+</div>
+<!-- Look 16 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Modern Slick Back" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsFO-j0f_OFcq782n4oqbZQuBlT5yyGUy_LhZKMzrqUEfzmQjDQrAevSqTi5RyQZQpOX_wiDzvqhDHICbEvuau-7xJhqS8gRc8f-FHg-nEl4R-l3uGlh25vBKX4O3mg2i_E5VkU6R4fLK-IOe2bxatZRIZzf02_6yH7SxMua_7ghB_cPkxvpcktj4lupRNIcpdDE0fA1hueglP9MhllcLdZbivGpwXhfrBV-O6guT3HDqXQ6m0Q5Gq31ssuP2TUII4Ew"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 16 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">SLICK BACK FADE</h3>
+    </div>
+</div>
+<!-- Look 17 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Traditional Beard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCQ68JbfT--0NUMXJfsI_IlS2ZtxCY6HaNMi0kn1tI00_J0-rblborxmD8WLyIsfm9D6uSdBJUbKYZ9Dc8bdMHJrPtg4Zb4084DCoswmuWFetk9KPiz7KPW7Fe4wSsiEyB--cqY8IL78Ukj_e0hk5WIqhsMtyDDIPSzvvnw-GPbCuloUW15l37KnK2CvYhNWIz29h_DXSvHlfrGeTfb1Ojf2Brym8J8DmwCpWr0hLUf27m20wXWvcb6VV5pa4DxJ2Eg"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 17 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">TRADITIONAL BEARD</h3>
+    </div>
+</div>
+<!-- Look 18 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Dermalogica Glow" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIgEy8_H_RNynQGiOlfn3r_RlAsMjSqzy0KJletmZd6DSE4LBeXOHTR2Be9Va86EFZ2-k7O9cbvSuYGkOyEhVE_fRngSu1B6KELFB2SouBpwUWZQurCu5kV6PbhFC518DFMr8Y59Wm02e1wrqdKzmjW5hcJ2MgFOHA8PgFn2o3j0PfbM8qfW1JcDcQo41Gcq8v0SrLhQsS6jQSSX67FG2B4dm_UMiCTaOloL6vkNCS3IGKIBktevNvbQ_K0jmiP8ylCQ"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 18 — GROOMING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">EXPRESS GLOW</h3>
+    </div>
+</div>
+<!-- Look 19 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="High Taper Fade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 19 — HAIRCUTS</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">HIGH TAPER FADE</h3>
+    </div>
+</div>
+<!-- Look 20 -->
+<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
+    <div class="h-[200px] overflow-hidden relative">
+        <img alt="Beard Oil Trim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
+    </div>
+    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
+        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 20 — BEARD STYLING</span>
+        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">CLASSIC SHAPE-UP</h3>
+    </div>
 </div>
 </div>
 <!-- Pagination / Load More -->
-<div class="mt-stack-lg flex flex-col items-center">
-<button class="group flex items-center gap-4 font-label-caps text-label-caps py-6 px-12 border border-border-muted hover:border-primary transition-all relative overflow-hidden">
+<div class="mt-stack-lg flex flex-col items-center" id="load-more-container">
+<button id="load-more-btn" class="group flex items-center gap-4 font-label-caps text-label-caps py-6 px-12 border border-border-muted hover:border-primary transition-all relative overflow-hidden">
 <span class="relative z-10">LOAD MORE LOOKS</span>
 <span class="material-symbols-outlined relative z-10 transition-transform group-hover:rotate-90">add</span>
 </button>
@@ -337,7 +469,7 @@
 </div>
 <div class="border-t border-white/10 w-full pt-8 mt-8">
 <p class="font-label-caps text-label-caps text-on-primary dark:text-primary opacity-60 uppercase tracking-widest">
-                    © 2024 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+                    © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
                 </p>
 </div>
 </div>
@@ -346,10 +478,54 @@
 <script>
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
+        const loadMoreContainer = document.getElementById('load-more-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        let currentFilter = 'all';
+        let showLimit = 12;
+
+        function updateGalleryItems() {
+            // Find all matching items
+            const matchingItems = [];
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (currentFilter === 'all' || category === currentFilter) {
+                    matchingItems.push(item);
+                } else {
+                    item.classList.add('hidden-item');
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                }
+            });
+
+            // Loop matching items to show up to showLimit
+            matchingItems.forEach((item, index) => {
+                if (index < showLimit) {
+                    item.classList.remove('hidden-item');
+                    // Small timeout for smooth animation
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    item.classList.add('hidden-item');
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                }
+            });
+
+            // Toggle Load More button visibility
+            if (matchingItems.length > showLimit) {
+                loadMoreContainer.style.display = 'flex';
+            } else {
+                loadMoreContainer.style.display = 'none';
+            }
+        }
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const filter = btn.getAttribute('data-filter');
+                currentFilter = btn.getAttribute('data-filter');
+                showLimit = 12; // Reset limit when switching categories
 
                 // Update Button Styles
                 filterBtns.forEach(b => {
@@ -359,32 +535,17 @@
                 btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
                 btn.classList.remove('border-border-muted');
 
-                // Filter Items with Animation
-                galleryItems.forEach(item => {
-                    const category = item.getAttribute('data-category');
-                    
-                    if (filter === 'all' || category === filter) {
-                        item.classList.remove('hidden-item');
-                        // Small timeout to allow browser to register display before opacity change
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.95)';
-                        // Wait for transition before hiding completely
-                        setTimeout(() => {
-                            // Check if filter hasn't changed again during timeout
-                            const currentFilter = document.querySelector('.filter-btn.bg-primary').getAttribute('data-filter');
-                            if (currentFilter !== 'all' && category !== currentFilter) {
-                                item.classList.add('hidden-item');
-                            }
-                        }, 400);
-                    }
-                });
+                updateGalleryItems();
             });
         });
+
+        loadMoreBtn.addEventListener('click', () => {
+            showLimit += 8; // Load 8 more items
+            updateGalleryItems();
+        });
+
+        // Initialize visibility
+        updateGalleryItems();
 
         // Hover effect for cards
         galleryItems.forEach(card => {
@@ -407,6 +568,19 @@
 
         close.addEventListener('click', () => {
             menu.classList.add('translate-x-full');
+        });
+
+        // Dismiss Page Loader
+        window.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 500);
+                }, 1000);
+            }
         });
     </script>
 </body></html>

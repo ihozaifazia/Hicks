@@ -1,402 +1,496 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<!DOCTYPE html><html lang="en" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>HICKS | Premium Men's Salon</title>
+<title>Hicks Artisan Grooming</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container-low": "#f3f3f3",
-                    "surface-container-high": "#e8e8e8",
-                    "border-muted": "#E5E5E5",
-                    "primary-container": "#1b1b1b",
-                    "on-secondary": "#ffffff",
-                    "surface-container-highest": "#e2e2e2",
-                    "surface-bright": "#f9f9f9",
-                    "background": "#f9f9f9",
-                    "error-container": "#ffdad6",
-                    "tertiary": "#000000",
-                    "primary": "#000000",
-                    "secondary-fixed-dim": "#c6c6c7",
-                    "inverse-on-surface": "#f1f1f1",
-                    "tertiary-container": "#1b1b1b",
-                    "on-tertiary-fixed": "#1b1b1b",
-                    "on-tertiary": "#ffffff",
-                    "tertiary-fixed-dim": "#c6c6c6",
-                    "surface-container-lowest": "#ffffff",
-                    "on-surface": "#1b1b1b",
-                    "primary-fixed": "#e2e2e2",
-                    "inverse-surface": "#303030",
-                    "on-surface-variant": "#4c4546",
-                    "on-secondary-fixed": "#1a1c1c",
-                    "tertiary-fixed": "#e2e2e2",
-                    "surface": "#f9f9f9",
-                    "secondary": "#5d5f5f",
-                    "surface-variant": "#e2e2e2",
-                    "primary-fixed-dim": "#c6c6c6",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#cfc4c5",
-                    "on-background": "#1b1b1b",
-                    "on-primary": "#ffffff",
-                    "secondary-fixed": "#e2e2e2",
-                    "surface-dim": "#dadada",
-                    "on-primary-fixed": "#1b1b1b",
-                    "on-primary-container": "#848484",
-                    "on-error-container": "#93000a",
-                    "secondary-container": "#dfe0e0",
-                    "outline": "#7e7576",
-                    "on-tertiary-fixed-variant": "#474747",
-                    "surface-container": "#eeeeee",
-                    "surface-charcoal": "#1A1A1A",
-                    "on-primary-fixed-variant": "#474747",
-                    "on-secondary-fixed-variant": "#454747",
-                    "surface-tint": "#5e5e5e",
-                    "error": "#ba1a1a",
-                    "on-secondary-container": "#616363",
-                    "inverse-primary": "#c6c6c6",
-                    "text-dimmed": "#737373",
-                    "on-tertiary-container": "#848484"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "stack-sm": "16px",
-                    "stack-md": "40px",
-                    "gutter": "24px",
-                    "stack-lg": "80px",
-                    "container-max": "1280px",
-                    "margin-edge": "40px"
-            },
-            "fontFamily": {
-                    "body-xl": ["Hanken Grotesk"],
-                    "headline-lg-mobile": ["Anton"],
-                    "label-caps": ["Hanken Grotesk"],
-                    "headline-xl": ["Anton"],
-                    "headline-lg": ["Anton"],
-                    "body-lg": ["Hanken Grotesk"],
-                    "display-lg": ["Anton"],
-                    "body-sm": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                    "headline-xl": ["48px", {"lineHeight": "52px", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
-                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              surface: '#f9f9f9',
+              'surface-dim': '#dadada',
+              'surface-bright': '#f9f9f9',
+              'surface-container-lowest': '#ffffff',
+              'surface-container-low': '#f3f3f3',
+              'surface-container': '#ededed',
+              'surface-container-high': '#e7e7e7',
+              'surface-container-highest': '#e2e2e2',
+              'on-surface': '#1b1b1b',
+              'on-surface-variant': '#474747',
+              outline: '#767676',
+              'outline-variant': '#c6c6c6',
+              primary: '#000000',
+              'on-primary': '#ffffff',
+              'primary-container': '#262626',
+              'on-primary-container': '#b1b1b1',
+              secondary: '#5e5e5e',
+              'on-secondary': '#ffffff',
+              'secondary-container': '#e6e6e6',
+              'on-secondary-container': '#4a4a4a',
+              tertiary: '#000000',
+              'on-tertiary': '#ffffff',
+              'tertiary-container': '#262626',
+              'on-tertiary-container': '#b1b1b1',
+              error: '#ba1a1a',
+              'on-error': '#ffffff',
+              'error-container': '#ffdad6',
+              'on-error-container': '#410002',
+              accent: '#d29676', // Extracted from images for subtle text
             }
+          },
+          borderRadius: {
+            'xl': '0.75rem',
+            '2xl': '1rem',
+            '3xl': '1.5rem',
           }
         }
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .dotted-leader {
-            display: flex;
-            align-items: baseline;
-        }
-        .dotted-leader::after {
-            content: "";
-            flex: 1;
-            border-bottom: 1px dotted #737373;
-            margin: 0 10px;
-        }
-        .parallax-bg {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .editorial-border {
-            border-bottom: 1px solid #E5E5E5;
-        }
-        @media (max-width: 768px) {
-            .parallax-bg {
-                background-attachment: scroll;
-            }
-        }
-        /* Custom Textures */
-        .bg-woody, .bg-background, .bg-white, .bg-surface-container-lowest {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
-            background-size: cover;
-            background-repeat: repeat;
-        }
-        .bg-charcoal, .bg-surface-charcoal, .bg-primary, footer {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
-            background-size: cover;
-            background-repeat: repeat;
-        }
-        .hover\:bg-white:hover {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
-            background-size: cover;
-        }
-        .hover\:bg-primary:hover {
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
-            background-size: cover;
-        }
-        @keyframes loaderPulse {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.05); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
-        }
-        .loader-text {
-            animation: loaderPulse 2s infinite ease-in-out;
-        }
-    </style>
+    }
+  </script>
+<style data-purpose="custom-styles" type="text/tailwindcss">
+    @layer utilities {
+      .text-balance {
+        text-wrap: balance;
+      }
+      .bg-glass {
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+    }
+    
+    body {
+      @apply bg-[#f9f9f9] text-brand-on-surface font-sans;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-serif;
+    }
+  </style>
 </head>
-<body class="bg-woody text-on-background selection:bg-primary selection:text-on-primary">
-<!-- Page Loader -->
-<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
-    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
+<body class="antialiased selection:bg-brand-primary selection:text-white">
+<!-- BEGIN: Hero Section -->
+<header class="relative h-[90vh] min-h-[600px] flex flex-col justify-between overflow-hidden text-white rounded-b-3xl">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Spa Interior" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK0TzXj7PDVbQpmyu7TrmqmmzLp08wCAvwLaoAQphsxJBAzeg8-PkrStMTKEhGvjWo88gEntIaiG3s0qo0fhRGsgpp6D5Ihwaw1vQNFaKf4BeZEwY6MJfRaVcv2lxL_vtdKSWqS1mUGRC23yoMqCVTK_qnoqQCqvUGhv8_KK3nA3NMoziK0GifYLJwCYTeoWMTUA8ClFPehRJCyma7OdtKSW3YTZ1BE5Iyxecb_A9wi_NFk9zRC3tHAOWr7h4fUhQp6UB9KTmqZgVDQw">
+<div class="absolute inset-0 bg-black/40"></div>
 </div>
-<!-- TopNavBar: Kept light/white as per request -->
-<header class="w-full top-0 sticky z-50 bg-background border-b border-border-muted transition-all duration-300" id="main-header">
-<nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
-<a class="font-headline-lg text-headline-lg tracking-tighter text-primary" href="index.html">HICKS</a>
-<!-- Desktop Navigation -->
-<ul class="hidden md:flex gap-10 items-center">
-<li class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 cursor-pointer transition-colors duration-300"><a href="index.html">HOME</a></li>
-<li class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer"><a href="service.html">SERVICES</a></li>
-<li class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer"><a href="locations.html">LOCATIONS</a></li>
-<li class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer"><a href="gallery.html">GALLERY</a></li>
-</ul>
-<div class="flex items-center gap-6">
-<button class="font-label-caps text-label-caps bg-primary text-on-primary px-8 py-3 hover:bg-white hover:text-primary border border-primary transition-all duration-300 cursor-pointer active:opacity-70" onclick="window.location.href='booking_form.html'">
-                    BOOK NOW
-                </button>
-<button class="md:hidden text-primary" id="mobile-menu-toggle">
-<span class="material-symbols-outlined">menu</span>
+<!-- Navigation -->
+<nav class="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+<a class="text-2xl font-serif tracking-wide" href="index.html">HICKS</a>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="text-white border-b border-white pb-1" href="index.html">Home</a>
+<a class="hover:text-white/80 transition-colors" href="services.html">Services</a>
+<a class="hover:text-white/80 transition-colors" href="locations.html">Locations</a>
+<a class="hover:text-white/80 transition-colors" href="gallery.html">Gallery</a>
+<a class="hover:text-white/80 transition-colors" href="ourcrew.html">Our Crew</a>
+</div>
+<div class="hidden md:block">
+<a class="bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all" href="bookingform.html">
+          Book Appointment
+        </a>
+</div>
+<!-- Mobile menu button -->
+<button class="md:hidden text-white p-2" id="mobile-menu-btn" aria-label="Toggle Navigation">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
 </button>
-</div>
 </nav>
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/70 z-50 hidden md:hidden transition-opacity">
+  <div class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-[#1e1d1b] text-white p-6 shadow-2xl flex flex-col justify-between">
+    <div>
+      <div class="flex justify-between items-center mb-8">
+        <a class="font-serif text-2xl tracking-widest uppercase text-white" href="index.html">Hicks</a>
+        <button id="mobile-menu-close" class="text-gray-400 p-2 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-5 text-base font-medium text-gray-300">
+        <a class="text-white font-semibold py-1 border-l-2 border-white pl-3" href="index.html">Home</a>
+        <a class="hover:text-white py-1" href="services.html">Services</a>
+        <a class="hover:text-white py-1" href="locations.html">Locations</a>
+        <a class="hover:text-white py-1" href="gallery.html">Gallery</a>
+        <a class="hover:text-white py-1" href="ourcrew.html">Our Crew</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-white/10">
+      <a class="w-full flex items-center justify-center py-3 bg-white text-black text-sm font-medium rounded-full transition-colors hover:bg-gray-100" href="bookingform.html">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto mt-16 mb-24">
+<p class="uppercase tracking-[0.3em] text-xs font-semibold mb-6">We are Bahawalpur's best</p>
+<h1 class="text-6xl md:text-8xl font-serif leading-[1.1] mb-6 font-normal">
+        The Art of<br>Gentleman, Refined
+      </h1>
+<p class="text-lg md:text-xl text-white/90 max-w-2xl mb-10 font-light text-balance leading-relaxed">
+        A place of luxury, with curated treatments delivered by highly experienced artisans in your home city.
+      </p>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<a class="bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors flex items-center gap-2" href="bookingform.html">
+          Book Appointment
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<a class="bg-transparent border border-white/40 text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-white/10 transition-colors" href="services.html">
+          Explore Services
+        </a>
+</div>
+</div>
 </header>
-<!-- Mobile Menu -->
-<div class="fixed inset-0 bg-background z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
-<button class="absolute top-8 right-margin-edge text-primary" id="mobile-menu-close">
-<span class="material-symbols-outlined" style="font-size: 40px;">close</span>
-</button>
-<ul class="flex flex-col gap-8 text-center">
-<li class="font-headline-xl text-headline-xl text-primary"><a href="index.html">HOME</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="service.html">SERVICES</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="locations.html">LOCATIONS</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed"><a href="gallery.html">GALLERY</a></li>
+<!-- END: Hero Section -->
+<!-- BEGIN: Stats Section -->
+<section class="py-24 bg-brand-surface text-center">
+<div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 divide-x divide-gray-200/0 md:divide-gray-200">
+<div class="flex flex-col items-center">
+<div class="text-5xl font-serif mb-2 text-brand-primary">2K+</div>
+<div class="text-brand-on-surface-variant text-sm tracking-wide">Guests Served</div>
+</div>
+<div class="flex flex-col items-center border-l-0 md:border-l border-gray-200">
+<div class="text-5xl font-serif mb-2 text-brand-primary">2</div>
+<div class="text-brand-on-surface-variant text-sm tracking-wide">City Branches</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="text-5xl font-serif mb-2 text-brand-primary">22</div>
+<div class="text-brand-on-surface-variant text-sm tracking-wide">Master Artisans</div>
+</div>
+<div class="flex flex-col items-center border-l-0 md:border-l border-gray-200">
+<div class="text-5xl font-serif mb-2 text-brand-primary">4.3</div>
+<div class="text-brand-on-surface-variant text-sm tracking-wide">Guest Rating</div>
+</div>
+</div>
+</section>
+<!-- END: Stats Section -->
+<!-- BEGIN: Philosophy Section -->
+<section class="py-24 bg-brand-surface">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative">
+<div class="max-w-xl">
+<p class="text-brand-accent uppercase tracking-widest text-xs font-semibold mb-6">Our Philosophy</p>
+<h2 class="text-5xl md:text-6xl font-serif leading-tight mb-8">We value our customers &amp; our customers value us.<br></h2>
+<div class="space-y-6 text-brand-on-surface-variant text-lg font-light leading-relaxed">
+<p class="">
+            At Hicks, what we are most concerned with is your experience with us.</p>
+<p class="">
+            Our artisans are the absolute best this city has to offer, thus we have brought them together for you.</p>
+</div>
+</div>
+<div class="relative h-[600px] rounded-3xl overflow-hidden bg-brand-surface-container-low hidden lg:block">
+<img alt="Spa Treatment" class="absolute inset-0 w-full h-full object-cover object-right" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB_NO8jTXlp5ci6OjDvjVcvLcC0-QXrMlGL4-UdOVeYU98J4_m13iFpU9NnjzRS7ZMOv0T_CcwGFtjTX1OznNvmKQ7TbYhSdbba25qe23nui5Fj1NVj8uGk5WIiQ7Y36gyIh6HEetpsIYBYh2HSsPzaHm6z9oo75oF0w7XJDOAR5XeAJn3QhdD46rlIWduu01jHdDgrPM4BkxR4jH64dDvXJ1fTpvaL-2fbwrDJ6bjYecqdKasivSA6JZfaiElfH2s993ngB8-QNklpA">
+<!-- Floating Card -->
+<div class="absolute bottom-8 right-8 bg-white/90 backdrop-blur rounded-2xl p-6 shadow-xl border border-white/20">
+<div class="text-3xl font-serif text-brand-primary mb-1">8+</div>
+<div class="text-sm text-brand-on-surface-variant">Years of craft</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Philosophy Section -->
+<!-- BEGIN: Services Section -->
+<section class="py-24 bg-[#f6f5f3]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<p class="text-brand-accent uppercase tracking-widest text-xs font-semibold mb-3">Signature offerings</p>
+<h2 class="text-4xl md:text-5xl font-serif">Curated Experiences</h2>
+</div>
+<a class="text-sm font-medium hover:opacity-70 transition-opacity flex items-center gap-2 pb-2" href="services.html">
+          View All 
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-64 overflow-hidden relative bg-brand-surface-container-low">
+<!-- Placeholder for missing image -->
+<div class="absolute inset-0 flex items-center justify-center text-brand-on-surface-variant/30 text-sm italic">Service Image 1</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-serif mb-3">Hair Cut &amp; Style</h3>
+<p class="text-sm text-brand-on-surface-variant line-clamp-3 mb-6 flex-1 font-light leading-relaxed">
+              A precision cut tailored to your face shape and lifestyle, finished with a...
+            </p>
+<div class="flex justify-between items-center text-sm pt-4 border-t border-brand-surface-container text-brand-on-surface-variant">
+<span class="font-medium text-brand-primary">PKR 85</span>
+<span class="flex items-center gap-1.5 opacity-80">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                60 min
+              </span>
+</div>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-64 overflow-hidden relative bg-brand-surface-container-low">
+<!-- Placeholder for missing image -->
+<div class="absolute inset-0 flex items-center justify-center text-brand-on-surface-variant/30 text-sm italic">Service Image 2</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-serif mb-3">Botanical Hair Treatment</h3>
+<p class="text-sm text-brand-on-surface-variant line-clamp-3 mb-6 flex-1 font-light leading-relaxed">
+              Deep conditioning ritual with cold-pressed botanical oils to restore shi...
+            </p>
+<div class="flex justify-between items-center text-sm pt-4 border-t border-brand-surface-container text-brand-on-surface-variant">
+<span class="font-medium text-brand-primary">PKR 65</span>
+<span class="flex items-center gap-1.5 opacity-80">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                45 min
+              </span>
+</div>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-64 overflow-hidden relative bg-brand-surface-container-low">
+<!-- Placeholder for missing image -->
+<div class="absolute inset-0 flex items-center justify-center text-brand-on-surface-variant/30 text-sm italic">Service Image 3</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-serif mb-3">Luminous Facial</h3>
+<p class="text-sm text-brand-on-surface-variant line-clamp-3 mb-6 flex-1 font-light leading-relaxed">
+              A customized facial using natural extracts to cleanse, exfoliate, and...
+            </p>
+<div class="flex justify-between items-center text-sm pt-4 border-t border-brand-surface-container text-brand-on-surface-variant">
+<span class="font-medium text-brand-primary">PKR 120</span>
+<span class="flex items-center gap-1.5 opacity-80">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                75 min
+              </span>
+</div>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-64 overflow-hidden relative bg-brand-surface-container-low">
+<!-- Placeholder for missing image -->
+<div class="absolute inset-0 flex items-center justify-center text-brand-on-surface-variant/30 text-sm italic">Service Image 4</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-serif mb-3">Manicure &amp; Gel Polish</h3>
+<p class="text-sm text-brand-on-surface-variant line-clamp-3 mb-6 flex-1 font-light leading-relaxed">
+              Nail shaping, cuticle care, and a long-lasting gel finish in the shade of you...
+            </p>
+<div class="flex justify-between items-center text-sm pt-4 border-t border-brand-surface-container text-brand-on-surface-variant">
+<span class="font-medium text-brand-primary">PKR 55</span>
+<span class="flex items-center gap-1.5 opacity-80">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                50 min
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Services Section -->
+<!-- BEGIN: Locations Section -->
+<section class="py-24 bg-[#f6f5f3]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<p class="text-brand-accent uppercase tracking-widest text-xs font-semibold mb-3">Find Us</p>
+<h2 class="text-4xl md:text-5xl font-serif">Our Sanctuaries</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Location 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col group">
+<div class="h-64 w-full bg-brand-surface-container-low overflow-hidden">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfmv-Irds68evD3uDEtZbgyVsXi35llijrxTx7j0ey8VtQBlU2dmBLW3rFO5I-9AYKq-nqhweNXNY13Sd2NaAcS76QDVNckQllwMDSmgnI8KJ9cBm48Ox42jsIYjrOEXYdCO2K4eet2wf-CiZ0q_euPSod9mT9qnQoZ-Qx12wtjsKLiQinwHrdvVn68UlqtnMh0TgHtU_dn20dEwoHhCONt_qMhCFhJY5hjwAsEhtavKwL0lXmpXId_9LZ3JisFfLBY8c9hpyeQdegWg" alt="Railway Road Main Branch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-serif mb-3">Railway Road (Main Branch)</h3>
+<div class="flex items-start gap-2 text-sm text-brand-on-surface-variant font-light mb-4">
+<svg class="w-5 h-5 shrink-0 opacity-60 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<p>Fandi Center, near Raja Pump Chowk, Railway Road, Bahawalpur</p>
+</div>
+</div>
+<a href="locations.html" class="text-xs font-semibold uppercase tracking-wider text-brand-accent hover:text-black transition-colors flex items-center gap-1">
+  Explore Branch &rarr;
+</a>
+</div>
+</div>
+<!-- Location 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col group">
+<div class="h-64 w-full bg-brand-surface-container-low overflow-hidden">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6UggXxYYhdasbiuFAcxdUeQZHWxQHDo45ZM4yJ7JcT1TsH8CD_gtk0A88i_23z9QYw_aHyHeiE5c2vzQmJjsGgaDi4EBJaTH5XY2j49L5ZglnKBmdDvntihAGEYKFcwbTy5QLpcEjWJJJdSoYw8NglblwDShS1oGeTzozUM2gEacbBV_iTslqNReQoN3dX-FiUmcGl5_h1wsjq9me6YMpl3nOrEKmINQWrzv9JeZubIwRBdrZ-MamguYsfbGWaHqaYvhLRZsNUhYRg" alt="Satellite Town Branch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-serif mb-3">Satellite Town Branch</h3>
+<div class="flex items-start gap-2 text-sm text-brand-on-surface-variant font-light mb-4">
+<svg class="w-5 h-5 shrink-0 opacity-60 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<p>Commercial Area, Satellite Town, Bahawalpur</p>
+</div>
+</div>
+<a href="locations.html" class="text-xs font-semibold uppercase tracking-wider text-brand-accent hover:text-black transition-colors flex items-center gap-1">
+  Explore Branch &rarr;
+</a>
+</div>
+</div>
+<!-- Location 3 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="h-64 w-full bg-brand-surface-container-low overflow-hidden relative">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4JNZxY5lfi_zlb9is4GgN0kuhF6W2xPyBayA2-K4-gh-3rd5JaO0DjWQoATE9Sv2-JrbsXfhsUcWYAv96EY03vQmhWJbHzOWH3_Bxjgz1jDXBOl0W-NlRDQY9MVmyFbpDHUnfvkQK6bwX0tPqQ8rIiGotr4NjSMSg4ctiiQ1QePQLVd-RE7vneGOZeO7C114SitUBf79Yp0Hj8DMTtvZLCNXYa7lrw9qnN768cwBVWD_5zzCWZWDROcsIFRxJ8nLL5MkY-0xnqGIpQ" alt="DHA Road Branch" class="w-full h-full object-cover grayscale brightness-90 group-hover:scale-105 transition-transform duration-700">
+<div class="absolute top-4 left-4 bg-black/80 text-white text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Opening Soon</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-serif mb-3">DHA Road Branch</h3>
+<div class="flex items-start gap-2 text-sm text-brand-on-surface-variant font-light mb-4">
+<svg class="w-5 h-5 shrink-0 opacity-60 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<p>DHA Main Boulevard, Bahawalpur (Opening Soon)</p>
+</div>
+</div>
+<a href="locations.html" class="text-xs font-semibold uppercase tracking-wider text-brand-accent hover:text-black transition-colors flex items-center gap-1">
+  Explore Branch &rarr;
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Locations Section -->
+
+<!-- BEGIN: Artisans Section -->
+<section class="py-24 bg-brand-surface border-t border-brand-surface-container">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<p class="text-brand-accent uppercase tracking-widest text-xs font-semibold mb-3">The Artisans</p>
+<h2 class="text-4xl md:text-5xl font-serif">Meet Our Stylists</h2>
+</div>
+<a class="text-sm font-medium hover:opacity-70 transition-opacity flex items-center gap-2 pb-2" href="ourcrew.html">
+          All Artisans 
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Artisan 1 -->
+<a href="ourcrew.html" class="group cursor-pointer block">
+<div class="aspect-[4/5] overflow-hidden rounded-3xl bg-brand-surface-container-low mb-6">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC94joR8lUD6WVdnlEP9YCHS5_LAz8hv2jsfKFXfL5-5FvbrVBw-qjueb61y1nqnoQtoawfPrjxwHAVN3VfdnAHagSDyo5oaVKki4vmdYPpZF68GWeXP08SDLVBBjdkjzY2quZnJbXBCBxkwMUqvDjVoLO2nFSS3mRuamVheqYtgm1XujNfj_e9NFFPTyeOBygHMYL4EnT8pGqAzAp_uVl61uVoCsL7bi64AmvnMmb1_jb5UDPgQeRd0m0PI3oP-4sgPKyIGqylTCS7Jw" alt="Tariq Malik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<h3 class="text-xl font-serif mb-1">Tariq Malik</h3>
+<p class="text-sm text-brand-accent">Master Stylist & Art Director</p>
+</a>
+<!-- Artisan 2 -->
+<a href="ourcrew.html" class="group cursor-pointer block">
+<div class="aspect-[4/5] overflow-hidden rounded-3xl bg-brand-surface-container-low mb-6">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJy83fde-oFabh17EtNuVRbDBz94PrA6HftatcoI8CEDKdMPiYvd1RiXV7TVj_sYe0kek5AzHaxrbG2OCaorsDZw3q7off5qfhaXd4fjjDg06oiiNqrZeB2jcceeACLEivdSd67PKycJacGk8Fn_ikR3-R4yVKRJ1vTttitnFprGhtF5JPHcn5YFYshQUwEFXFHqgxmGIxG6Bn5Tgan3FbxBdyKZDpRFx__XidV_cfICBVDlQOwqpE4qQ7Ofy-lITKstmkcUvCbezdhA" alt="Usman Ali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<h3 class="text-xl font-serif mb-1">Usman Ali</h3>
+<p class="text-sm text-brand-accent">Master Barber & Beard Artisan</p>
+</a>
+<!-- Artisan 3 -->
+<a href="ourcrew.html" class="group cursor-pointer block">
+<div class="aspect-[4/5] overflow-hidden rounded-3xl bg-brand-surface-container-low mb-6">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPquLN0CpguHuTCvmzvc6fYGZmKoTlN31Q3ZVkpehsHprNkOVTvIx8AuSFke9HA0FG4ru2q3csbOmAJh3ZJEIqPE4E7hcKLQ-Yxs_ipy5oGoZbDdod7844-Os0BSVGIuCQ9SNHfKL6fvC39FfT1yplCd3BaUiQFymeNwF_D2QlHWRiy8URDcKItYwOHt70sRUjz60U6zlxvx5TTrIeEoAj_jtxi5BSl34t-Fsw1cUf1UULWnxEi05-3QhJqiN2X_KG4JHoO9A8J1pSXA" alt="Hamza Farooq" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<h3 class="text-xl font-serif mb-1">Hamza Farooq</h3>
+<p class="text-sm text-brand-accent">Creative Director & Hair Designer</p>
+</a>
+</div>
+</div>
+</section>
+<!-- END: Artisans Section -->
+<!-- END: Artisans Section -->
+<!-- BEGIN: Footer / CTA Section -->
+<footer class="bg-[#2d2a28] text-white pt-32 pb-16">
+<div class="max-w-4xl mx-auto px-6 text-center mb-32">
+<div class="text-brand-accent mb-6 flex justify-center">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h2 class="text-5xl md:text-7xl font-serif mb-6">Your ritual&nbsp;<i class="italic">awaits.</i></h2>
+<p class="text-lg text-white/80 mb-10 font-light text-balance">
+        Reserve your session with us &amp; let us take care of the rest.</p>
+<a class="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors" href="bookingform.html">Place Your Booking<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/10 pt-16">
+<div class="md:col-span-1">
+<h3 class="text-3xl font-serif mb-4">HICKS</h3>
+<p class="text-white/60 text-sm font-light mb-6"><span style="color: rgb(194, 188, 187); font-family: &quot;Hanken Grotesk&quot;, sans-serif; background-color: rgb(50, 47, 44);" class="">A scintillating experience with the best artisans bahawalpur has to offer.</span></p>
+<div class="flex gap-4 opacity-60">
+<!-- Social Icons Placeholder -->
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</div>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-widest text-white/50 font-semibold mb-6">Explore</h4>
+<ul class="space-y-4 text-sm text-white/80 font-light">
+<li class=""><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="locations.html">Locations</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="ourcrew.html">Our Crew</a></li>
 </ul>
 </div>
-<main>
-<!-- Section 1: Hero -->
-<section class="relative h-[921px] w-full overflow-hidden flex items-center justify-center">
-<div class="absolute inset-0 z-0 scale-105 animate-[subtle-zoom_20s_infinite_alternate] transition-all duration-1000 opacity-100 translate-y-0">
-<div class="w-full h-full bg-cover bg-center" data-alt="Cinematic portrait of a sharp-featured man in a black blazer." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3CKP_KZnUEjBtWob7NowYojvcGeAuD35GvIFr2kE0SoZmb-OsFrpKFppCEMesyy9xw42HPgnNXc5QWDfrIASYzzfUczylHT_yo2-vSan8B0xZhid65KHu8q3I7NxwXPwB88qdoSl3EzNa6yAiWA15yJTuHnQN8GP9jxo4gXgaNtems5VZ_Rf36pDerOlyfjCq_GDmgeBa1stmj5_8MMJN1g_UziVespWu6PLBrod2YbeQY3l8t-vqUl63ycYG_28_bQ')"></div>
-</div>
-<div class="absolute inset-0 bg-black/20 z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
-<div class="relative z-20 text-center text-white px-margin-edge transition-all duration-1000 opacity-100 translate-y-0">
-<h1 class="font-display-lg text-[120px] md:text-[200px] leading-none tracking-tight animate-fade-in uppercase">HICKS</h1>
-<p class="font-label-caps text-label-caps tracking-[0.4em] mt-4 opacity-90">BAHAWALPUR FASHION WEEK</p>
-<div class="mt-stack-md flex justify-center">
-<div class="w-[1px] h-24 bg-white/50 animate-bounce"></div>
-</div>
-</div>
-</section>
-<!-- Section 2: About Premium Grooming -->
-<section class="py-stack-lg px-margin-edge max-w-container-max mx-auto grid md:grid-cols-2 gap-gutter items-center bg-woody">
-<div class="space-y-stack-sm order-2 md:order-1 transition-all duration-1000 opacity-100 translate-y-0">
-<span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">The Legacy</span>
-<h2 class="font-headline-xl text-headline-xl text-primary uppercase">Editorial Excellence in Bahawalpur</h2>
-<p class="font-body-xl text-body-xl text-on-surface-variant max-w-xl">
-                    HICKS isn't just a salon; it's a statement of sophistication. Operating since 2016, we bring high-fashion grooming standards to the heart of Bahawalpur, merging 10 years of experience with modern editorial aesthetics.
-                </p>
-<p class="font-body-lg text-body-lg text-text-dimmed max-w-lg">
-                    Our master barbers are architects of style, crafting looks that define the modern gentleman. Experience the quiet luxury of a space designed for the discerning.
-                </p>
-<div class="pt-stack-sm">
-<button class="font-label-caps text-label-caps border border-primary text-primary px-10 py-4 hover:bg-primary hover:text-on-primary transition-all duration-300">OUR STORY</button>
-</div>
-</div>
-<div class="order-1 md:order-2 h-[600px] bg-border-muted overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
-<img alt="Luxury minimalist salon interior" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP4R01ikbPQY1h86v4EX_mGuj256l8y6T-fVR_RY9FBr8FrgFdg9NqcndL14XlDtRwM5C8TcvDTzWl5nQ4ekkhbGpb7K-BGc50E2urSzXIvDItt_mtx1nR_YV1d6S9Cvl3Sz0YKgZ_O5blT1rOsNEJ-XCjnxHi3t8W4Ndw3mFx0w5-8jS3sF9jIu9v8uGUoZHwrgW5Yfo-_bNEVfeyjvjIAGLVKHiDZYKdBxdp-hVjP6Pun42hhIY25Y_8HFS2N7cbdw">
-</div>
-</section>
-<!-- Section 3: Services Teaser -->
-<section class="bg-surface-container-low py-stack-lg px-margin-edge bg-woody">
-<div class="max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
-<div class="flex flex-col md:flex-row justify-between items-end mb-stack-md border-b border-border-muted pb-8">
 <div>
-<span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">Curation</span>
-<h2 class="font-headline-xl text-headline-xl text-primary">SELECT SERVICES</h2>
+<h4 class="text-xs uppercase tracking-widest text-white/50 font-semibold mb-6">Visit</h4>
+<ul class="space-y-4 text-sm text-white/80 font-light">
+<li class=""><a class="hover:text-white transition-colors" href="bookingform.html">Book Appointment</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="locations.html">Find a Branch</a></li>
+<li class=""></li>
+</ul>
 </div>
-<a class="font-label-caps text-label-caps text-primary hover:underline transition-all" href="service.html">VIEW FULL MENU</a>
+<div>
+<h4 class="text-xs uppercase tracking-widest text-white/50 font-semibold mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-white/80 font-light">
+<li><a class="hover:text-white transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a></li>
+<li><a class="hover:text-white transition-colors" href="tel:+923468541177">+92 346 8541177</a></li>
+<li><a class="hover:text-white transition-colors" href="tel:0622888743">062 2888743</a></li>
+</ul>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Service 1 -->
-<div class="bg-white/80 backdrop-blur-sm p-gutter space-y-6 border border-border-muted hover:border-primary transition-colors group">
-<div class="h-64 overflow-hidden">
-<img alt="Hair Designing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_swWO_5AWSAK0WtQy7c-nalIJFhqSGN5NJoHqEIHs_m-_mPQ5fRxkXtK0fvIfVekGkM_dVgaPnI1eZVXnVEkkzCNfG768rEgwDXQqf5KjiUI8FL9ArFGK4A1-mk2z0w1TaXT6ZpJKoPp1rxzirGr8ljhpJbvSkEU2xL14-gXVyzGJ-jNpcsTh_8YIzyKWzqB_A6QSwnQBd82Vmf5y4cBDfBl5smEOMvSnh9xes7S5RX8sAzD-GRPgVCBerOSl0AIDw">
-</div>
-<div class="space-y-4">
-<div class="dotted-leader">
-<span class="font-headline-lg text-headline-lg uppercase">Hair Designing</span>
-<span class="font-body-xl text-body-xl text-primary">ON INQUIRY</span>
-</div>
-<p class="font-body-sm text-body-sm text-text-dimmed">Architectural cuts tailored to your face structure and lifestyle.</p>
-</div>
-</div>
-<!-- Service 2 -->
-<div class="bg-white/80 backdrop-blur-sm p-gutter space-y-6 border border-border-muted hover:border-primary transition-colors group">
-<div class="h-64 overflow-hidden">
-<img alt="Premium Wash" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsYFY94Sw1ZV_KQ_dsohfkUy7uZ5jZEu4PKBQ9q1Qt8qJZywNd9To6YMZZwnXn-UtPriG1epNOvZzeBH2mvE_tHHeIewbOxyJP2UjbAj9Uqa_9vg914W7H4UrIaR-noVhFaKx4n9kUXQknedmsJcP2xwKgHeBnh9C2OoJWt_4eraab7DOk7c-xt-JAddpzlHs_Ge90gifptYL1VVK3Q4H9Rk4UwjjBT_wPLpyuBKJ0bjSTvp0zqXSSH1LPpBYIhsWTsg">
-</div>
-<div class="space-y-4">
-<div class="dotted-leader">
-<span class="font-headline-lg text-headline-lg uppercase">Premium Wash</span>
-<span class="font-body-xl text-body-xl text-primary">ON INQUIRY</span>
-</div>
-<p class="font-body-sm text-body-sm text-text-dimmed">Deep cleansing and scalp therapy using artisan-grade botanicals.</p>
-</div>
-</div>
-<!-- Service 3 -->
-<div class="bg-white/80 backdrop-blur-sm p-gutter space-y-6 border border-border-muted hover:border-primary transition-colors group">
-<div class="h-64 overflow-hidden">
-<img alt="Signature Shave" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVLs9qr4r4KTfbkhpktAq6OzEmBkzHnByRokMq1M7xaguKpKtSdNIl33N6f5bSeeFaMJxhYLLf4NeIYbES5xUc4fsnMRui4Yn5CaDtlHC-Ehw1q-B-gX7TDIgkTd23K3NYzY90sW8_iDHTSrCtq40Gnbn2LacYCmuQWdTERZq5SR2_r0Az9ECufcNHszsRc1obs3qjwHIQi-Si6yIdmgGt5euKmUqEtYDdwODJGtgPV76Di_6omFtLncD24Mx4oiNtmQ">
-</div>
-<div class="space-y-4">
-<div class="dotted-leader">
-<span class="font-headline-lg text-headline-lg uppercase">Signature Shave</span>
-<span class="font-body-xl text-body-xl text-primary">ON INQUIRY</span>
-</div>
-<p class="font-body-sm text-body-sm text-text-dimmed">Classic straight-razor ritual with hot towels and essential oils.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 4: Find Your Style -->
-<section class="relative py-32 overflow-hidden flex items-center justify-center group cursor-pointer bg-charcoal">
-<div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
-<div class="w-full h-full opacity-30 grayscale transition-all duration-700 group-hover:opacity-20 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy-eEEsUFwBQIsMvZIglwR6Gy7s-XFhCtWdu6M7y2oCO03LhHuk_K9TLCyGlyuss1ZZ3GU7xiJl9lpRGqxA6O-vdJ8X5-JRGJ2YQIyWeZqY2MuoWkM91GPHvXPxF80UgpORH7qRYN48dKFAat3GgrUfFBvSaNLhBNLnWtg6LK1YMrP3Rxu2wGi4nKShVQxa6l03OyZ3NkKpFpPsBZZ8IOBOMx2YVTn41Y67aOsShCl4YrACUiX4IJMFXsiQUEbVIx_ig')"></div>
-</div>
-<div class="relative z-10 text-center px-margin-edge transition-all duration-1000 opacity-100 translate-y-0">
-<span class="font-label-caps text-label-caps text-white/70 mb-4 block tracking-[0.5em]">DISCOVER THE LOOKBOOK</span>
-<h2 class="font-display-lg text-display-lg text-white uppercase group-hover:tracking-widest transition-all duration-700">FIND YOUR STYLE</h2>
-<div class="mt-8">
-<a class="inline-flex items-center gap-4 text-white font-label-caps text-label-caps border-b border-white pb-2" href="gallery.html">
-                        EXPLORE GALLERY <span class="material-symbols-outlined">trending_flat</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Section 5: Locations Teaser -->
-<section class="py-stack-lg px-margin-edge max-w-container-max mx-auto text-center bg-woody">
-<span class="font-label-caps text-label-caps text-text-dimmed uppercase tracking-widest">Connectivity</span>
-<h2 class="font-headline-xl text-headline-xl text-primary mt-4 mb-stack-md">OUR STUDIOS</h2>
-<div class="flex flex-col md:flex-row justify-center gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
-<a class="p-10 border border-border-muted bg-white/50 backdrop-blur-sm flex-1 text-left space-y-4 hover:border-primary transition-all block" href="locations.html">
-<h3 class="font-headline-lg text-headline-lg">RAILWAY ROAD (MAIN BRANCH)</h3>
-<p class="font-body-lg text-body-lg text-text-dimmed">Fandi Center, near Raja Pump Chowk, Railway Road, Bahawalpur, Punjab</p>
-<div class="pt-4 flex items-center gap-2 font-label-caps text-label-caps text-primary">
-<span class="material-symbols-outlined">location_on</span> VIEW ON MAP
-                    </div>
-</a>
-<a class="p-10 border border-border-muted bg-white/50 backdrop-blur-sm flex-1 text-left space-y-4 hover:border-primary transition-all block" href="locations.html">
-<h3 class="font-headline-lg text-headline-lg">SATELLITE TOWN BRANCH</h3>
-<p class="font-body-lg text-body-lg text-text-dimmed">Satellite Town, Bahawalpur District, Punjab</p>
-<div class="pt-4 flex items-center gap-2 font-label-caps text-label-caps text-primary">
-<span class="material-symbols-outlined">location_on</span> VIEW ON MAP
-                    </div>
-</a>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full mt-stack-lg bg-charcoal text-on-primary">
-<div class="flex flex-col items-center pt-stack-lg pb-stack-md px-margin-edge w-full text-center max-w-container-max mx-auto">
-<div class="font-display-lg text-display-lg text-on-primary mb-stack-sm">HICKS</div>
-<div class="flex flex-wrap justify-center gap-8 mb-stack-md">
-<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">PRIVACY POLICY</a>
-<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="#">TERMS OF SERVICE</a>
-<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="https://instagram.com/hicksmens" target="_blank">INSTAGRAM</a>
-<a class="font-label-caps text-label-caps text-on-primary-container hover:opacity-80 transition-opacity" href="https://facebook.com/hicksmens" target="_blank">FACEBOOK</a>
-</div>
-<div class="font-label-caps text-label-caps text-on-primary/50 border-t border-on-primary/10 pt-10 w-full">
-                © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
-            </div>
 </div>
 </footer>
+<!-- END: Footer / CTA Section -->
+
 <script>
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-sm');
-                header.classList.remove('py-6');
-            } else {
-                header.classList.remove('py-2', 'shadow-sm');
-                header.classList.add('py-6');
-            }
-        });
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const menuClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-        const toggle = document.getElementById('mobile-menu-toggle');
-        const close = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
-
-        toggle.addEventListener('click', () => {
-            menu.classList.remove('translate-x-full');
-        });
-
-        close.addEventListener('click', () => {
-            menu.classList.add('translate-x-full');
-        });
-
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
-        });
-
-        // Dismiss Page Loader
-        window.addEventListener('DOMContentLoaded', () => {
-            const loader = document.getElementById('page-loader');
-            if (loader) {
-                setTimeout(() => {
-                    loader.style.opacity = '0';
-                    setTimeout(() => {
-                        loader.remove();
-                    }, 500);
-                }, 1000);
-            }
-        });
-    </script>
-<style>
-        @keyframes subtle-zoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
-        @keyframes fade-in {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fade-in 1.5s ease-out forwards;
-        }
-    </style>
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+  }
+  if (menuClose && mobileMenu) {
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  }
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  }
+</script>
 </body></html>

@@ -1,586 +1,277 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en" style=""><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HICKS | Find Your Style Gallery</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "border-muted": "#E5E5E5",
-                    "on-secondary-container": "#616363",
-                    "surface-dim": "#dadada",
-                    "on-error": "#ffffff",
-                    "primary": "#000000",
-                    "error": "#ba1a1a",
-                    "background": "#f9f9f9",
-                    "error-container": "#ffdad6",
-                    "on-primary-fixed-variant": "#474747",
-                    "tertiary": "#000000",
-                    "on-tertiary-fixed": "#1b1b1b",
-                    "surface-tint": "#5e5e5e",
-                    "text-dimmed": "#737373",
-                    "secondary-container": "#dfe0e0",
-                    "primary-container": "#1b1b1b",
-                    "secondary-fixed": "#e2e2e2",
-                    "surface-container": "#eeeeee",
-                    "on-primary": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "surface-container-high": "#e8e8e8",
-                    "on-surface": "#1b1b1b",
-                    "on-secondary-fixed-variant": "#454747",
-                    "primary-fixed-dim": "#c6c6c6",
-                    "on-background": "#1b1b1b",
-                    "tertiary-fixed": "#e2e2e2",
-                    "inverse-primary": "#c6c6c6",
-                    "surface-container-low": "#f3f3f3",
-                    "surface-bright": "#f9f9f9",
-                    "surface": "#f9f9f9",
-                    "on-tertiary-fixed-variant": "#474747",
-                    "inverse-surface": "#303030",
-                    "on-tertiary": "#ffffff",
-                    "outline-variant": "#cfc4c5",
-                    "tertiary-container": "#1b1b1b",
-                    "on-error-container": "#93000a",
-                    "on-primary-container": "#848484",
-                    "tertiary-fixed-dim": "#c6c6c6",
-                    "on-surface-variant": "#4c4546",
-                    "on-secondary-fixed": "#1a1c1c",
-                    "primary-fixed": "#e2e2e2",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-charcoal": "#1A1A1A",
-                    "on-primary-fixed": "#1b1b1b",
-                    "secondary-fixed-dim": "#c6c6c7",
-                    "outline": "#7e7576",
-                    "on-tertiary-container": "#848484",
-                    "surface-variant": "#e2e2e2",
-                    "inverse-on-surface": "#f1f1f1",
-                    "surface-container-highest": "#e2e2e2",
-                    "secondary": "#5d5f5f"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "gutter": "24px",
-                    "container-max": "1280px",
-                    "stack-lg": "80px",
-                    "margin-edge": "40px",
-                    "stack-md": "40px",
-                    "stack-sm": "16px"
-            },
-            "fontFamily": {
-                    "display-lg": ["Anton"],
-                    "headline-xl": ["Anton"],
-                    "label-caps": ["Hanken Grotesk"],
-                    "body-sm": ["Hanken Grotesk"],
-                    "headline-lg-mobile": ["Anton"],
-                    "headline-lg": ["Anton"],
-                    "body-xl": ["Hanken Grotesk"],
-                    "body-lg": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "52px", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
-                    "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-            }
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Gallery - HICKS</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#f9f9f9',
+            'surface-dim': '#dadada',
+            primary: '#000000',
+            secondary: '#555555',
+            accent: '#b47960',
+            footer: '#272523',
           },
-        },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .dotted-leader {
-        display: flex;
-        align-items: baseline;
-      }
-      .dotted-leader::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px dotted #E5E5E5;
-        margin: 0 8px;
-        order: 2;
-      }
-      .dotted-leader span:last-child {
-        order: 3;
-      }
-      .hairline-card {
-        border: 1px solid #E5E5E5;
-      }
-      .editorial-shadow {
-        box-shadow: 4px 4px 0px 0px #000000;
-      }
-      body, .bg-woody, .bg-background, .bg-white, .bg-surface-container-lowest {
-        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
-        background-size: cover;
-        background-repeat: repeat;
-        background-attachment: fixed;
-      }
-      .bg-charcoal, .bg-surface-charcoal, .bg-primary, footer {
-        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
-        background-size: cover;
-        background-repeat: repeat;
-      }
-      .hover\:bg-white:hover {
-        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA') !important;
-        background-size: cover;
-      }
-      .hover\:bg-primary:hover {
-        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ') !important;
-        background-size: cover;
-      }
-      .gallery-item {
-        transition: opacity 0.4s ease, transform 0.4s ease;
-      }
-      .gallery-item.hidden-item {
-        display: none !important;
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      /* Grid design just like services page */
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 24px;
-      }
-      @media (min-width: 768px) {
-        .gallery-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
         }
       }
-      @media (min-width: 1024px) {
-        .gallery-grid {
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-      }
-      .gallery-grid .gallery-item {
-        grid-column: span 1 !important;
-        height: 320px !important;
-      }
-      @keyframes loaderPulse {
-          0% { transform: scale(0.95); opacity: 0.8; }
-          50% { transform: scale(1.05); opacity: 1; }
-          100% { transform: scale(0.95); opacity: 0.8; }
-      }
-      .loader-text {
-          animation: loaderPulse 2s infinite ease-in-out;
-      }
-    </style>
+    }
+  </script>
 </head>
-<body class="text-on-background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs8L_U8mN5Wq-2WwBADMEplimSPz1WHTeZElM8xAQiCEyFvCp8DMTrXgPALgstdbdNx6-zOL3O1NDo3eN5qLiSDWTohL1TZ8yn2NMmGVlxiFiQqwR67Qtj531Vm0HY_z1YPHnn16Gi6JtNbAO1eFZxpeNS8ujJ2QV374Lb4oNgQG6DDCu99CJRvMv7Fuy83BGuFG-orCQYagUfO4l_o_oYe4H-Sb15DGGpqMrZ223kPPUUxIJq7YRl0NgfdFNAPhMsGA"); background-size: cover; background-attachment: fixed;'>
-<!-- Page Loader -->
-<div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ'); background-size: cover; background-position: center; transition: opacity 0.5s ease-in-out;">
-    <h1 class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text">HICKS</h1>
-</div>
-<!-- TopNavBar -->
-<header class="bg-white dark:bg-surface-charcoal w-full top-0 sticky z-50 border-b border-border-muted dark:border-on-surface-variant" id="main-header">
-<nav class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto">
-<a class="font-headline-lg text-headline-lg tracking-tighter text-primary dark:text-on-primary" href="index.html">HICKS</a>
-<div class="hidden md:flex space-x-8">
-<a class="font-label-caps text-label-caps text-text-dimmed dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="index.html">HOME</a>
-<a class="font-label-caps text-label-caps text-text-dimmed dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="service.html">SERVICES</a>
-<a class="font-label-caps text-label-caps text-text-dimmed dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="locations.html">LOCATIONS</a>
-<a class="font-label-caps text-label-caps text-primary dark:text-on-primary border-b-2 border-primary dark:border-on-primary pb-1 transition-colors duration-300 cursor-pointer active:opacity-70" href="gallery.html">GALLERY</a>
-</div>
-<div class="flex items-center gap-6">
-<button class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 hover:bg-white hover:text-primary border border-primary transition-all duration-300" onclick="window.location.href='booking_form.html'">
-                BOOK NOW
-            </button>
-<button class="md:hidden text-primary dark:text-on-primary" id="mobile-menu-toggle">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-</header>
-<!-- Mobile Menu -->
-<div class="fixed inset-0 bg-background dark:bg-surface-charcoal z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
-<button class="absolute top-8 right-margin-edge text-primary dark:text-on-primary" id="mobile-menu-close">
-<span class="material-symbols-outlined" style="font-size: 40px;">close</span>
-</button>
-<ul class="flex flex-col gap-8 text-center">
-<li class="font-headline-xl text-headline-xl text-text-dimmed dark:text-on-surface-variant"><a href="index.html">HOME</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed dark:text-on-surface-variant"><a href="service.html">SERVICES</a></li>
-<li class="font-headline-xl text-headline-xl text-text-dimmed dark:text-on-surface-variant"><a href="locations.html">LOCATIONS</a></li>
-<li class="font-headline-xl text-headline-xl text-primary dark:text-on-primary"><a href="gallery.html">GALLERY</a></li>
-</ul>
-</div>
-<main class="max-w-container-max mx-auto px-margin-edge pt-stack-lg pb-stack-lg">
-<!-- Header Section -->
-<section class="mb-stack-lg flex flex-col md:flex-row gap-gutter items-end p-8 md:p-12 border border-border-muted text-on-primary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIAMjlAfY-uCvtiPmnQdkki9Km_2lIVTMbuzvc61b4lTU1RkQeew-7lrZlwOViYyor8aWDO4m8DYpWUawJ52uACvfM11pQ8WspMdD7xxK8xB4hlDwfVDCK_qJ-bT8muNyHKzBfAk2w9vIsKbmojMczbZAxeVufmE5wtvLMRmH4VqAZQI3-XngFf17HPksN2uH5WEahAh9VrpPNsEXePW47o8cL5kIBHWPot75W3MOifRACNPsbMJSsYfV0h1Wowj-Kzg'); background-size: cover; background-position: center;"><div class="w-full">
-<h1 class="font-display-lg text-display-lg uppercase mb-stack-sm text-on-primary">
-                FIND YOUR <br/> STYLE
-            </h1>
-<p class="font-body-xl text-body-xl text-on-primary/70 max-w-md">
-                Explore our curated gallery of professional craftsmanship. From precision haircuts to specialized beard styling and premium grooming, discover the standard of Hicks.
-            </p>
-</div>
-</section>
-<!-- Category Filter -->
-<div class="flex flex-wrap gap-gutter mb-stack-md border-b border-border-muted pb-8" id="filter-container">
-<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-primary bg-primary text-on-primary transition-colors" data-filter="all">ALL LOOKS</button>
-<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-border-muted hover:border-primary transition-colors" data-filter="haircuts">HAIRCUTS</button>
-<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-border-muted hover:border-primary transition-colors" data-filter="beard-styling">BEARD STYLING</button>
-<button class="filter-btn font-label-caps text-label-caps px-4 py-2 border border-border-muted hover:border-primary transition-colors" data-filter="grooming">GROOMING</button>
-</div>
-<!-- Customer Style Section -->
-<div class="mb-4">
-<h2 class="font-label-caps text-label-caps text-primary tracking-widest mb-stack-sm">CUSTOMER LOOKS</h2>
-</div>
-<div class="gallery-grid" id="gallery-grid">
-<!-- Look 01 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="The Architectural Fade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ"/>
+<body class="bg-surface text-gray-800 flex flex-col min-h-screen">
+  <!-- BEGIN: Header -->
+  <header class="bg-surface/95 backdrop-blur-md py-6 px-8 flex items-center justify-between sticky top-0 z-50 border-b border-gray-200/50">
+    <a class="text-2xl font-serif tracking-widest text-primary uppercase font-medium" href="index.html">Hicks</a>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+      <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="hover:text-primary transition-colors" href="services.html">Services</a>
+      <a class="hover:text-primary transition-colors" href="locations.html">Locations</a>
+      <a class="text-primary border-b border-primary pb-1 font-medium" href="gallery.html">Gallery</a>
+      <a class="hover:text-primary transition-colors" href="ourcrew.html">Our Crew</a>
+    </nav>
+    <div class="hidden md:block">
+      <a class="bg-[#8b9181] hover:bg-[#787d6f] text-white text-sm font-medium py-2.5 px-6 rounded-full transition-colors" href="bookingform.html">
+        Book Appointment
+      </a>
     </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 01 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">THE ARCHITECTURAL FADE</h3>
-    </div>
-</div>
-<!-- Look 02 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Sculpted Beard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 02 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">SCULPTED BEARD</h3>
-    </div>
-</div>
-<!-- Look 03 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Matte Pompadour" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4bWm18fu7ru2nqRFP2HvftszEP7hvRuMYrT3pSiqGDsM7tb23k9sJB_p1jW866NpzwmBbzwhoTGH1beav24BeHY4ei1OmZ3GK55b9_55_R8ZCgyekezY3h-2cnedtdHaC6xNK4Lwfmoa9srtkfmlIPoBZtJG-kKDmuwLZAjgkGuBgQJDHeYobhPa2NVVhjKtPR1J4u9z-SPaQ4mAzBAAEC35v43NPQMDUj_nlFjWMJjP_aioElEgOtrV8LDGwgJUhA"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 03 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">MATTE POMPADOUR</h3>
-    </div>
-</div>
-<!-- Look 04 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="The Urban Buzz" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsFO-j0f_OFcq782n4oqbZQuBlT5yyGUy_LhZKMzrqUEfzmQjDQrAevSqTi5RyQZQpOX_wiDzvqhDHICbEvuau-7xJhqS8gRc8f-FHg-nEl4R-l3uGlh25vBKX4O3mg2i_E5VkU6R4fLK-IOe2bxatZRIZzf02_6yH7SxMua_7ghB_cPkxvpcktj4lupRNIcpdDE0fA1hueglP9MhllcLdZbivGpwXhfrBV-O6guT3HDqXQ6m0Q5Gq31ssuP2TUII4Ew"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 04 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">THE URBAN BUZZ</h3>
-    </div>
-</div>
-<!-- Look 05 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Low Taper Fade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIgEy8_H_RNynQGiOlfn3r_RlAsMjSqzy0KJletmZd6DSE4LBeXOHTR2Be9Va86EFZ2-k7O9cbvSuYGkOyEhVE_fRngSu1B6KELFB2SouBpwUWZQurCu5kV6PbhFC518DFMr8Y59Wm02e1wrqdKzmjW5hcJ2MgFOHA8PgFn2o3j0PfbM8qfW1JcDcQo41Gcq8v0SrLhQsS6jQSSX67FG2B4dm_UMiCTaOloL6vkNCS3IGKIBktevNvbQ_K0jmiP8ylCQ"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 05 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">LOW TAPER FADE</h3>
-    </div>
-</div>
-<!-- Look 06 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Classic Goatee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCQ68JbfT--0NUMXJfsI_IlS2ZtxCY6HaNMi0kn1tI00_J0-rblborxmD8WLyIsfm9D6uSdBJUbKYZ9Dc8bdMHJrPtg4Zb4084DCoswmuWFetk9KPiz7KPW7Fe4wSsiEyB--cqY8IL78Ukj_e0hk5WIqhsMtyDDIPSzvvnw-GPbCuloUW15l37KnK2CvYhNWIz29h_DXSvHlfrGeTfb1Ojf2Brym8J8DmwCpWr0hLUf27m20wXWvcb6VV5pa4DxJ2Eg"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 06 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">CLASSIC GOATEE</h3>
-    </div>
-</div>
-<!-- Look 07 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Sharp Line-Up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YHfz4NGReZEF9SnFO8uf2D9pp5g1VysL9jIbM9TPEhZQhyC_eEAG9xTyPNYXyK72-Qcg59ht-NZecYeMlW9L_deEKyejC8ydR9oUNurY4SZ67PBeu7ipskI16lpImdQ2OPRt-85vHkZk6uSb_vAc7RIyIE9YXGNu_5rFJ95-3m0-7lHVE92pa6b5YnAoWlfZmzeJXqT5iTf2Yql85CfLkTIyDcIzpgpzx8XShagXG2CXMu_Kc8i99WShcgJYTnLvIA"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 07 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">SHARP LINE-UP</h3>
-    </div>
-</div>
-<!-- Look 08 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Executive Facial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV3853dXW4p0M5iFu5Mg7eF52jmbmLC9B4R-DdWGGdqgnIq9k50s6SYUVEWexY9ZNrhTnQmQJLvPQxkAnA5vbJjeE1e44KTl8RT40jvxhJAcQrXYINyHMs52QivCfzuK2gBle9j9jdBugDmoxFBCYkvE0VZjKuyL-9IUU1tDh8jVXBBj8NK2eXz7JeVWQC7PwJxp1ue3h8CibcEmwinhyi0xUynrEPm41cBjSr9h3ekLEpIVDGg5SXclasFVPQMaqm7w"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 08 — GROOMING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">EXECUTIVE FACIAL</h3>
-    </div>
-</div>
-<!-- Look 09 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="The Groom Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEnh4LbZXVyArAhMkVMDZzaptHHWF5tYsq2SugQHnHPJR4SDK2gUHQLr6cpeGhf6esG5LEDyyzLUJUBV_CpsOkjuH0i7YgMqR6sL3yePlX14APTQ12iX7D8SItXlF5TV1qqN8Z8grjxVZqOy-bXcm2gbkFRfL8j01Fr8cpHc3JpNrpaXlSR5PhNs1g7mz9zc0qY4RgJ1LADLqJrC5NPzAnHnkRIuXAQaB3YHbWFXHoMhRw1RW6V3WGL6D_d_brPxzSrw"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 09 — GROOMING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">THE GROOM SESSION</h3>
-    </div>
-</div>
-<!-- Look 10 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Classic Textured Crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 10 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">TEXTURED CROP</h3>
-    </div>
-</div>
-<!-- Look 11 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Faded Shape-Up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 11 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">FADED SHAPE-UP</h3>
-    </div>
-</div>
-<!-- Look 12 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Whitening Facial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV3853dXW4p0M5iFu5Mg7eF52jmbmLC9B4R-DdWGGdqgnIq9k50s6SYUVEWexY9ZNrhTnQmQJLvPQxkAnA5vbJjeE1e44KTl8RT40jvxhJAcQrXYINyHMs52QivCfzuK2gBle9j9jdBugDmoxFBCYkvE0VZjKuyL-9IUU1tDh8jVXBBj8NK2eXz7JeVWQC7PwJxp1ue3h8CibcEmwinhyi0xUynrEPm41cBjSr9h3ekLEpIVDGg5SXclasFVPQMaqm7w"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 12 — GROOMING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">WHITENING FACIAL</h3>
-    </div>
-</div>
-<!-- Look 13 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Classic Blowout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4bWm18fu7ru2nqRFP2HvftszEP7hvRuMYrT3pSiqGDsM7tb23k9sJB_p1jW866NpzwmBbzwhoTGH1beav24BeHY4ei1OmZ3GK55b9_55_R8ZCgyekezY3h-2cnedtdHaC6xNK4Lwfmoa9srtkfmlIPoBZtJG-kKDmuwLZAjgkGuBgQJDHeYobhPa2NVVhjKtPR1J4u9z-SPaQ4mAzBAAEC35v43NPQMDUj_nlFjWMJjP_aioElEgOtrV8LDGwgJUhA"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 13 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">CLASSIC BLOWOUT</h3>
-    </div>
-</div>
-<!-- Look 14 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Stubble Groom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YHfz4NGReZEF9SnFO8uf2D9pp5g1VysL9jIbM9TPEhZQhyC_eEAG9xTyPNYXyK72-Qcg59ht-NZecYeMlW9L_deEKyejC8ydR9oUNurY4SZ67PBeu7ipskI16lpImdQ2OPRt-85vHkZk6uSb_vAc7RIyIE9YXGNu_5rFJ95-3m0-7lHVE92pa6b5YnAoWlfZmzeJXqT5iTf2Yql85CfLkTIyDcIzpgpzx8XShagXG2CXMu_Kc8i99WShcgJYTnLvIA"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 14 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">STUBBLE DETAILED</h3>
-    </div>
-</div>
-<!-- Look 15 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Premium Spa Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEnh4LbZXVyArAhMkVMDZzaptHHWF5tYsq2SugQHnHPJR4SDK2gUHQLr6cpeGhf6esG5LEDyyzLUJUBV_CpsOkjuH0i7YgMqR6sL3yePlX14APTQ12iX7D8SItXlF5TV1qqN8Z8grjxVZqOy-bXcm2gbkFRfL8j01Fr8cpHc3JpNrpaXlSR5PhNs1g7mz9zc0qY4RgJ1LADLqJrC5NPzAnHnkRIuXAQaB3YHbWFXHoMhRw1RW6V3WGL6D_d_brPxzSrw"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 15 — GROOMING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">PREMIUM SPA SESSION</h3>
-    </div>
-</div>
-<!-- Look 16 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Modern Slick Back" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsFO-j0f_OFcq782n4oqbZQuBlT5yyGUy_LhZKMzrqUEfzmQjDQrAevSqTi5RyQZQpOX_wiDzvqhDHICbEvuau-7xJhqS8gRc8f-FHg-nEl4R-l3uGlh25vBKX4O3mg2i_E5VkU6R4fLK-IOe2bxatZRIZzf02_6yH7SxMua_7ghB_cPkxvpcktj4lupRNIcpdDE0fA1hueglP9MhllcLdZbivGpwXhfrBV-O6guT3HDqXQ6m0Q5Gq31ssuP2TUII4Ew"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 16 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">SLICK BACK FADE</h3>
-    </div>
-</div>
-<!-- Look 17 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Traditional Beard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCQ68JbfT--0NUMXJfsI_IlS2ZtxCY6HaNMi0kn1tI00_J0-rblborxmD8WLyIsfm9D6uSdBJUbKYZ9Dc8bdMHJrPtg4Zb4084DCoswmuWFetk9KPiz7KPW7Fe4wSsiEyB--cqY8IL78Ukj_e0hk5WIqhsMtyDDIPSzvvnw-GPbCuloUW15l37KnK2CvYhNWIz29h_DXSvHlfrGeTfb1Ojf2Brym8J8DmwCpWr0hLUf27m20wXWvcb6VV5pa4DxJ2Eg"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 17 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">TRADITIONAL BEARD</h3>
-    </div>
-</div>
-<!-- Look 18 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="grooming">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Dermalogica Glow" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIgEy8_H_RNynQGiOlfn3r_RlAsMjSqzy0KJletmZd6DSE4LBeXOHTR2Be9Va86EFZ2-k7O9cbvSuYGkOyEhVE_fRngSu1B6KELFB2SouBpwUWZQurCu5kV6PbhFC518DFMr8Y59Wm02e1wrqdKzmjW5hcJ2MgFOHA8PgFn2o3j0PfbM8qfW1JcDcQo41Gcq8v0SrLhQsS6jQSSX67FG2B4dm_UMiCTaOloL6vkNCS3IGKIBktevNvbQ_K0jmiP8ylCQ"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 18 — GROOMING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">EXPRESS GLOW</h3>
-    </div>
-</div>
-<!-- Look 19 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="haircuts">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="High Taper Fade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFYJVZWKKjgT8rSbnN9lEAwlwi5Joap7XO6Un05xK04f5bL0MOBlSeO1W4VBopEe2JbwWndpKUG9doOVoX2GBHOphspHmvHV98_oLVTY4c17GkXQt0YZP3lwJqEdlckFeUSCcuG42XKvRbIBOFvLDF4KqLZzT9N1b_W_lf3DvmV93iwBYqSu3lP8Qgn_J8yE--V8kZoHhYTLFD4TG0NNRrGS7LdeiEPnF2cYeY2_yXdBw7lqmbsyUUh_ttcjnGN6WSQ"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 19 — HAIRCUTS</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">HIGH TAPER FADE</h3>
-    </div>
-</div>
-<!-- Look 20 -->
-<div class="gallery-item group hairline-card bg-white flex flex-col" data-category="beard-styling">
-    <div class="h-[200px] overflow-hidden relative">
-        <img alt="Beard Oil Trim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKuqQpNmuKHIkFszMrCzgty_1H_0N7tOJ_ZBYNJyA6DDQAg_NKo32x0FuBepLYI8_9OP2zjGEmQqVVUS0_vbiLii6kdFUoY5WTmXOYOnKvkCd_JAxw8uKD0MnmMK-N3G8S_lKqR0zXOLG7V7aDpKLnI65SSRdo5nxXKmjA6UFO9iztYSyTjWj-kexFdo5p3bUMk_RcQoWyrhgo0ynX_JOMPitCuLOeePdkxgJEZfoXnpt9xhP2voU33IQ5G4G5kkMN_Q"/>
-    </div>
-    <div class="p-4 flex-1 flex flex-col justify-center border-t border-border-muted bg-white text-on-surface">
-        <span class="font-label-caps text-[10px] text-text-dimmed block">LOOK 20 — BEARD STYLING</span>
-        <h3 class="font-headline-lg text-headline-lg mt-1 text-primary">CLASSIC SHAPE-UP</h3>
-    </div>
-</div>
-</div>
-<!-- Pagination / Load More -->
-<div class="mt-stack-lg flex flex-col items-center" id="load-more-container">
-<button id="load-more-btn" class="group flex items-center gap-4 font-label-caps text-label-caps py-6 px-12 border border-border-muted hover:border-primary transition-all relative overflow-hidden">
-<span class="relative z-10">LOAD MORE LOOKS</span>
-<span class="material-symbols-outlined relative z-10 transition-transform group-hover:rotate-90">add</span>
-</button>
-</div>
-</main>
-<!-- Footer -->
-<footer class="w-full mt-stack-lg text-white" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs-7R_rdS5pAv-QOuuZPFayB3NiZCZMgR4tkg6MJ8wyiwh7cDnwmuDOCRYfm71Kks08ryFo76NBWbjJrsHrROiIaxRj0H-0SK--danph1ZjdW4_mlb0UZJcryhNuYmSYRYxPrC-oYfusIO0a3z7dhAXUgiZT1cku-yLPda245UOetVJTv5nUTZVAnNceFxXkiobSxANY-ngjK3E3yZC698nAiCTNiZ-YyCU2AQvrCvC97MIoohP5mBg0YvBqI_hyQH0Q'); background-size: cover; background-position: center;">
-<div class="flex flex-col items-center pt-stack-lg pb-stack-md px-margin-edge w-full text-center max-w-container-max mx-auto">
-<div class="font-display-lg text-display-lg text-on-primary dark:text-primary mb-8">HICKS</div>
-<div class="flex flex-wrap justify-center gap-8 mb-stack-md">
-<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
-<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
-<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="https://instagram.com/hicksmens" target="_blank">INSTAGRAM</a>
-<a class="font-label-caps text-label-caps text-white/70 dark:text-text-dimmed hover:text-white transition-colors" href="https://facebook.com/hicksmens" target="_blank">FACEBOOK</a>
-</div>
-<div class="border-t border-white/10 w-full pt-8 mt-8">
-<p class="font-label-caps text-label-caps text-on-primary dark:text-primary opacity-60 uppercase tracking-widest">
-                    © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
-                </p>
-</div>
-</div>
-</footer>
-<!-- Filter Interactivity Script -->
-<script>
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const loadMoreContainer = document.getElementById('load-more-container');
-        const loadMoreBtn = document.getElementById('load-more-btn');
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle Navigation">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </header>
+  <!-- END: Header -->
 
-        let currentFilter = 'all';
-        let showLimit = 12;
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-50 hidden md:hidden transition-opacity">
+    <div class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white p-6 shadow-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-center mb-8">
+          <a class="font-serif text-2xl tracking-widest uppercase text-primary" href="index.html">Hicks</a>
+          <button id="mobile-menu-close" class="text-gray-500 p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-5 text-base font-medium text-gray-700">
+          <a class="hover:text-black py-1" href="index.html">Home</a>
+          <a class="hover:text-black py-1" href="services.html">Services</a>
+          <a class="hover:text-black py-1" href="locations.html">Locations</a>
+          <a class="text-black font-semibold py-1 border-l-2 border-black pl-3" href="gallery.html">Gallery</a>
+          <a class="hover:text-black py-1" href="ourcrew.html">Our Crew</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-gray-200">
+        <a class="w-full flex items-center justify-center py-3 bg-[#8b9181] hover:bg-[#787d6f] text-white text-sm font-medium rounded-full transition-colors" href="bookingform.html">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </div>
 
-        function updateGalleryItems() {
-            // Find all matching items
-            const matchingItems = [];
-            galleryItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (currentFilter === 'all' || category === currentFilter) {
-                    matchingItems.push(item);
-                } else {
-                    item.classList.add('hidden-item');
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.95)';
-                }
-            });
+  <!-- BEGIN: Main Content -->
+  <main class="flex-grow">
+    <!-- BEGIN: Gallery Intro -->
+    <section class="py-20 px-4 text-center max-w-4xl mx-auto">
+      <p class="text-xs font-semibold tracking-widest text-accent uppercase mb-4">Our Work</p>
+      <h1 class="text-5xl md:text-6xl font-serif text-primary mb-6">The <span class="italic font-light">Gallery</span></h1>
+      <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        A collection of moments — the looks, the textures, and the gentleman transformations crafted by our master artisans.
+      </p>
+    </section>
+    <!-- END: Gallery Intro -->
 
-            // Loop matching items to show up to showLimit
-            matchingItems.forEach((item, index) => {
-                if (index < showLimit) {
-                    item.classList.remove('hidden-item');
-                    // Small timeout for smooth animation
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 50);
-                } else {
-                    item.classList.add('hidden-item');
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.95)';
-                }
-            });
+    <!-- BEGIN: Gallery Filter -->
+    <section class="mb-12 flex justify-center">
+      <div class="flex flex-wrap justify-center gap-3 px-4">
+        <button class="filter-btn bg-[#8b9181] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="all" onclick="filterGallery('all')">All</button>
+        <button class="filter-btn bg-white hover:bg-gray-100 text-gray-600 px-6 py-2 rounded-full text-sm font-medium shadow-sm transition-colors border border-gray-100" data-filter="hair" onclick="filterGallery('hair')">Hair</button>
+        <button class="filter-btn bg-white hover:bg-gray-100 text-gray-600 px-6 py-2 rounded-full text-sm font-medium shadow-sm transition-colors border border-gray-100" data-filter="skincare" onclick="filterGallery('skincare')">Skincare</button>
+        <button class="filter-btn bg-white hover:bg-gray-100 text-gray-600 px-6 py-2 rounded-full text-sm font-medium shadow-sm transition-colors border border-gray-100" data-filter="beard" onclick="filterGallery('beard')">Beard</button>
+      </div>
+    </section>
+    <!-- END: Gallery Filter -->
 
-            // Toggle Load More button visibility
-            if (matchingItems.length > showLimit) {
-                loadMoreContainer.style.display = 'flex';
-            } else {
-                loadMoreContainer.style.display = 'none';
-            }
+    <!-- BEGIN: Gallery Grid -->
+    <section class="px-8 pb-24 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="gallery-container">
+        <!-- Hair items -->
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="hair">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_swWO_5AWSAK0WtQy7c-nalIJFhqSGN5NJoHqEIHs_m-_mPQ5fRxkXtK0fvIfVekGkM_dVgaPnI1eZVXnVEkkzCNfG768rEgwDXQqf5KjiUI8FL9ArFGK4A1-mk2z0w1TaXT6ZpJKoPp1rxzirGr8ljhpJbvSkEU2xL14-gXVyzGJ-jNpcsTh_8YIzyKWzqB_A6QSwnQBd82Vmf5y4cBDfBl5smEOMvSnh9xes7S5RX8sAzD-GRPgVCBerOSl0AIDw" alt="Architectural Haircut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Precision Architectural Cut</p>
+          </div>
+        </div>
+
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-square md:aspect-auto md:row-span-2" data-category="hair">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3CKP_KZnUEjBtWob7NowYojvcGeAuD35GvIFr2kE0SoZmb-OsFrpKFppCEMesyy9xw42HPgnNXc5QWDfrIASYzzfUczylHT_yo2-vSan8B0xZhid65KHu8q3I7NxwXPwB88qdoSl3EzNa6yAiWA15yJTuHnQN8GP9jxo4gXgaNtems5VZ_Rf36pDerOlyfjCq_GDmgeBa1stmj5_8MMJN1g_UziVespWu6PLBrod2YbeQY3l8t-vqUl63ycYG_28_bQ" alt="Editorial Fashion Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Editorial Gentlemen Styling</p>
+          </div>
+        </div>
+
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="hair">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy-eEEsUFwBQIsMvZIglwR6Gy7s-XFhCtWdu6M7y2oCO03LhHuk_K9TLCyGlyuss1ZZ3GU7xiJl9lpRGqxA6O-vdJ8X5-JRGJ2YQIyWeZqY2MuoWkM91GPHvXPxF80UgpORH7qRYN48dKFAat3GgrUfFBvSaNLhBNLnWtg6LK1YMrP3Rxu2wGi4nKShVQxa6l03OyZ3NkKpFpPsBZZ8IOBOMx2YVTn41Y67aOsShCl4YrACUiX4IJMFXsiQUEbVIx_ig" alt="Lookbook Modern Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Textured Taper Fade</p>
+          </div>
+        </div>
+
+        <!-- Beard items -->
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="beard">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVLs9qr4r4KTfbkhpktAq6OzEmBkzHnByRokMq1M7xaguKpKtSdNIl33N6f5bSeeFaMJxhYLLf4NeIYbES5xUc4fsnMRui4Yn5CaDtlHC-Ehw1q-B-gX7TDIgkTd23K3NYzY90sW8_iDHTSrCtq40Gnbn2LacYCmuQWdTERZq5SR2_r0Az9ECufcNHszsRc1obs3qjwHIQi-Si6yIdmgGt5euKmUqEtYDdwODJGtgPV76Di_6omFtLncD24Mx4oiNtmQ" alt="Classic Straight Razor Shave" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Traditional Razor Ritual</p>
+          </div>
+        </div>
+
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-square md:aspect-auto md:row-span-2" data-category="beard">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRxIkwt6_TQGOlPJkNlaxcnBfpR6qBNFQI5l0MwE1DpXV4lcHqkeifXHfUgQoYiUPQU1FtMVhxpqSFRSPL2gdt3vbIULiI4NwyRFscXynf0TWPpbC-yXreG171n7Cx8RIU2NZ2zIJljdOzYjTyas_yDIi6z2dlNXKODsFGr-MD0GjInHF5k-sfZSckvAJsaaYfj3LBqtw8gsAGSeBvWEJdMD2UQtbNY10RRA8BmzGLMlFf_w_TYjspE8l5gwa33vtWyKQVgqoEvR7G8g" alt="Executive Beard Sculpting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Executive Beard Contouring</p>
+          </div>
+        </div>
+
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="beard">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaAm9-IH3aPd7RDG3MzLeQVmHDuAdMrydb3IalVLjxrVBUdc3ccGmQD42jg6YJmiffoZbXZF-vZkzn6Zc72Zhwv2VLzuU46AQfadyU1FSJNLSoTzTAJ0u7pfgq4XkO3s08EHWnuUbkBA28su4bYTUeJRXlnh8NcxHeJ3r8hmiL2neTPDfRvlFYdBATHWpBSoJYh73IqGkyW277a9lVekZiMNAWsVRWDtpPiIPCj7Ow9mrKeEKe6qN-0P5S2FMTmTZUQ7bpJIXew5SksA" alt="Beard Shaping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Beard Fade & Lineup</p>
+          </div>
+        </div>
+
+        <!-- Skincare items -->
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="skincare">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsYFY94Sw1ZV_KQ_dsohfkUy7uZ5jZEu4PKBQ9q1Qt8qJZywNd9To6YMZZwnXn-UtPriG1epNOvZzeBH2mvE_tHHeIewbOxyJP2UjbAj9Uqa_9vg914W7H4UrIaR-noVhFaKx4n9kUXQknedmsJcP2xwKgHeBnh9C2OoJWt_4eraab7DOk7c-xt-JAddpzlHs_Ge90gifptYL1VVK3Q4H9Rk4UwjjBT_wPLpyuBKJ0bjSTvp0zqXSSH1LPpBYIhsWTsg" alt="Scalp Therapy and Rejuvenation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Deep Scalp Therapy & Wash</p>
+          </div>
+        </div>
+
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="skincare">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT9CAdmeh5ViNEB6leI1biPkRCaROT1oMIpXNCDLod5J0Su-B6s9CzNXrApsltyMmom3wfpwPlvD345rKBk1kyFmp_yvBD4CCQOEjGwIDufqyFvx7ucihYR67Lf3o-5BcWTsxduzD7_cp8msNHtcITsIxiLjcc0SR1o2xIW39HfnB6GtNq9ZzQzi29uwtzg8yizW_eE77AOX9BMF7UtRPyv7z02Ppl_L2_PeltX5aKWmLFGGpW_QvgEz8IKQ26aduJ9SR_-r84CIHsSQ" alt="Facial Polish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Hydrating Facial Therapy</p>
+          </div>
+        </div>
+
+        <div class="gallery-item overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 group relative aspect-[4/3]" data-category="skincare">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY8j86eJDX-nWeYSNOYgTSb8J8InkBFnnY7yy0WC2U-NruKO1YiXZq6gLbITrdFmx1yCSy_3VvsQJrbaY0FjD4Kitbz-2RtggQAkOGn5ZWQctOm9U_6kET_3oKaD5vI0Ooj0jYeAdh5NTQagoE5aVFUYjclBeJ5-wmU2yhZnBi8qy7e9fafp4Oi0noLxsFFEcaUNlLFBUWhZxi06prq4Yf7kVCYKNRlBznLomWaGh9Y3sLHYmIXYHMAPhnA-REYv4i-69AvgVoncpXag" alt="Charcoal Mask and Scrub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="text-white text-sm font-medium">Rejuvenating Charcoal Mask</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Gallery Grid -->
+  </main>
+  <!-- END: Main Content -->
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-footer text-gray-400 py-16 px-8 mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand Info -->
+      <div class="col-span-1 md:col-span-1">
+        <a class="text-white text-2xl font-serif mb-4 block" href="index.html">HICKS</a>
+        <p class="text-sm mb-6 leading-relaxed">
+          A scintillating experience with the best artisans Bahawalpur has to offer.
+        </p>
+        <div class="flex space-x-4">
+          <a class="hover:text-white transition-colors" href="https://instagram.com/hicksmens" target="_blank" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+          </a>
+          <a class="hover:text-white transition-colors" href="https://facebook.com/hicksmens" target="_blank" aria-label="Facebook">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Explore Links -->
+      <div class="col-span-1">
+        <h4 class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-4">Explore</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-white transition-colors" href="locations.html">Locations</a></li>
+          <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
+          <li><a class="hover:text-white transition-colors" href="ourcrew.html">Our Crew</a></li>
+        </ul>
+      </div>
+      <!-- Visit Links -->
+      <div class="col-span-1">
+        <h4 class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-4">Visit</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-white transition-colors" href="bookingform.html">Book Appointment</a></li>
+          <li><a class="hover:text-white transition-colors" href="locations.html">Find a Branch</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="col-span-1">
+        <h4 class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-4">Contact</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-white transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a></li>
+          <li><a class="hover:text-white transition-colors" href="tel:+923468541177">+92 346 8541177</a></li>
+          <li><a class="hover:text-white transition-colors" href="tel:0622888743">062 2888743</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+      <p>© 2026 HICKS Artisans & Gentlemen Salon. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+  <script>
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
         }
+      });
+      
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.classList.add('bg-[#8b9181]', 'text-white');
+          btn.classList.remove('bg-white', 'text-gray-600');
+        } else {
+          btn.classList.remove('bg-[#8b9181]', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-600');
+        }
+      });
+    }
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                currentFilter = btn.getAttribute('data-filter');
-                showLimit = 12; // Reset limit when switching categories
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-                // Update Button Styles
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
-                    b.classList.add('border-border-muted');
-                });
-                btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
-                btn.classList.remove('border-border-muted');
-
-                updateGalleryItems();
-            });
-        });
-
-        loadMoreBtn.addEventListener('click', () => {
-            showLimit += 8; // Load 8 more items
-            updateGalleryItems();
-        });
-
-        // Initialize visibility
-        updateGalleryItems();
-
-        // Hover effect for cards
-        galleryItems.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.classList.add('editorial-shadow');
-            });
-            card.addEventListener('mouseleave', () => {
-                card.classList.remove('editorial-shadow');
-            });
-        });
-
-        // Mobile Menu Logic
-        const toggle = document.getElementById('mobile-menu-toggle');
-        const close = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
-
-        toggle.addEventListener('click', () => {
-            menu.classList.remove('translate-x-full');
-        });
-
-        close.addEventListener('click', () => {
-            menu.classList.add('translate-x-full');
-        });
-
-        // Dismiss Page Loader
-        window.addEventListener('DOMContentLoaded', () => {
-            const loader = document.getElementById('page-loader');
-            if (loader) {
-                setTimeout(() => {
-                    loader.style.opacity = '0';
-                    setTimeout(() => {
-                        loader.remove();
-                    }, 500);
-                }, 1000);
-            }
-        });
-    </script>
-</body></html>
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+      });
+    }
+    if (menuClose && mobileMenu) {
+      menuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    }
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

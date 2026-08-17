@@ -1,540 +1,329 @@
-<!doctype html>
-<html class="light" lang="en" style="">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>LOCATIONS | HICKS PREMIUM MEN'S SALON</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!-- Material Symbols -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!-- Theme Configuration -->
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container-low": "#f3f3f3",
-              "surface-container-high": "#e8e8e8",
-              "border-muted": "#E5E5E5",
-              "primary-container": "#1b1b1b",
-              "on-secondary": "#ffffff",
-              "surface-container-highest": "#e2e2e2",
-              "surface-bright": "#f9f9f9",
-              background: "#f9f9f9",
-              "error-container": "#ffdad6",
-              tertiary: "#000000",
-              primary: "#000000",
-              "secondary-fixed-dim": "#c6c6c7",
-              "inverse-on-surface": "#f1f1f1",
-              "tertiary-container": "#1b1b1b",
-              "on-tertiary-fixed": "#1b1b1b",
-              "on-tertiary": "#ffffff",
-              "tertiary-fixed-dim": "#c6c6c6",
-              "surface-container-lowest": "#ffffff",
-              "on-surface": "#1b1b1b",
-              "primary-fixed": "#e2e2e2",
-              "inverse-surface": "#303030",
-              "on-surface-variant": "#4c4546",
-              "on-secondary-fixed": "#1a1c1c",
-              "tertiary-fixed": "#e2e2e2",
-              surface: "#f9f9f9",
-              secondary: "#5d5f5f",
-              "surface-variant": "#e2e2e2",
-              "primary-fixed-dim": "#c6c6c6",
-              "on-error": "#ffffff",
-              "outline-variant": "#cfc4c5",
-              "on-background": "#1b1b1b",
-              "on-primary": "#ffffff",
-              "secondary-fixed": "#e2e2e2",
-              "surface-dim": "#dadada",
-              "on-primary-fixed": "#1b1b1b",
-              "on-primary-container": "#848484",
-              "on-error-container": "#93000a",
-              "secondary-container": "#dfe0e0",
-              outline: "#7e7576",
-              "on-tertiary-fixed-variant": "#474747",
-              "surface-container": "#eeeeee",
-              "surface-charcoal": "#1A1A1A",
-              "on-primary-fixed-variant": "#474747",
-              "on-secondary-fixed-variant": "#454747",
-              "surface-tint": "#5e5e5e",
-              error: "#ba1a1a",
-              "on-secondary-container": "#616363",
-              "inverse-primary": "#c6c6c6",
-              "text-dimmed": "#737373",
-              "on-tertiary-container": "#848484",
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
-            spacing: {
-              "stack-sm": "16px",
-              "stack-md": "40px",
-              gutter: "24px",
-              "stack-lg": "80px",
-              "container-max": "1280px",
-              "margin-edge": "40px",
-            },
-            fontFamily: {
-              "body-xl": ["Hanken Grotesk"],
-              "headline-lg-mobile": ["Anton"],
-              "label-caps": ["Hanken Grotesk"],
-              "headline-xl": ["Anton"],
-              "headline-lg": ["Anton"],
-              "body-lg": ["Hanken Grotesk"],
-              "display-lg": ["Anton"],
-              "body-sm": ["Hanken Grotesk"],
-            },
-            fontSize: {
-              "body-xl": ["20px", { lineHeight: "32px", fontWeight: "400" }],
-              "headline-lg-mobile": [
-                "28px",
-                { lineHeight: "32px", fontWeight: "400" },
-              ],
-              "label-caps": [
-                "12px",
-                {
-                  lineHeight: "16px",
-                  letterSpacing: "0.1em",
-                  fontWeight: "700",
-                },
-              ],
-              "headline-xl": [
-                "48px",
-                {
-                  lineHeight: "52px",
-                  letterSpacing: "0.01em",
-                  fontWeight: "400",
-                },
-              ],
-              "headline-lg": [
-                "32px",
-                { lineHeight: "36px", fontWeight: "400" },
-              ],
-              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-              "display-lg": [
-                "80px",
-                {
-                  lineHeight: "88px",
-                  letterSpacing: "-0.02em",
-                  fontWeight: "400",
-                },
-              ],
-              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
-            },
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Locations - HICKS</title>
+  <!-- Google Fonts: Playfair Display & Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+  <!-- Material Symbols for Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#f9f9f9',
+            'surface-dim': '#dadada',
+            'surface-container-low': '#f3f3f3',
+            'brand-dark': '#2a2a2a',
+            'brand-gray': '#555555',
+            'brand-accent': '#8a8a8a',
+            'brand-light': '#ffffff',
+            'button-bg': '#828e82',
+            'button-hover': '#6b776b',
+            'footer-bg': '#272523',
           },
-        },
-      };
-    </script>
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-          "FILL" 0,
-          "wght" 300,
-          "GRAD" 0,
-          "opsz" 24;
-        font-size: 20px;
-      }
-      .dotted-leader {
-        display: flex;
-        align-items: baseline;
-      }
-      .dotted-leader::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px dotted #e5e5e5;
-        margin: 0 10px;
-        order: 2;
-      }
-      .dotted-leader .value {
-        order: 3;
-      }
-      .map-container {
-        filter: grayscale(1) contrast(1.1) brightness(0.9);
-        transition: filter 0.5s ease;
-      }
-      .map-container:hover {
-        filter: grayscale(0.2) contrast(1);
-      }
-      body,
-      .texture-light,
-      .bg-woody,
-      .bg-background,
-      .bg-white,
-      .bg-surface-container-lowest {
-        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA") !important;
-        background-size: cover;
-        background-repeat: repeat;
-      }
-      .texture-dark,
-      .bg-charcoal,
-      .bg-surface-charcoal,
-      .bg-primary,
-      footer {
-        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ") !important;
-        background-size: cover;
-        background-repeat: repeat;
-      }
-      .hover\:bg-white:hover {
-        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdxVCXn0dL3AteqZfPVSkOj5zqKfs5_KSzIFvvKH8N58P1YTrXZBieync9dsC3P424BnjvTvbx6512cfhv7Bw9f81muWBzoiSk-o4yqG7KDaHlZoFFfQOHgUAZnhYFdafqX0cX3EbJYu5KPeYdJpzNxClQUJjARueTjsxIfggVZbap3RA11ofzxpJnJolSQyUb2vgZedxGMRZ8BbeuYfcQ2RCfBAhPRcY1VoX-M0CW056T4KmEwQ9vN4IYDgoAPUrquA") !important;
-        background-size: cover;
-      }
-      .hover\:bg-primary:hover {
-        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ") !important;
-        background-size: cover;
-      }
-      @keyframes loaderPulse {
-        0% {
-          transform: scale(0.95);
-          opacity: 0.8;
-        }
-        50% {
-          transform: scale(1.05);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(0.95);
-          opacity: 0.8;
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
         }
       }
-      .loader-text {
-        animation: loaderPulse 2s infinite ease-in-out;
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background text-on-background font-body-lg antialiased texture-light"
-  >
-    <!-- Page Loader -->
-    <div
-      id="page-loader"
-      class="fixed inset-0 z-[9999] flex items-center justify-center bg-charcoal"
-      style="
-        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDVMWNaITd8dKLXMeiRrUGbyBe7rahqmOL1ZqNaDbtCa8m_VRY8BlicHFAlLGwkVLf_3wUxz_U1lUjXjxW2N8MfwsUjjOhTDbRDa85EP4PYZPSFlT5eK_YzKDHwfTF5JK1OBTGUILecXpCDFI3yEQi8xRY6tTGp41lnM-bvSNFB6ATeVTepxN1RcEgP4rbDAc06lPi8U_f8ZD6KgWvoAZtJtx8sVlnVHr_IgAU2YLq5ttFVIQd3Zv83QPHBskt6smUfzQ&quot;);
-        background-size: cover;
-        background-position: center;
-        transition: opacity 0.5s ease-in-out;
-      "
-    >
-      <h1
-        class="font-display-lg text-[80px] md:text-[140px] text-white tracking-tighter uppercase loader-text"
-      >
-        HICKS
-      </h1>
-    </div>
-    <!-- TopAppBar -->
-    <header
-      class="w-full top-0 sticky bg-white border-b border-border-muted z-50"
-      id="main-header"
-    >
-      <nav
-        class="flex justify-between items-center px-margin-edge py-6 max-w-container-max mx-auto"
-      >
-        <a
-          class="font-headline-lg text-headline-lg tracking-tighter text-primary"
-          href="index.html"
-          >HICKS</a
-        >
-        <div class="hidden md:flex gap-8 items-center">
-          <a
-            class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70"
-            href="index.html"
-            >HOME</a
-          >
-          <a
-            class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70"
-            href="service.html"
-            >SERVICES</a
-          >
-          <a
-            class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-colors duration-300 cursor-pointer active:opacity-70"
-            href="locations.html"
-            >LOCATIONS</a
-          >
-          <a
-            class="font-label-caps text-label-caps text-text-dimmed hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70"
-            href="gallery.html"
-            >GALLERY</a
-          >
-        </div>
-        <div class="flex items-center gap-6">
-          <button
-            class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3 uppercase tracking-widest hover:bg-white hover:text-primary border border-primary transition-all duration-300"
-            onclick="window.location.href = 'booking_form.html'"
-          >
-            BOOK NOW
-          </button>
-          <button class="md:hidden text-primary" id="mobile-menu-toggle">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-        </div>
+    }
+  </script>
+  <style data-purpose="custom-styles">
+    body {
+      background-color: #f9f9f9;
+      color: #2a2a2a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .bg-dotted {
+      background-size: 20px 20px;
+      background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+    }
+    .icon-small {
+      font-size: 1.125rem;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-dotted">
+  <!-- BEGIN: Global Header -->
+  <header class="w-full py-6 px-8 bg-surface/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <a class="text-3xl font-serif tracking-widest text-brand-dark uppercase" href="index.html">Hicks</a>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8 items-center text-sm tracking-wide text-brand-gray">
+        <a class="hover:text-brand-dark transition-colors" href="index.html">Home</a>
+        <a class="hover:text-brand-dark transition-colors" href="services.html">Services</a>
+        <a class="text-brand-dark border-b border-brand-dark pb-1 font-medium" href="locations.html">Locations</a>
+        <a class="hover:text-brand-dark transition-colors" href="gallery.html">Gallery</a>
+        <a class="hover:text-brand-dark transition-colors" href="ourcrew.html">Our Crew</a>
       </nav>
-    </header>
-    <!-- Mobile Menu -->
-    <div
-      class="fixed inset-0 bg-background z-[60] flex flex-col items-center justify-center translate-x-full transition-transform duration-500 md:hidden"
-      id="mobile-menu"
-    >
-      <button
-        class="absolute top-8 right-margin-edge text-primary"
-        id="mobile-menu-close"
-      >
-        <span class="material-symbols-outlined" style="font-size: 40px"
-          >close</span
-        >
+      <!-- CTA Button -->
+      <a class="hidden md:inline-block bg-button-bg hover:bg-button-hover text-white px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors"
+        href="bookingform.html">
+        Book Appointment
+      </a>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-brand-dark p-2" id="mobile-menu-btn" aria-label="Toggle Navigation">
+        <span class="material-symbols-outlined">menu</span>
       </button>
-      <ul class="flex flex-col gap-8 text-center">
-        <li class="font-headline-xl text-headline-xl text-text-dimmed">
-          <a href="index.html">HOME</a>
-        </li>
-        <li class="font-headline-xl text-headline-xl text-text-dimmed">
-          <a href="service.html">SERVICES</a>
-        </li>
-        <li class="font-headline-xl text-headline-xl text-primary">
-          <a href="locations.html">LOCATIONS</a>
-        </li>
-        <li class="font-headline-xl text-headline-xl text-text-dimmed">
-          <a href="gallery.html">GALLERY</a>
-        </li>
-      </ul>
     </div>
-    <main class="max-w-container-max mx-auto px-margin-edge">
-      <!-- Hero Section -->
-      <section
-        class="mt-stack-lg mb-stack-md transition-all duration-1000 opacity-100 p-8 md:p-12 border border-border-muted"
-        style="
-          background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCTYHsTeCBEFoh_xHpd17M6A2mAPclBczi6vGR7XWbxtmOQcpTQ6-SAwlNoFUxrs9uzDqR45Y9qBlGkTc8XhaaYym7cah45_Z-lt_2b-jMkulSd-EKX9n5hJxsPc9jkUbze3PA-6y53cEGHGuyEAdGYPS-06kPjkfqVL0dcKXkdJDHL3bncXOLrUduXfICwHJCXT_QabWRASw5p2lZ9IoJBU2Dj5-W86hNqWnM6SpZMiu0Ln_u1RCUFUYHt9_tKgyflOg&quot;);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center center;
-        "
-      >
-        <h1
-          class="font-display-lg text-display-lg uppercase max-w-4xl text-on-primary"
-        >
-          Establishments of Distinction
-        </h1>
-        <p
-          class="font-body-xl text-body-xl text-on-primary opacity-60 mt-stack-sm max-w-2xl"
-          style="opacity: 1"
-        >
-          Premium grooming services in the heart of Bahawalpur. Visit our
-          sanctuaries of style for a masterfully curated experience.
-        </p>
-      </section>
-      <!-- Locations Grid (Asymmetric) -->
-      <section
-        class="flex flex-col gap-stack-lg mb-stack-lg transition-all duration-1000 opacity-100"
-      >
-        <!-- Row 1: Railway Road -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center border-b border-border-muted pb-stack-md"
-        >
-          <div class="block overflow-hidden border border-border-muted group w-full aspect-[16/9]">
-            <iframe 
-              src="https://maps.google.com/maps?q=29.403819,71.664898&t=&z=17&ie=UTF8&iwloc=&output=embed" 
-              class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
-              allowfullscreen="" 
-              loading="lazy">
-            </iframe>
-          </div>
-          <div class="flex flex-col gap-4">
-            <h2 class="font-headline-xl text-headline-xl uppercase">
-              Railway Road (Main Branch)
-            </h2>
-            <div class="space-y-2">
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                  >location_on</span
-                >
-                <span class="font-body-lg"
-                  >Fandi Center, near Raja Pump Chowk, Railway Road,
-                  Bahawalpur</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary">call</span>
-                <span class="font-body-lg">+92 346 8541177</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                  >schedule</span
-                >
-                <span class="font-body-lg">Mon-Sun 10:00 AM - 10:00 PM</span>
-              </div>
-            </div>
+  </header>
+  <!-- END: Global Header -->
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-50 hidden md:hidden transition-opacity">
+    <div class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white p-6 shadow-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-center mb-8">
+          <a class="font-serif text-2xl tracking-widest uppercase text-brand-dark" href="index.html">Hicks</a>
+          <button id="mobile-menu-close" class="text-gray-500 p-2">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-5 text-base font-medium text-gray-700">
+          <a class="hover:text-black py-1" href="index.html">Home</a>
+          <a class="hover:text-black py-1" href="services.html">Services</a>
+          <a class="text-black font-semibold py-1 border-l-2 border-black pl-3" href="locations.html">Locations</a>
+          <a class="hover:text-black py-1" href="gallery.html">Gallery</a>
+          <a class="hover:text-black py-1" href="ourcrew.html">Our Crew</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-gray-200">
+        <a class="w-full flex items-center justify-center py-3 bg-button-bg hover:bg-button-hover text-white text-sm font-medium rounded-full transition-colors" href="bookingform.html">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEGIN: Main Content -->
+  <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <!-- Section Header -->
+    <div class="text-center mb-16 md:mb-24">
+      <p class="text-sm font-semibold tracking-widest text-brand-accent uppercase mb-4">Visit Us</p>
+      <h1 class="text-5xl md:text-6xl font-serif italic mb-6">Our Locations</h1>
+      <p class="max-w-2xl mx-auto text-brand-gray leading-relaxed">
+        Visit us at our sanctuaries in Bahawalpur — thoughtfully designed spaces offering master barbering, luxury grooming, and relaxed elegance.
+      </p>
+    </div>
+
+    <!-- Locations List -->
+    <div class="space-y-16">
+      <!-- Location Card 1: Railway Road / Kausar Colony -->
+      <div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+        <!-- Image -->
+        <div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
+          <img alt="Hicks Railway Road Interior" class="absolute inset-0 w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfmv-Irds68evD3uDEtZbgyVsXi35llijrxTx7j0ey8VtQBlU2dmBLW3rFO5I-9AYKq-nqhweNXNY13Sd2NaAcS76QDVNckQllwMDSmgnI8KJ9cBm48Ox42jsIYjrOEXYdCO2K4eet2wf-CiZ0q_euPSod9mT9qnQoZ-Qx12wtjsKLiQinwHrdvVn68UlqtnMh0TgHtU_dn20dEwoHhCONt_qMhCFhJY5hjwAsEhtavKwL0lXmpXId_9LZ3JisFfLBY8c9hpyeQdegWg">
+        </div>
+        <!-- Content -->
+        <div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-accent mb-2">Main Branch</span>
+          <h2 class="text-3xl font-serif mb-6 text-brand-dark">Railway Road Branch (Kausar Colony)</h2>
+          <ul class="space-y-4 text-brand-gray mb-10 text-sm">
+            <li class="flex items-start">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">location_on</span>
+              <span>Fandi Center, near Raja Pump Chowk, Railway Road, Bahawalpur</span>
+            </li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent">call</span>
+              <a class="hover:text-brand-dark transition-colors" href="tel:+923468541177">+92 346 8541177</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent">mail</span>
+              <a class="hover:text-brand-dark transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">schedule</span>
+              <span>Monday – Sunday: 10:00 AM – 10:00 PM</span>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-flex items-center justify-center px-6 py-2.5 bg-button-bg hover:bg-button-hover text-white rounded-full text-sm font-medium transition-colors"
+              href="https://maps.google.com/maps?q=29.403819,71.664898" target="_blank">
+              <span class="material-symbols-outlined text-[18px] mr-2">near_me</span>
+              Get Directions
+            </a>
+            <a class="inline-flex items-center justify-center px-6 py-2.5 border border-gray-300 hover:border-gray-400 text-brand-dark rounded-full text-sm font-medium transition-colors bg-white"
+              href="bookingform.html">
+              Book Here
+              <span class="material-symbols-outlined text-[18px] ml-2">arrow_forward</span>
+            </a>
           </div>
         </div>
-        <!-- Row 2: Satellite Town -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center border-b border-border-muted pb-stack-md"
-        >
-          <div class="block overflow-hidden border border-border-muted group w-full aspect-[16/9]">
-            <iframe 
-              src="https://maps.google.com/maps?q=Hicks%20Men%20Salon,%20Satellite%20Town,%20Bahawalpur&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-              class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
-              allowfullscreen="" 
-              loading="lazy">
-            </iframe>
-          </div>
-          <div class="flex flex-col gap-4">
-            <h2 class="font-headline-xl text-headline-xl uppercase">
-              Satellite Town Branch
-            </h2>
-            <div class="space-y-2">
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                  >location_on</span
-                >
-                <span class="font-body-lg">Satellite Town, Bahawalpur</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary">call</span>
-                <span class="font-body-lg">+92 325 8079200</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                  >schedule</span
-                >
-                <span class="font-body-lg">Mon-Sun 10:00 AM - 10:00 PM</span>
-              </div>
-            </div>
+      </div>
+
+      <!-- Location Card 2: Satellite Town -->
+      <div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+        <!-- Image -->
+        <div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
+          <img alt="Hicks Satellite Town Interior" class="absolute inset-0 w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6UggXxYYhdasbiuFAcxdUeQZHWxQHDo45ZM4yJ7JcT1TsH8CD_gtk0A88i_23z9QYw_aHyHeiE5c2vzQmJjsGgaDi4EBJaTH5XY2j49L5ZglnKBmdDvntihAGEYKFcwbTy5QLpcEjWJJJdSoYw8NglblwDShS1oGeTzozUM2gEacbBV_iTslqNReQoN3dX-FiUmcGl5_h1wsjq9me6YMpl3nOrEKmINQWrzv9JeZubIwRBdrZ-MamguYsfbGWaHqaYvhLRZsNUhYRg">
+        </div>
+        <!-- Content -->
+        <div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-accent mb-2">Branch 02</span>
+          <h2 class="text-3xl font-serif mb-6 text-brand-dark">Satellite Town Branch</h2>
+          <ul class="space-y-4 text-brand-gray mb-10 text-sm">
+            <li class="flex items-start">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">location_on</span>
+              <span>Commercial Area, Satellite Town, Bahawalpur</span>
+            </li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent">call</span>
+              <a class="hover:text-brand-dark transition-colors" href="tel:+923258079200">+92 325 8079200</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent">mail</span>
+              <a class="hover:text-brand-dark transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">schedule</span>
+              <span>Monday – Sunday: 10:00 AM – 10:00 PM</span>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-flex items-center justify-center px-6 py-2.5 bg-button-bg hover:bg-button-hover text-white rounded-full text-sm font-medium transition-colors"
+              href="https://maps.google.com/maps?q=Hicks%20Men%20Salon,%20Satellite%20Town,%20Bahawalpur" target="_blank">
+              <span class="material-symbols-outlined text-[18px] mr-2">near_me</span>
+              Get Directions
+            </a>
+            <a class="inline-flex items-center justify-center px-6 py-2.5 border border-gray-300 hover:border-gray-400 text-brand-dark rounded-full text-sm font-medium transition-colors bg-white"
+              href="bookingform.html">
+              Book Here
+              <span class="material-symbols-outlined text-[18px] ml-2">arrow_forward</span>
+            </a>
           </div>
         </div>
-        <!-- Row 3: DHA Road -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
-          <a
-            class="block overflow-hidden border border-border-muted group"
-            href="https://maps.google.com"
-            target="_blank"
-          >
-            <img
-              alt="DHA Road Branch"
-              class="w-full aspect-[16/9] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpJw_vx8YIWEnUzifP4aFLRLCNmfZPpk-MxQ_zPVc8zwK4fqrVELnuIDftiIDYvmLqcNhf8_fVKTtHmc58z4BtzGAKEX_9u6rDnudE0lkyN5OFN6YbMPd2dWRXbfBAd1GVUPujTRSYDh47dDnxmIAIRNn8SCoFhJ5-e5mZQe47hhLll3mksNAuPbhW-tRIxOL2wxsLYcEfD1mAkRvjWhMMS7hdNFxgsvdOoBuVCmSQw60NjLf5MulLD5BJQynuaDnC6g"
-            />
+      </div>
+
+      <!-- Location Card 3: DHA Road -->
+      <div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+        <!-- Image -->
+        <div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
+          <img alt="Hicks DHA Road" class="absolute inset-0 w-full h-full object-cover grayscale brightness-90"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4JNZxY5lfi_zlb9is4GgN0kuhF6W2xPyBayA2-K4-gh-3rd5JaO0DjWQoATE9Sv2-JrbsXfhsUcWYAv96EY03vQmhWJbHzOWH3_Bxjgz1jDXBOl0W-NlRDQY9MVmyFbpDHUnfvkQK6bwX0tPqQ8rIiGotr4NjSMSg4ctiiQ1QePQLVd-RE7vneGOZeO7C114SitUBf79Yp0Hj8DMTtvZLCNXYa7lrw9qnN768cwBVWD_5zzCWZWDROcsIFRxJ8nLL5MkY-0xnqGIpQ">
+          <div class="absolute top-4 left-4 bg-brand-dark text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider">
+            Opening Soon
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-accent mb-2">Upcoming Sanctuaries</span>
+          <h2 class="text-3xl font-serif mb-6 text-brand-dark">DHA Road Branch</h2>
+          <ul class="space-y-4 text-brand-gray mb-10 text-sm">
+            <li class="flex items-start">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">location_on</span>
+              <span>DHA Main Boulevard, Bahawalpur</span>
+            </li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent">call</span>
+              <a class="hover:text-brand-dark transition-colors" href="tel:+923468541177">+92 346 8541177</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent">mail</span>
+              <a class="hover:text-brand-dark transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a>
+            </li>
+            <li class="flex items-start">
+              <span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">schedule</span>
+              <span>Opening Soon (10:00 AM – 10:00 PM)</span>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-flex items-center justify-center px-6 py-2.5 bg-button-bg hover:bg-button-hover text-white rounded-full text-sm font-medium transition-colors"
+              href="bookingform.html">
+              Reserve Pre-Booking
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- END: Main Content -->
+
+  <!-- BEGIN: Global Footer -->
+  <footer class="bg-footer-bg text-gray-300 py-16 px-8 mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand Info -->
+      <div class="md:col-span-1">
+        <h3 class="text-3xl font-serif tracking-widest uppercase mb-4 text-white">Hicks</h3>
+        <p class="text-sm text-gray-400 mb-6 leading-relaxed">A scintillating experience with the best artisans Bahawalpur has to offer.</p>
+        <div class="flex space-x-4">
+          <a class="text-gray-400 hover:text-white transition-colors" href="https://instagram.com/hicksmens" target="_blank" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
           </a>
-          <div class="flex flex-col gap-4">
-            <h2 class="font-headline-xl text-headline-xl uppercase">
-              DHA ROAD BRANCH
-            </h2>
-            <span
-              class="font-headline-xl text-headline-xl text-primary tracking-widest uppercase"
-              >Opening Soon</span
-            >
-          </div>
-        </div>
-      </section>
-      <!-- Dotted Menu Style Operational Hours -->
-      <!-- Atmospheric Imagery Section -->
-    </main>
-    <!-- Footer -->
-    <footer
-      class="w-full bg-surface-charcoal text-white flex flex-col items-center py-12 px-margin-edge text-center"
-      style="
-        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAve22IeDfiz4JxX0doMsfTNQNg8vUxwjaetArebLdyS1bh0lcxBsWvctS_93v0W6ZlNLElKUgDuxViQXnea4lQxysYDfUXj_BnBARtqz3iRucoyhqzQ6yHYbVQg9RNIBdk3GHRrbDyG41Wc1hmu-qGTYO428kkCzyTdG5DV3M-VreRVXmM5jaZsDRv2Og0tc0iEaLeD3H9V5VSRh25Wzm2AKTcGSQD-qj-v0dPr_y3ZF2y1MD_RRd2V6wXWOdActmbFw&quot;);
-        background-size: cover;
-        background-position: center center;
-      "
-    >
-      <div
-        class="font-display-lg text-display-lg uppercase mb-8 tracking-tighter"
-      >
-        HICKS
-      </div>
-      <div class="flex flex-wrap justify-center gap-8 mb-12">
-        <a
-          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
-          href="#"
-          >PRIVACY POLICY</a
-        >
-        <a
-          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
-          href="#"
-          >TERMS OF SERVICE</a
-        >
-        <a
-          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
-          href="https://instagram.com/hicksmens"
-          target="_blank"
-          >INSTAGRAM</a
-        >
-        <a
-          class="font-label-caps text-label-caps hover:opacity-70 transition-opacity"
-          href="https://facebook.com/hicksmens"
-          target="_blank"
-          >FACEBOOK</a
-        >
-      </div>
-      <div class="w-full border-t border-white/10 pt-8">
-        <div class="font-label-caps text-[10px] tracking-widest opacity-60">
-          © 2026 HICKS PREMIUM MEN'S SALON. ALL RIGHTS RESERVED.
+          <a class="text-gray-400 hover:text-white transition-colors" href="https://facebook.com/hicksmens" target="_blank" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+          </a>
         </div>
       </div>
-    </footer>
-    <script>
-      // Mobile Menu Logic
-      const toggle = document.getElementById("mobile-menu-toggle");
-      const close = document.getElementById("mobile-menu-close");
-      const menu = document.getElementById("mobile-menu");
+      <!-- Explore Links -->
+      <div>
+        <h4 class="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-6">Explore</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-white transition-colors" href="locations.html">Locations</a></li>
+          <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
+          <li><a class="hover:text-white transition-colors" href="ourcrew.html">Our Crew</a></li>
+        </ul>
+      </div>
+      <!-- Visit Links -->
+      <div>
+        <h4 class="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-6">Visit</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a class="hover:text-white transition-colors" href="bookingform.html">Book Appointment</a></li>
+          <li><a class="hover:text-white transition-colors" href="locations.html">Find a Branch</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-6">Contact</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a class="hover:text-white transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a></li>
+          <li><a class="hover:text-white transition-colors" href="tel:+923468541177">+92 346 8541177</a></li>
+          <li><a class="hover:text-white transition-colors" href="tel:0622888743">062 2888743</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+      <p>© 2026 HICKS Artisans & Gentlemen Salon. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- END: Global Footer -->
 
-      toggle.addEventListener("click", () => {
-        menu.classList.remove("translate-x-full");
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
       });
-
-      close.addEventListener("click", () => {
-        menu.classList.add("translate-x-full");
+    }
+    if (menuClose && mobileMenu) {
+      menuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
-
-      // Simple intersection observer for reveal effect
-      const observerOptions = {
-        threshold: 0.1,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("opacity-100");
-            entry.target.classList.remove("opacity-0", "translate-y-4");
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll("section").forEach((section) => {
-        section.classList.add(
-          "transition-all",
-          "duration-1000",
-          "opacity-0",
-          "translate-y-4",
-        );
-        observer.observe(section);
-      });
-
-      // Dismiss Page Loader
-      window.addEventListener("DOMContentLoaded", () => {
-        const loader = document.getElementById("page-loader");
-        if (loader) {
-          setTimeout(() => {
-            loader.style.opacity = "0";
-            setTimeout(() => {
-              loader.remove();
-            }, 500);
-          }, 1000);
+    }
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.add('hidden');
         }
       });
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>

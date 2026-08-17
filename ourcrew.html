@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Our Crew - HICKS</title>
+  <!-- Font Setup: Playfair Display (Serif) and Inter (Sans-serif) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              surface: '#f9f9f9',
+              accent: '#b47960', // Copper/rust color for subheadings
+              button: '#8e9681', // Olive green for buttons
+              buttonHover: '#7a826e',
+              footer: '#272523',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-brand-surface text-gray-800 font-sans antialiased selection:bg-brand-button selection:text-white">
+  <!-- BEGIN: MainHeader -->
+  <header class="w-full flex items-center justify-between py-6 px-8 md:px-16 border-b border-gray-200/50 sticky top-0 bg-brand-surface/90 backdrop-blur-md z-50">
+    <!-- Logo -->
+    <a class="font-serif text-2xl tracking-widest uppercase text-black" href="index.html">Hicks</a>
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-500">
+      <a class="hover:text-black transition-colors" href="index.html">Home</a>
+      <a class="hover:text-black transition-colors" href="services.html">Services</a>
+      <a class="hover:text-black transition-colors" href="locations.html">Locations</a>
+      <a class="hover:text-black transition-colors" href="gallery.html">Gallery</a>
+      <a class="text-black border-b border-black pb-1" href="ourcrew.html">Our Crew</a>
+    </nav>
+    <!-- CTA Button -->
+    <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-brand-button hover:bg-brand-buttonHover text-white text-sm font-medium rounded-lg transition-colors"
+      href="bookingform.html">
+      Book Appointment
+    </a>
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-gray-600 p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </header>
+  <!-- END: MainHeader -->
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-50 hidden md:hidden transition-opacity">
+    <div class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-brand-surface p-6 shadow-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-center mb-8">
+          <a class="font-serif text-2xl tracking-widest uppercase text-black" href="index.html">Hicks</a>
+          <button id="mobile-menu-close" class="text-gray-500 p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-5 text-base font-medium text-gray-700">
+          <a class="hover:text-black py-1" href="index.html">Home</a>
+          <a class="hover:text-black py-1" href="services.html">Services</a>
+          <a class="hover:text-black py-1" href="locations.html">Locations</a>
+          <a class="hover:text-black py-1" href="gallery.html">Gallery</a>
+          <a class="text-black font-semibold py-1 border-l-2 border-black pl-3" href="ourcrew.html">Our Crew</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-gray-200">
+        <a class="w-full flex items-center justify-center py-3 bg-brand-button hover:bg-brand-buttonHover text-white text-sm font-medium rounded-lg transition-colors" href="bookingform.html">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- BEGIN: Hero Section -->
+    <section class="py-20 md:py-24 px-6 md:px-12 text-center max-w-4xl mx-auto">
+      <p class="text-xs font-bold tracking-[0.2em] text-brand-accent uppercase mb-6">The Team</p>
+      <h1 class="text-5xl md:text-7xl font-serif text-black mb-8 leading-tight">
+        Our <span class="italic font-light">Artisans</span>
+      </h1>
+      <p class="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        Behind every transformation is a master. Meet the hands and hearts that make HICKS what it is.
+      </p>
+    </section>
+    <!-- END: Hero Section -->
+
+    <!-- BEGIN: Team Grid -->
+    <section class="px-6 md:px-16 pb-24 max-w-[1400px] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <!-- Artisan 1 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Tariq Malik"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC94joR8lUD6WVdnlEP9YCHS5_LAz8hv2jsfKFXfL5-5FvbrVBw-qjueb61y1nqnoQtoawfPrjxwHAVN3VfdnAHagSDyo5oaVKki4vmdYPpZF68GWeXP08SDLVBBjdkjzY2quZnJbXBCBxkwMUqvDjVoLO2nFSS3mRuamVheqYtgm1XujNfj_e9NFFPTyeOBygHMYL4EnT8pGqAzAp_uVl61uVoCsL7bi64AmvnMmb1_jb5UDPgQeRd0m0PI3oP-4sgPKyIGqylTCS7Jw">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Tariq Malik</h2>
+          <p class="text-brand-accent text-sm mb-3">Master Stylist & Art Director</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">10+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Specializing in precision scissor cuts, architectural styling, and bespoke aesthetic consultations tailored to facial anatomy.
+          </p>
+        </article>
+
+        <!-- Artisan 2 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Usman Ali"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJy83fde-oFabh17EtNuVRbDBz94PrA6HftatcoI8CEDKdMPiYvd1RiXV7TVj_sYe0kek5AzHaxrbG2OCaorsDZw3q7off5qfhaXd4fjjDg06oiiNqrZeB2jcceeACLEivdSd67PKycJacGk8Fn_ikR3-R4yVKRJ1vTttitnFprGhtF5JPHcn5YFYshQUwEFXFHqgxmGIxG6Bn5Tgan3FbxBdyKZDpRFx__XidV_cfICBVDlQOwqpE4qQ7Ofy-lITKstmkcUvCbezdhA">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Usman Ali</h2>
+          <p class="text-brand-accent text-sm mb-3">Master Barber & Shave Artisan</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">10+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Master of traditional straight-razor shaving, hot towel rituals, beard sculpting, and executive gentlemen grooming.
+          </p>
+        </article>
+
+        <!-- Artisan 3 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Hamza Farooq"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPquLN0CpguHuTCvmzvc6fYGZmKoTlN31Q3ZVkpehsHprNkOVTvIx8AuSFke9HA0FG4ru2q3csbOmAJh3ZJEIqPE4E7hcKLQ-Yxs_ipy5oGoZbDdod7844-Os0BSVGIuCQ9SNHfKL6fvC39FfT1yplCd3BaUiQFymeNwF_D2QlHWRiy8URDcKItYwOHt70sRUjz60U6zlxvx5TTrIeEoAj_jtxi5BSl34t-Fsw1cUf1UULWnxEi05-3QhJqiN2X_KG4JHoO9A8J1pSXA">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Hamza Farooq</h2>
+          <p class="text-brand-accent text-sm mb-3">Creative Director & Hair Designer</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">10+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Pioneering modern textured cuts, bespoke taper fades, and editorial fashion-forward styling for the contemporary gentleman.
+          </p>
+        </article>
+
+        <!-- Artisan 4 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Bilal Ahmed"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-S6-iZe9_DLK1zcEzT9XL_FOni4-XlnXAyt5Aac0-hFcX7verX9wi-ezbQYMFCH40kU-lFgw_iVApPBjNboOYNsnydt-OsSgz75UrWAgICAOxhXuRtEinTcKeVRtjm42tT5r4h4BZ9ltyx4qKT6rNzqCBhy5u1HPm1TmM25t5dWHXEaTmUG5UQF_DLQ7qXbPzoN05eXvw_gXQpG2sFX03MszpuPWHtXz-NEvjZ9Q88UBm0XYGdCz7TY7hJOF5xHTvPmM_TWRADbWP4g">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Bilal Ahmed</h2>
+          <p class="text-brand-accent text-sm mb-3">Senior Colorist & Hair Treatment Specialist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">10+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Renowned for transformative coloring techniques, keratin therapy treatments, and specialized scalp restoration.
+          </p>
+        </article>
+
+        <!-- Artisan 5 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Daniyal Raza"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHS6ZtBIT9tj--ftwYFv6hcyVooomZmXLf0Ob5eyFipwbuizQ_keks1QyVxZ2EvD8hCdeCfKPXkkXq5ZsUgYuBogUUObjHn_weyWUJuvGIkP2FNbqjxujhT4B8gxLFJQLYXXlDtlPOPDO-Ofawwka1bMAlRTc54OeuZUneJTjBworDoIKa0aJ6awaK3vgoeluCo0NivIOCgubwi-a5S11pM0eHZOEWtB2qFwLwZAca7kqQ5UCIEyuSJ9KidjMVNJvrCw">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Daniyal Raza</h2>
+          <p class="text-brand-accent text-sm mb-3">Exclusive Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Expert in modern skin fades, pompadour shaping, and personalized beard line definition.
+          </p>
+        </article>
+
+        <!-- Artisan 6 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Zaid Hassan"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoMII5_moUPxwjNPuXLzO3GAN9RmdY2w669HFsmC66gcMG0VKDQzE-zFlHiUuwIvY7Yw88kbbsgGEM4AzmIMM05tf_oMuc7iZl2CS1CfG33G7JfvKXnRbajXJMGWQWpWhkrnjhB_ej2QygSo80cW2rlGMsQVHow_19Vctcl4hRQunYe592hiXIB1PuDOtBGJcUtshdoBbEniLJfuv2SPbcnz2nmEGPnEj9vJ8PMMLjAg1uAdjZbDyiG0y-3OHWyyuKmg">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Zaid Hassan</h2>
+          <p class="text-brand-accent text-sm mb-3">Exclusive Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Passionate about facial rejuvenation, hot towel shaving rituals, and custom beard contouring.
+          </p>
+        </article>
+
+        <!-- Artisan 7 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Farhan Akhtar"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_tPPBcOBnrRfAPjV6RT_fpILg4l6jh3fulQAt60qDEOeXl4a7iTskpd3d8FjNQFl77sgqDGvuDB9IX4cEDjXqU0-RjFODx9mfqgTqAjf05qPMUGG6QZcW9K2_USUslLU91JehaIIG8Fi2Sixpr4ZxKoxu5EoRz835fwnwnVeOnWGsXNFZRAclEXkSqpfrA26Xe3BI-zCXI_3TyhrB2JU6xE-P8ifmIoaiErrhlzHQJiLxX0Q8tQGaRxfmFwHAKeQoPw">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Farhan Akhtar</h2>
+          <p class="text-brand-accent text-sm mb-3">Standard Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Specialist in sharp scissor work, gentleman fades, and rejuvenating head massages.
+          </p>
+        </article>
+
+        <!-- Artisan 8 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Rayan Siddiqui"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6p0IsprcNvex2_3dAJ5dBUKwKRgseV3hDyUWQZARtWqInXxlD30OfBQhC2b-yga5oNIyBgiwxm0Gc-WiFMWJYg7S5zvnEnt5MMtDCVDue7iFVFHyu6QlqvzWM4ui5mRJWd0dlBmj5JSCRbOEtlqnLDJEWoPdK6PqbFsJFpItNw7g38l0J1KCc2mReuXjoA98rjKop3S8SdnlqtZoMuq7F-SFmxboR1_fVbpE01Yk0I-YiJZG2TAEVuZM3fMliQcwa5Q">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Rayan Siddiqui</h2>
+          <p class="text-brand-accent text-sm mb-3">Standard Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Dedicated to clean lines, signature trims, and revitalizing skin polish rituals.
+          </p>
+        </article>
+
+        <!-- Artisan 9 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Shahzaib Khan"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAua-pOqeF4lg_hMdZue_rfGEJJbgU3CmigLRgIkyOLdVyN0OO5VF_bFszkbpkZTwg_BMTGAWbNhSOR8yRO9H8jrFJb-L2-gAX5UY2FTURwYwJCSmvf-thyqWeLUnBU9P6EnBgPNnxTce-AU9wwyscjTf1NTz3AOV1eo495WopBieR4IGYnJFKuuSKTBxGmlvr-gffy3ZQRkk6sG852iJYUueQ_cZ4qP4QvGN1bkYo9Lz48OyRyy3EPANMm14mS73P3BA">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Shahzaib Khan</h2>
+          <p class="text-brand-accent text-sm mb-3">Standard Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Crafting tailored hairstyles, modern hair designing, and precision beard lines.
+          </p>
+        </article>
+
+        <!-- Artisan 10 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Murtaza Ali"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0o9qhdJXt2P3IG-K3DDVkPwCErzTtcIHsUZkiMXMQ2PiPxFqzvwaT4DZr1Cux6z2jMSdGhbE15_2iNfjAa7fe3eG74dYHaNp9wry0dDZflAfyRtCXo-PbF7xu6sUZeWi-xzzKGBcQuG8Sabcg3kJE6wJrFkuuNQEY9qOW9o3GcPS6qclCkS8aLqyTDynvIiLbaPZlvCMmhfxH1IZuYsfa0C-aH0YNhtyP-13sqUV_E8QQfsCXzf-u3Z2V8Q5q3-PMtg">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Murtaza Ali</h2>
+          <p class="text-brand-accent text-sm mb-3">Standard Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Focused on meticulous grooming, luxury facials, and gentlemen styling consultations.
+          </p>
+        </article>
+
+        <!-- Artisan 11 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Sameer Qureshi"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy1PRScOwnmMtGY_gmAI6ltTnVyNqE83qkAVc-I_jBaraf03XxV8zBErd6T2NU3mg-NBgdmbJrgM3U-2kN0m06HMX47fhuwEE1KBkIRovIMMJ7M2yqGI2ObLmttxgryLK-WqmmizH-hXIaDMbcSOOGRpsrCN6nREFhriZaaiiNVmHpq179cEQ2gkzuGnEdFZQFY_A-HaiYlylNzKYFkh4QkD1d0_QVyYN8SeMkPrJFIlpYdAI86MBY31jsbqGKYskx2w">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Sameer Qureshi</h2>
+          <p class="text-brand-accent text-sm mb-3">Standard Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Mastering modern streetwear hair trends, clean tapers, and hair care therapies.
+          </p>
+        </article>
+
+        <!-- Artisan 12 -->
+        <article class="flex flex-col group">
+          <div class="overflow-hidden rounded-[1.5rem] mb-6 aspect-[4/5] bg-gray-200 shadow-sm">
+            <img alt="Waleed Aslam"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQEF_y0WIgsPzKHpP4AYALfHLIRwb085Y4hkBAgc3gIESmtJUVSZSh3emuUKbzcu6VBLNGKomiGLbR4ImbI1SfLb0_PxgLDBJRLbL2ULo43YyggJQxkMW6GCed0UZMGaQhBEQqzXqU5hU6IQjdq2gaEN2eJiPLyLkVzOFs8aV5mde8YLh9xo0-HX0WbeCuhnFo3MWXm8PeBkIJreYLkE-elnIAwq_fq8x0VpMLBp6UGd0JmOAsrPsSp5JvlVS7FXnbNg">
+          </div>
+          <h2 class="text-2xl font-serif text-black mb-1">Waleed Aslam</h2>
+          <p class="text-brand-accent text-sm mb-3">Standard Stylist</p>
+          <p class="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-4">5+ Years Experience</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Specialist in classic British-style cuts, hot towel treatments, and beard refinement.
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- END: Team Grid -->
+
+    <!-- BEGIN: Bottom CTA -->
+    <section class="py-32 px-6 text-center bg-[#f4f4f4]/50">
+      <h2 class="text-3xl md:text-4xl font-serif text-black mb-8">Want to sit with one of our artisans?</h2>
+      <a class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-button hover:bg-brand-buttonHover text-white text-sm font-medium rounded-lg transition-colors group"
+        href="bookingform.html">
+        Book Appointment
+        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+          stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </section>
+    <!-- END: Bottom CTA -->
+  </main>
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-brand-footer text-gray-300 py-20 px-8 md:px-16 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <!-- Brand Col -->
+      <div class="md:col-span-1">
+        <a class="font-serif text-3xl tracking-widest uppercase text-white mb-6 block" href="index.html">Hicks</a>
+        <p class="text-gray-400 mb-6 max-w-xs leading-relaxed">A curated wellness journey. Where ritual meets precision in Bahawalpur.</p>
+        <div class="flex space-x-4">
+          <a class="hover:text-white transition-colors" href="https://instagram.com/hicksmens" target="_blank" aria-label="Instagram">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+            </svg>
+          </a>
+          <a class="hover:text-white transition-colors" href="https://facebook.com/hicksmens" target="_blank" aria-label="Facebook">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- Explore Links -->
+      <div class="md:col-span-1">
+        <h3 class="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-6">Explore</h3>
+        <ul class="space-y-4">
+          <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-white transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-white transition-colors" href="locations.html">Locations</a></li>
+          <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
+          <li><a class="hover:text-white transition-colors" href="ourcrew.html">Our Crew</a></li>
+        </ul>
+      </div>
+      <!-- Visit Links -->
+      <div class="md:col-span-1">
+        <h3 class="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-6">Visit</h3>
+        <ul class="space-y-4">
+          <li><a class="hover:text-white transition-colors" href="bookingform.html">Book Appointment</a></li>
+          <li><a class="hover:text-white transition-colors" href="locations.html">Find a Branch</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="md:col-span-1">
+        <h3 class="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-6">Contact</h3>
+        <ul class="space-y-4 text-gray-400">
+          <li><a class="hover:text-white transition-colors" href="mailto:hickssalon@gmail.com">hickssalon@gmail.com</a></li>
+          <li><a class="hover:text-white transition-colors" href="tel:+923468541177">+92 346 8541177</a></li>
+          <li><a class="hover:text-white transition-colors" href="tel:0622888743">062 2888743</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 pt-8 border-t border-gray-800">
+      <p>© 2026 HICKS Artisans & Gentlemen Salon. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+      });
+    }
+    if (menuClose && mobileMenu) {
+      menuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    }
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
